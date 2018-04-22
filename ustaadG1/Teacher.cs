@@ -18,7 +18,7 @@ namespace ustaadG1
         private string account_no;
         private string password;
         private string cPassword;
-        private DateTime timing;
+        private string timing;
         private string area;
         private string range;
 
@@ -29,7 +29,7 @@ namespace ustaadG1
         public string Answer { get => answer; set => answer = value; }
         public string Password { get => password; set => password = value; }
         public string CPassword { get => cPassword; set => cPassword = value; }
-        public DateTime Timing { get => timing; set => timing = value; }
+        public string Timing { get => timing; set => timing = value; }
         public string Area { get => area; set => area = value; }
         public string Range { get => range; set => range = value; }
         public string Secret_Question { get => secret_Question; set => secret_Question = value; }
