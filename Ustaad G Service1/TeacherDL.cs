@@ -36,5 +36,34 @@ namespace Ustaad_G_Service1
             }
             return false;
         }
+
+        public  bool isfoundT(string username)
+        {
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Username == username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ResetPasswordT(string username,string secret_Question, string secret_answer)
+        {
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Username == username)
+                {
+                    if (secret_Question == t.Secret_Question && secret_answer == t.Answer)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
     }
 }

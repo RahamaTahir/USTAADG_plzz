@@ -69,3 +69,4 @@ C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.p
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources

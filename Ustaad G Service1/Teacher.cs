@@ -38,5 +38,6 @@ namespace Ustaad_G_Service1
         public string Subject { get => subject; set => subject = value; }
         public string Level { get => level; set => level = value; }
         public string Account_no { get => account_no; set => account_no = value; }
+      
     }
 }

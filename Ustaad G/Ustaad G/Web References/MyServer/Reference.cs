@@ -23,7 +23,7 @@ namespace Ustaad_G.MyServer {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -40,6 +40,14 @@ namespace Ustaad_G.MyServer {
         private System.Threading.SendOrPostCallback verifyStudentOperationCompleted;
         
         private System.Threading.SendOrPostCallback verifyteacherOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback isfoundTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback isfoundSOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ResetPasswordSOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ResetPasswordTOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -96,6 +104,18 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event verifyteacherCompletedEventHandler verifyteacherCompleted;
+        
+        /// <remarks/>
+        public event isfoundTCompletedEventHandler isfoundTCompleted;
+        
+        /// <remarks/>
+        public event isfoundSCompletedEventHandler isfoundSCompleted;
+        
+        /// <remarks/>
+        public event ResetPasswordSCompletedEventHandler ResetPasswordSCompleted;
+        
+        /// <remarks/>
+        public event ResetPasswordTCompletedEventHandler ResetPasswordTCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -314,6 +334,134 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/isfoundT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void isfoundT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, out bool isfoundTResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool isfoundTResultSpecified) {
+            object[] results = this.Invoke("isfoundT", new object[] {
+                        username});
+            isfoundTResult = ((bool)(results[0]));
+            isfoundTResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void isfoundTAsync(string username) {
+            this.isfoundTAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void isfoundTAsync(string username, object userState) {
+            if ((this.isfoundTOperationCompleted == null)) {
+                this.isfoundTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnisfoundTOperationCompleted);
+            }
+            this.InvokeAsync("isfoundT", new object[] {
+                        username}, this.isfoundTOperationCompleted, userState);
+        }
+        
+        private void OnisfoundTOperationCompleted(object arg) {
+            if ((this.isfoundTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.isfoundTCompleted(this, new isfoundTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/isfoundS", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void isfoundS([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, out bool isfoundSResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool isfoundSResultSpecified) {
+            object[] results = this.Invoke("isfoundS", new object[] {
+                        username});
+            isfoundSResult = ((bool)(results[0]));
+            isfoundSResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void isfoundSAsync(string username) {
+            this.isfoundSAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void isfoundSAsync(string username, object userState) {
+            if ((this.isfoundSOperationCompleted == null)) {
+                this.isfoundSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnisfoundSOperationCompleted);
+            }
+            this.InvokeAsync("isfoundS", new object[] {
+                        username}, this.isfoundSOperationCompleted, userState);
+        }
+        
+        private void OnisfoundSOperationCompleted(object arg) {
+            if ((this.isfoundSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.isfoundSCompleted(this, new isfoundSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ResetPasswordS", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ResetPasswordS([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_answer, out bool ResetPasswordSResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool ResetPasswordSResultSpecified) {
+            object[] results = this.Invoke("ResetPasswordS", new object[] {
+                        username,
+                        secret_Question,
+                        secret_answer});
+            ResetPasswordSResult = ((bool)(results[0]));
+            ResetPasswordSResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void ResetPasswordSAsync(string username, string secret_Question, string secret_answer) {
+            this.ResetPasswordSAsync(username, secret_Question, secret_answer, null);
+        }
+        
+        /// <remarks/>
+        public void ResetPasswordSAsync(string username, string secret_Question, string secret_answer, object userState) {
+            if ((this.ResetPasswordSOperationCompleted == null)) {
+                this.ResetPasswordSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnResetPasswordSOperationCompleted);
+            }
+            this.InvokeAsync("ResetPasswordS", new object[] {
+                        username,
+                        secret_Question,
+                        secret_answer}, this.ResetPasswordSOperationCompleted, userState);
+        }
+        
+        private void OnResetPasswordSOperationCompleted(object arg) {
+            if ((this.ResetPasswordSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ResetPasswordSCompleted(this, new ResetPasswordSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ResetPasswordT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ResetPasswordT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_answer, out bool ResetPasswordTResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool ResetPasswordTResultSpecified) {
+            object[] results = this.Invoke("ResetPasswordT", new object[] {
+                        username,
+                        secret_Question,
+                        secret_answer});
+            ResetPasswordTResult = ((bool)(results[0]));
+            ResetPasswordTResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void ResetPasswordTAsync(string username, string secret_Question, string secret_answer) {
+            this.ResetPasswordTAsync(username, secret_Question, secret_answer, null);
+        }
+        
+        /// <remarks/>
+        public void ResetPasswordTAsync(string username, string secret_Question, string secret_answer, object userState) {
+            if ((this.ResetPasswordTOperationCompleted == null)) {
+                this.ResetPasswordTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnResetPasswordTOperationCompleted);
+            }
+            this.InvokeAsync("ResetPasswordT", new object[] {
+                        username,
+                        secret_Question,
+                        secret_answer}, this.ResetPasswordTOperationCompleted, userState);
+        }
+        
+        private void OnResetPasswordTOperationCompleted(object arg) {
+            if ((this.ResetPasswordTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ResetPasswordTCompleted(this, new ResetPasswordTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -333,7 +481,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -380,11 +528,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -406,11 +554,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -432,19 +580,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AddStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AddTeacherCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void verifyStudentCompletedEventHandler(object sender, verifyStudentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -474,11 +622,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void verifyteacherCompletedEventHandler(object sender, verifyteacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyteacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -500,6 +648,142 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public bool verifyteacherResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void isfoundTCompletedEventHandler(object sender, isfoundTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class isfoundTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal isfoundTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool isfoundTResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool isfoundTResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void isfoundSCompletedEventHandler(object sender, isfoundSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class isfoundSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal isfoundSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool isfoundSResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool isfoundSResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void ResetPasswordSCompletedEventHandler(object sender, ResetPasswordSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ResetPasswordSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ResetPasswordSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool ResetPasswordSResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool ResetPasswordSResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void ResetPasswordTCompletedEventHandler(object sender, ResetPasswordTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ResetPasswordTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ResetPasswordTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool ResetPasswordTResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool ResetPasswordTResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

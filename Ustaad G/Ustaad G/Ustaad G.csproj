@@ -59,6 +59,12 @@
     <Compile Include="frmRegisterTutor.Designer.cs">
       <DependentUpon>frmRegisterTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelectRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterTutor.resx">
       <DependentUpon>frmRegisterTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectRegister.resx">
       <DependentUpon>frmSelectRegister.cs</DependentUpon>

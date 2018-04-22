@@ -16,7 +16,15 @@ namespace Ustaad_G
         {
             InitializeComponent();
         }
-
+        private static frmlogin login_frm;
+        public static frmlogin GetInstance()
+        {
+            if (login_frm == null)
+            {
+                login_frm = new frmlogin();
+            }
+            return login_frm;
+        }
         private void cmdRegister_Click(object sender, EventArgs e)
         {
             frmSelectRegister R = new frmSelectRegister();
@@ -53,6 +61,13 @@ namespace Ustaad_G
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lnkResetPassowrd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmResetPassword ResetPassword = new frmResetPassword();
+            this.Hide();
+            ResetPassword.Show();
         }
     }
 }

@@ -157,6 +157,7 @@
             this.lnkResetPassowrd.TabIndex = 40;
             this.lnkResetPassowrd.TabStop = true;
             this.lnkResetPassowrd.Text = "Reset Password";
+            this.lnkResetPassowrd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkResetPassowrd_LinkClicked);
             // 
             // cmdLogin
             // 

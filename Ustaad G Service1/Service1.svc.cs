@@ -50,7 +50,32 @@ namespace Ustaad_G_Service1
 
         public bool verifyteacher(string username, string password)
         {
+           
             return TeacherDL.verify(username, password);
+        }
+
+        public bool isfoundT(string username)
+        {
+            TeacherDL tc = new TeacherDL();
+            return tc.isfoundT(username);
+        }
+
+        public bool isfoundS(string username)
+        {
+            StudentDL st = new StudentDL();
+            return st.isfoundS(username);
+        }
+
+        public bool ResetPasswordS(string username,string secret_Question, string secret_answer)
+        {
+            StudentDL st = new StudentDL();
+            return st.ResetPasswordS(username,secret_Question, secret_answer);
+        }
+
+        public bool ResetPasswordT(string username,string secret_Question, string secret_answer)
+        {
+            TeacherDL tc = new TeacherDL();
+            return tc.ResetPasswordT(username,secret_Question, secret_answer);
         }
     }
 }

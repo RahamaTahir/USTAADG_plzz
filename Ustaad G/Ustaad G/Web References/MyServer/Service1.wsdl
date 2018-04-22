@@ -43,6 +43,30 @@
   <wsdl:message name="IService1_verifyteacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:verifyteacherResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_isfoundT_InputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundS_InputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPasswordS_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPasswordS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPasswordT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPasswordT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordTResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -67,6 +91,22 @@
     <wsdl:operation name="verifyteacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/verifyteacher" message="tns:IService1_verifyteacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/verifyteacherResponse" message="tns:IService1_verifyteacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isfoundT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isfoundT" message="tns:IService1_isfoundT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isfoundTResponse" message="tns:IService1_isfoundT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isfoundS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isfoundS" message="tns:IService1_isfoundS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isfoundSResponse" message="tns:IService1_isfoundS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPasswordS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ResetPasswordS" message="tns:IService1_ResetPasswordS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ResetPasswordSResponse" message="tns:IService1_ResetPasswordS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPasswordT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ResetPasswordT" message="tns:IService1_ResetPasswordT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ResetPasswordTResponse" message="tns:IService1_ResetPasswordT_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -118,6 +158,42 @@
     </wsdl:operation>
     <wsdl:operation name="verifyteacher">
       <soap:operation soapAction="http://tempuri.org/IService1/verifyteacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isfoundT">
+      <soap:operation soapAction="http://tempuri.org/IService1/isfoundT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isfoundS">
+      <soap:operation soapAction="http://tempuri.org/IService1/isfoundS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPasswordS">
+      <soap:operation soapAction="http://tempuri.org/IService1/ResetPasswordS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPasswordT">
+      <soap:operation soapAction="http://tempuri.org/IService1/ResetPasswordT" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
