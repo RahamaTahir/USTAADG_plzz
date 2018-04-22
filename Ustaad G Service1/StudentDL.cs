@@ -21,5 +21,17 @@ namespace Ustaad_G_Service1
             Students.Add(st);
         }
 
+        public static bool verify(string username, string password)
+        {
+            foreach (Student st in Students)
+            {
+                if (st.Username == username && st.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

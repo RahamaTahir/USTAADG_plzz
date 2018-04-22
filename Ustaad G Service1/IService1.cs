@@ -23,7 +23,13 @@ namespace Ustaad_G_Service1
         void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword);
 
         [OperationContract]
+
         void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range);
+
+        [OperationContract]
+        bool verifyStudent(string username, string password);
+        [OperationContract]
+        bool verifyteacher(string username, string password);
 
 
 

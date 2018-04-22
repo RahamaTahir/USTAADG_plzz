@@ -12,3 +12,10 @@ C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G Service1\Ustaad G Service1\ob
 C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G Service1\Ustaad G Service1\obj\Debug\Ustaad G Service1.csproj.CoreCompileInputs.cache
 C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G Service1\Ustaad G Service1\obj\Debug\Ustaad G Service1.dll
 C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G Service1\Ustaad G Service1\obj\Debug\Ustaad G Service1.pdb
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.dll.config
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.dll
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.pdb
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.csprojResolveAssemblyReference.cache
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.csproj.CoreCompileInputs.cache
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.dll
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.pdb

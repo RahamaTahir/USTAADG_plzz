@@ -1,0 +1,58 @@
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Form1.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAboutUs.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdmin.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmFilteredTutors.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmMyAccount.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmNewPassword.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSearch.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\Aleena Riaz\Desktop\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\Aleena Riaz\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmLogin.resources
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\OOAD Project\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmLogin.resources
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\final\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb

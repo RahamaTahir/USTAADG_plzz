@@ -25,5 +25,16 @@ namespace Ustaad_G_Service1
             tc.Level = level;
             Teachers.Add(tc);
         }
+        public static bool verify(string username, string password)
+        {
+            foreach (Teacher tc in Teachers)
+            {
+                if (tc.Username == username && tc.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

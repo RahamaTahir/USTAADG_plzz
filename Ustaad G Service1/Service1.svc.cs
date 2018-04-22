@@ -41,5 +41,16 @@ namespace Ustaad_G_Service1
             TeacherDL tc = new TeacherDL();
             tc.AddTeacher(username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
         }
+
+
+        public bool verifyStudent(string username, string password)
+        {
+            return StudentDL.verify(username, password);
+        }
+
+        public bool verifyteacher(string username, string password)
+        {
+            return TeacherDL.verify(username, password);
+        }
     }
 }
