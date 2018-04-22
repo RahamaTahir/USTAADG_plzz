@@ -1,0 +1,12 @@
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.csprojResolveAssemblyReference.cache
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.frmRegisterStudent.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.frmRegisterTutor.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.frmSelectRegister.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.Properties.Resources.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.csproj.GenerateResource.Cache
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.csproj.CoreCompileInputs.cache
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\bin\Debug\ustaadG1.exe.config
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\bin\Debug\ustaadG1.exe
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\bin\Debug\ustaadG1.pdb
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.exe
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\ustaadG1\obj\Debug\ustaadG1.pdb

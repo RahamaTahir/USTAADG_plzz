@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,13 +47,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
+    <Compile Include="frmRegisterStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterStudent.Designer.cs">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterTutor.Designer.cs">
+      <DependentUpon>frmRegisterTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRegister.Designer.cs">
+      <DependentUpon>frmSelectRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentDL.cs" />
-    <Compile Include="Teacher.cs" />
-    <Compile Include="TeacherDL.cs" />
+    <Compile Include="Web References\MyServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmRegisterStudent.resx">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterTutor.resx">
+      <DependentUpon>frmRegisterTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRegister.resx">
+      <DependentUpon>frmSelectRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -70,9 +100,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\MyServer\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyServer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyServer\Service1.wsdl" />
+    <None Include="Web References\MyServer\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\MyServer\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\MyServer\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigstock-Apple-on-School-Books-with-cop-14086715.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:50152/Service1.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyServer\</RelPath>
+      <UpdateFromURL>http://localhost:50152/Service1.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ustaadG1_MyServer_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\MyServer\Service1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

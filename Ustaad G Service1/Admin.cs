@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace ustaadG1
+namespace Ustaad_G_Service1
 {
-    class Admin
+    public class Admin
     {
         private int rating;
 
         public int Rating { get => rating; set => rating = value; }
 
-        public int UpdateRating(string feedback);
     }
 }
