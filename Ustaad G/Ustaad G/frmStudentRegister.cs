@@ -31,7 +31,7 @@ namespace Ustaad_G
 
         private void lnkLogin8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmLogin L = new frmLogin();
+            frmlogin L = new frmlogin();
             this.Hide();
             L.Show();
         }
