@@ -337,10 +337,10 @@
             "Shadrha, Lahore",
             "Dandoth, Chitral",
             "Model Town, Gujranwala"});
-            this.comboBoxArea.Location = new System.Drawing.Point(376, 214);
+            this.comboBoxArea.Location = new System.Drawing.Point(373, 214);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(200, 33);
-            this.comboBoxArea.TabIndex = 45;
+            this.comboBoxArea.TabIndex = 46;
             // 
             // frmSearch
             // 

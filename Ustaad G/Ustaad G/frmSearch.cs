@@ -67,7 +67,6 @@ namespace Ustaad_G
 
         private void txtSCity_Click(object sender, EventArgs e)
         {
-            txtSCity.Clear();
         }
 
         private void txtPwd_Click(object sender, EventArgs e)
