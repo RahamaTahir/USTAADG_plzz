@@ -56,6 +56,13 @@ namespace Ustaad_G
             {
                 MessageBox.Show("Invalid Username or Password!");
             }
+
+            if (!chkT.Checked)
+            {
+                frmSearch search = new frmSearch();
+                this.Hide();
+                search.Show();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

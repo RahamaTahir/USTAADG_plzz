@@ -77,5 +77,11 @@ namespace Ustaad_G_Service1
             TeacherDL tc = new TeacherDL();
             return tc.ResetPasswordT(username,secret_Question, secret_answer);
         }
+
+        public bool VerifyByAdmin(string username,string password)
+        {
+            StudentDL st = new StudentDL();
+            return st.VerifyByAdmin(username, password);
+        }
     }
 }

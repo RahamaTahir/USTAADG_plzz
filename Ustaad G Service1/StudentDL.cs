@@ -62,5 +62,19 @@ namespace Ustaad_G_Service1
             return false;
         }
 
+        public Boolean VerifyByAdmin(string username, string password)
+        {
+            foreach (Student st in Students)
+            {
+                if (st.Username == username && st.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
     }
 }

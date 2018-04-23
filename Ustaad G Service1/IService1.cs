@@ -43,11 +43,16 @@ namespace Ustaad_G_Service1
         [OperationContract]
         bool ResetPasswordT(string username, string secret_Question, string secret_answer);
 
+        [OperationContract]
+        Boolean VerifyByAdmin(string username, string password);
 
 
 
-            // TODO: Add your service operations here
-        }
+
+
+
+        // TODO: Add your service operations here
+    }
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

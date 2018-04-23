@@ -70,3 +70,32 @@ C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.e
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmlogin.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.cache
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmlogin.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSearch.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\Hmna76\Downloads\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
