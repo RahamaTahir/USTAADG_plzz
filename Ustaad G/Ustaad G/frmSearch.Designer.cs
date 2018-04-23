@@ -45,6 +45,7 @@
             this.lnkContactUs3 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +134,7 @@
             this.txtPwd.TabIndex = 39;
             this.txtPwd.Text = "Enter Password";
             this.txtPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
             // 
             // txtSCity
             // 
@@ -147,6 +149,7 @@
             this.txtSCity.TabIndex = 38;
             this.txtSCity.Text = "Enter City";
             this.txtSCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSCity.Click += new System.EventHandler(this.txtSCity_Click);
             // 
             // txtUname
             // 
@@ -161,6 +164,8 @@
             this.txtUname.TabIndex = 37;
             this.txtUname.Text = "Enter Username";
             this.txtUname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUname.Click += new System.EventHandler(this.txtUname_Click);
+            this.txtUname.TextChanged += new System.EventHandler(this.txtUname_TextChanged);
             // 
             // lblPLP
             // 
@@ -316,11 +321,29 @@
             this.picHome.TabIndex = 30;
             this.picHome.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 422);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(62, 23);
+            this.linkLabel1.TabIndex = 44;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Close";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 454);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmdViewDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdSearch);
@@ -364,5 +387,6 @@
         private System.Windows.Forms.LinkLabel lnkContactUs3;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

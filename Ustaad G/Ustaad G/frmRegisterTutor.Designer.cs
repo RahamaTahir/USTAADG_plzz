@@ -37,7 +37,6 @@
             this.cmdHome2 = new System.Windows.Forms.Button();
             this.lblPLP = new System.Windows.Forms.Label();
             this.txtTSubject = new System.Windows.Forms.TextBox();
-            this.txtTCity = new System.Windows.Forms.TextBox();
             this.comboBoxTLevel = new System.Windows.Forms.ComboBox();
             this.txtTName = new System.Windows.Forms.TextBox();
             this.txtTpassword = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.chkBTerms = new System.Windows.Forms.CheckBox();
             this.lnklblTerms = new System.Windows.Forms.LinkLabel();
             this.picHome = new System.Windows.Forms.PictureBox();
+            this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -201,20 +201,7 @@
             this.txtTSubject.TabIndex = 15;
             this.txtTSubject.Text = "Subject";
             this.txtTSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTCity
-            // 
-            this.txtTCity.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtTCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTCity.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTCity.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtTCity.Location = new System.Drawing.Point(56, 383);
-            this.txtTCity.Multiline = true;
-            this.txtTCity.Name = "txtTCity";
-            this.txtTCity.Size = new System.Drawing.Size(298, 33);
-            this.txtTCity.TabIndex = 16;
-            this.txtTCity.Text = "City";
-            this.txtTCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTSubject.Click += new System.EventHandler(this.txtTSubject_Click);
             // 
             // comboBoxTLevel
             // 
@@ -251,6 +238,8 @@
             this.txtTName.TabIndex = 19;
             this.txtTName.Text = "Username";
             this.txtTName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTName.Click += new System.EventHandler(this.txtTName_Click);
+            this.txtTName.TextChanged += new System.EventHandler(this.txtTName_TextChanged);
             // 
             // txtTpassword
             // 
@@ -265,6 +254,7 @@
             this.txtTpassword.TabIndex = 20;
             this.txtTpassword.Text = "Password";
             this.txtTpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTpassword.Click += new System.EventHandler(this.txtTpassword_Click);
             // 
             // txtTCPassword
             // 
@@ -279,6 +269,7 @@
             this.txtTCPassword.TabIndex = 21;
             this.txtTCPassword.Text = "Confirm Password";
             this.txtTCPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTCPassword.Click += new System.EventHandler(this.txtTCPassword_Click);
             // 
             // comboBoxSecretQs
             // 
@@ -309,6 +300,7 @@
             this.txtSecretAnswer.TabIndex = 23;
             this.txtSecretAnswer.Text = "Secret Answer";
             this.txtSecretAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSecretAnswer.Click += new System.EventHandler(this.txtSecretAnswer_Click);
             // 
             // txtTNo
             // 
@@ -323,6 +315,7 @@
             this.txtTNo.TabIndex = 24;
             this.txtTNo.Text = "Contact No";
             this.txtTNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTNo.Click += new System.EventHandler(this.txtTNo_Click);
             // 
             // txtTage
             // 
@@ -337,6 +330,7 @@
             this.txtTage.TabIndex = 25;
             this.txtTage.Text = "Age";
             this.txtTage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTage.Click += new System.EventHandler(this.txtTage_Click);
             // 
             // chkTM
             // 
@@ -359,7 +353,7 @@
             this.chkTF.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkTF.Location = new System.Drawing.Point(206, 343);
             this.chkTF.Name = "chkTF";
-            this.chkTF.Size = new System.Drawing.Size(108, 29);
+            this.chkTF.Size = new System.Drawing.Size(107, 29);
             this.chkTF.TabIndex = 27;
             this.chkTF.Text = "Female";
             this.chkTF.UseVisualStyleBackColor = false;
@@ -397,6 +391,7 @@
             this.txtTiming.TabIndex = 29;
             this.txtTiming.Text = " Timing";
             this.txtTiming.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTiming.Click += new System.EventHandler(this.txtTiming_Click);
             // 
             // txtRange
             // 
@@ -411,6 +406,8 @@
             this.txtRange.TabIndex = 30;
             this.txtRange.Text = "Range (in Rs)";
             this.txtRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRange.Click += new System.EventHandler(this.txtRange_Click);
+            this.txtRange.TextChanged += new System.EventHandler(this.txtRange_TextChanged);
             // 
             // lnkLogin2
             // 
@@ -453,7 +450,7 @@
             this.lnklblTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblTerms.Location = new System.Drawing.Point(379, 565);
             this.lnklblTerms.Name = "lnklblTerms";
-            this.lnklblTerms.Size = new System.Drawing.Size(242, 25);
+            this.lnklblTerms.Size = new System.Drawing.Size(240, 25);
             this.lnklblTerms.TabIndex = 33;
             this.lnklblTerms.TabStop = true;
             this.lnklblTerms.Text = "Terms and Conditions";
@@ -470,12 +467,32 @@
             this.picHome.TabIndex = 2;
             this.picHome.TabStop = false;
             // 
+            // comboBoxArea
+            // 
+            this.comboBoxArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxArea.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.comboBoxArea.FormattingEnabled = true;
+            this.comboBoxArea.Items.AddRange(new object[] {
+            "Model Town, Lahore",
+            "Johar Town, Lahore",
+            "Defence, Lahore",
+            "Shadrha, Lahore",
+            "Dandoth, Chitral",
+            "Model Town, Gujranwala"});
+            this.comboBoxArea.Location = new System.Drawing.Point(56, 383);
+            this.comboBoxArea.Name = "comboBoxArea";
+            this.comboBoxArea.Size = new System.Drawing.Size(298, 33);
+            this.comboBoxArea.TabIndex = 34;
+            // 
             // frmRegisterTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(791, 605);
+            this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.lnklblTerms);
             this.Controls.Add(this.chkBTerms);
             this.Controls.Add(this.txtRange);
@@ -491,7 +508,6 @@
             this.Controls.Add(this.txtTpassword);
             this.Controls.Add(this.txtTName);
             this.Controls.Add(this.comboBoxTLevel);
-            this.Controls.Add(this.txtTCity);
             this.Controls.Add(this.txtTSubject);
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.panel1);
@@ -520,7 +536,6 @@
         private System.Windows.Forms.Button cmdHome2;
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.TextBox txtTSubject;
-        private System.Windows.Forms.TextBox txtTCity;
         private System.Windows.Forms.ComboBox comboBoxTLevel;
         private System.Windows.Forms.TextBox txtTName;
         private System.Windows.Forms.TextBox txtTpassword;
@@ -539,5 +554,6 @@
         private System.Windows.Forms.CheckBox chkBTerms;
         private System.Windows.Forms.LinkLabel lnklblTerms;
         private System.Windows.Forms.Button cmdAdmin2;
+        private System.Windows.Forms.ComboBox comboBoxArea;
     }
 }

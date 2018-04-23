@@ -266,6 +266,7 @@
             this.txtAnswerReset.TabIndex = 46;
             this.txtAnswerReset.Text = "Answer";
             this.txtAnswerReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAnswerReset.Click += new System.EventHandler(this.txtAnswerReset_Click);
             // 
             // txtResetName
             // 
@@ -280,6 +281,7 @@
             this.txtResetName.TabIndex = 44;
             this.txtResetName.Text = "Username";
             this.txtResetName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtResetName.Click += new System.EventHandler(this.txtResetName_Click);
             // 
             // chkT
             // 

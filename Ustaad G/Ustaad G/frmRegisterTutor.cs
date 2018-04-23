@@ -84,7 +84,7 @@ namespace Ustaad_G
                 }
                 else
                 {
-                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, txtTCity.Text, txtRange.Text);
+                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxArea.Text, txtRange.Text);
                     MessageBox.Show("You have been registered");
                 }
 
@@ -101,6 +101,61 @@ namespace Ustaad_G
         private void cmdTRegister_SystemColorsChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTName_Click(object sender, EventArgs e)
+        {
+            txtTName.Clear();
+        }
+
+        private void txtTNo_Click(object sender, EventArgs e)
+        {
+            txtTNo.Clear();
+        }
+
+        private void txtTage_Click(object sender, EventArgs e)
+        {
+            txtTage.Clear();
+        }
+
+        private void txtTSubject_Click(object sender, EventArgs e)
+        {
+            txtTSubject.Clear();
+        }
+
+        private void txtTiming_Click(object sender, EventArgs e)
+        {
+            txtTiming.Clear();
+        }
+
+        private void txtRange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRange_Click(object sender, EventArgs e)
+        {
+            txtRange.Clear();
+        }
+
+        private void txtTpassword_Click(object sender, EventArgs e)
+        {
+            txtTpassword.Clear();
+        }
+
+        private void txtTCPassword_Click(object sender, EventArgs e)
+        {
+            txtTCPassword.Clear();
+        }
+
+        private void txtSecretAnswer_Click(object sender, EventArgs e)
+        {
+            txtSecretAnswer.Clear();
         }
     }
 }

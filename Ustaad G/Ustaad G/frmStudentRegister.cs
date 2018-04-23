@@ -84,5 +84,40 @@ namespace Ustaad_G
             Application.Exit();
 
         }
+
+        private void frmStudentRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSName_Click(object sender, EventArgs e)
+        {
+            txtSName.Clear();
+        }
+
+        private void txtSNo_Click(object sender, EventArgs e)
+        {
+            txtSNo.Clear();
+        }
+
+        private void txtSage_Click(object sender, EventArgs e)
+        {
+            txtSage.Clear();
+        }
+
+        private void txtSpassword_Click(object sender, EventArgs e)
+        {
+            txtSpassword.Clear();
+        }
+
+        private void txtSCPassword_Click(object sender, EventArgs e)
+        {
+            txtSCPassword.Clear();
+        }
+
+        private void txtSSecretAnswer_Click(object sender, EventArgs e)
+        {
+            txtSSecretAnswer.Clear();
+        }
     }
 }

@@ -191,6 +191,7 @@
             this.txtPassword.TabIndex = 38;
             this.txtPassword.Text = "Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // txtUsername
             // 
@@ -205,6 +206,8 @@
             this.txtUsername.TabIndex = 37;
             this.txtUsername.Text = "Username";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // lblPLP
             // 

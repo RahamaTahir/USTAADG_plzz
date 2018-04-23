@@ -51,17 +51,13 @@ namespace Ustaad_G
             if (isFound == true)
             {
                 MessageBox.Show("Login Successfully!");
+                frmSearch search = new frmSearch();
+                this.Hide();
+                search.Show();
             }
             else
             {
                 MessageBox.Show("Invalid Username or Password!");
-            }
-
-            if (!chkT.Checked)
-            {
-                frmSearch search = new frmSearch();
-                this.Hide();
-                search.Show();
             }
         }
 
@@ -75,6 +71,21 @@ namespace Ustaad_G
             frmResetPassword ResetPassword = new frmResetPassword();
             this.Hide();
             ResetPassword.Show();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
         }
     }
 }

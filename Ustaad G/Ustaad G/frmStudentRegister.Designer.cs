@@ -213,6 +213,7 @@
             this.txtSName.TabIndex = 20;
             this.txtSName.Text = "Username";
             this.txtSName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSName.Click += new System.EventHandler(this.txtSName_Click);
             // 
             // txtSNo
             // 
@@ -227,6 +228,7 @@
             this.txtSNo.TabIndex = 25;
             this.txtSNo.Text = "Contact No";
             this.txtSNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSNo.Click += new System.EventHandler(this.txtSNo_Click);
             // 
             // txtSage
             // 
@@ -241,6 +243,7 @@
             this.txtSage.TabIndex = 26;
             this.txtSage.Text = "Age";
             this.txtSage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSage.Click += new System.EventHandler(this.txtSage_Click);
             // 
             // chkSM
             // 
@@ -263,7 +266,7 @@
             this.chkSF.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkSF.Location = new System.Drawing.Point(196, 395);
             this.chkSF.Name = "chkSF";
-            this.chkSF.Size = new System.Drawing.Size(108, 29);
+            this.chkSF.Size = new System.Drawing.Size(107, 29);
             this.chkSF.TabIndex = 28;
             this.chkSF.Text = "Female";
             this.chkSF.UseVisualStyleBackColor = false;
@@ -297,6 +300,7 @@
             this.txtSSecretAnswer.TabIndex = 30;
             this.txtSSecretAnswer.Text = "Secret Answer";
             this.txtSSecretAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSSecretAnswer.Click += new System.EventHandler(this.txtSSecretAnswer_Click);
             // 
             // txtSpassword
             // 
@@ -311,6 +315,7 @@
             this.txtSpassword.TabIndex = 31;
             this.txtSpassword.Text = "Password";
             this.txtSpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSpassword.Click += new System.EventHandler(this.txtSpassword_Click);
             this.txtSpassword.TextChanged += new System.EventHandler(this.txtSpassword_TextChanged);
             // 
             // txtSCPassword
@@ -326,6 +331,7 @@
             this.txtSCPassword.TabIndex = 32;
             this.txtSCPassword.Text = "Confirm Password";
             this.txtSCPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSCPassword.Click += new System.EventHandler(this.txtSCPassword_Click);
             // 
             // chkBSTerms
             // 
@@ -351,7 +357,7 @@
             this.lnklblSTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblSTerms.Location = new System.Drawing.Point(386, 552);
             this.lnklblSTerms.Name = "lnklblSTerms";
-            this.lnklblSTerms.Size = new System.Drawing.Size(242, 25);
+            this.lnklblSTerms.Size = new System.Drawing.Size(240, 25);
             this.lnklblSTerms.TabIndex = 35;
             this.lnklblSTerms.TabStop = true;
             this.lnklblSTerms.Text = "Terms and Conditions";
@@ -415,6 +421,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudentRegister";
             this.Text = "frmStudentRegister";
+            this.Click += new System.EventHandler(this.frmStudentRegister_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);

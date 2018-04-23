@@ -49,5 +49,30 @@ namespace Ustaad_G
             this.Hide();
             L.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtUname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUname_Click(object sender, EventArgs e)
+        {
+            txtUname.Clear();
+        }
+
+        private void txtSCity_Click(object sender, EventArgs e)
+        {
+            txtSCity.Clear();
+        }
+
+        private void txtPwd_Click(object sender, EventArgs e)
+        {
+            txtPwd.Clear();
+        }
     }
 }

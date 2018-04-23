@@ -97,5 +97,15 @@ namespace Ustaad_G
         {
             Application.Exit();
         }
+
+        private void txtResetName_Click(object sender, EventArgs e)
+        {
+            txtResetName.Clear();
+        }
+
+        private void txtAnswerReset_Click(object sender, EventArgs e)
+        {
+            txtAnswerReset.Clear();
+        }
     }
 }
