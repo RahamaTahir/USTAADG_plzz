@@ -51,9 +51,13 @@ namespace Ustaad_G
             if (isFound == true)
             {
                 MessageBox.Show("Login Successfully!");
-                frmSearch search = new frmSearch();
-                this.Hide();
-                search.Show();
+                if(!chkT.Checked)
+                {
+                    frmSearch search = new frmSearch();
+                    this.Hide();
+                    search.Show();
+                }
+                
             }
             else
             {

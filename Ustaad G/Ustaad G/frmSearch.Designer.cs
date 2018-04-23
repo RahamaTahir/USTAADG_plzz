@@ -33,7 +33,6 @@
             this.cmdSearch = new System.Windows.Forms.Button();
             this.comboBoxLevel = new System.Windows.Forms.ComboBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
-            this.txtSCity = new System.Windows.Forms.TextBox();
             this.txtUname = new System.Windows.Forms.TextBox();
             this.lblPLP = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +45,7 @@
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -135,21 +135,6 @@
             this.txtPwd.Text = "Enter Password";
             this.txtPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
-            // 
-            // txtSCity
-            // 
-            this.txtSCity.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSCity.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSCity.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSCity.Location = new System.Drawing.Point(376, 214);
-            this.txtSCity.Multiline = true;
-            this.txtSCity.Name = "txtSCity";
-            this.txtSCity.Size = new System.Drawing.Size(197, 33);
-            this.txtSCity.TabIndex = 38;
-            this.txtSCity.Text = "Enter City";
-            this.txtSCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSCity.Click += new System.EventHandler(this.txtSCity_Click);
             // 
             // txtUname
             // 
@@ -338,18 +323,37 @@
             this.linkLabel1.Text = "Close";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // comboBoxArea
+            // 
+            this.comboBoxArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxArea.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.comboBoxArea.FormattingEnabled = true;
+            this.comboBoxArea.Items.AddRange(new object[] {
+            "Model Town, Lahore",
+            "Johar Town, Lahore",
+            "Defence, Lahore",
+            "Shadrha, Lahore",
+            "Dandoth, Chitral",
+            "Model Town, Gujranwala"});
+            this.comboBoxArea.Location = new System.Drawing.Point(376, 214);
+            this.comboBoxArea.Name = "comboBoxArea";
+            this.comboBoxArea.Size = new System.Drawing.Size(200, 33);
+            this.comboBoxArea.TabIndex = 45;
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 454);
+            this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmdViewDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdSearch);
             this.Controls.Add(this.comboBoxLevel);
             this.Controls.Add(this.txtPwd);
-            this.Controls.Add(this.txtSCity);
             this.Controls.Add(this.txtUname);
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.panel1);
@@ -375,7 +379,6 @@
         private System.Windows.Forms.Button cmdSearch;
         private System.Windows.Forms.ComboBox comboBoxLevel;
         private System.Windows.Forms.TextBox txtPwd;
-        private System.Windows.Forms.TextBox txtSCity;
         private System.Windows.Forms.TextBox txtUname;
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.Panel panel1;
@@ -388,5 +391,6 @@
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox comboBoxArea;
     }
 }
