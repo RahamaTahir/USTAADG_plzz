@@ -15,7 +15,10 @@ namespace Ustaad_G_Service1
 
         [OperationContract]
         string GetData(int value);
-
+        [OperationContract]
+        void NewPasswordT(string username, string newPassword);
+        [OperationContract]
+        void NewPasswordS(string username, string newPassword);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 

@@ -34,7 +34,7 @@ namespace Ustaad_G
 
         private void lnkLogin9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmlogin L = new frmlogin();
+            frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
         }
@@ -58,9 +58,17 @@ namespace Ustaad_G
             }
             if (isFound == true)
             {
-                MessageBox.Show("Add New Password");
+                frmNewPassword frm;
+                if (chkT.Checked)
+                {
+                    frm = new frmNewPassword(username, "Teacher");
+                }
+                else
+                {
+                    frm = new frmNewPassword(username, "Student");
+                }
                 this.Hide();
-                //frmNewPassword.show();
+                frm.Show();              
             }
             else
             {
@@ -98,14 +106,9 @@ namespace Ustaad_G
             Application.Exit();
         }
 
-        private void txtResetName_Click(object sender, EventArgs e)
+        private void picHome_Click(object sender, EventArgs e)
         {
-            txtResetName.Clear();
-        }
 
-        private void txtAnswerReset_Click(object sender, EventArgs e)
-        {
-            txtAnswerReset.Clear();
         }
     }
 }

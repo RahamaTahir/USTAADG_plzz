@@ -214,6 +214,7 @@
             this.picHome.Size = new System.Drawing.Size(791, 454);
             this.picHome.TabIndex = 25;
             this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // cmdReset
             // 
@@ -266,7 +267,6 @@
             this.txtAnswerReset.TabIndex = 46;
             this.txtAnswerReset.Text = "Answer";
             this.txtAnswerReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAnswerReset.Click += new System.EventHandler(this.txtAnswerReset_Click);
             // 
             // txtResetName
             // 
@@ -281,7 +281,6 @@
             this.txtResetName.TabIndex = 44;
             this.txtResetName.Text = "Username";
             this.txtResetName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtResetName.Click += new System.EventHandler(this.txtResetName_Click);
             // 
             // chkT
             // 
@@ -291,7 +290,7 @@
             this.chkT.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkT.Location = new System.Drawing.Point(438, 247);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(140, 29);
+            this.chkT.Size = new System.Drawing.Size(142, 29);
             this.chkT.TabIndex = 49;
             this.chkT.Text = "Is Teacher";
             this.chkT.UseVisualStyleBackColor = false;
@@ -351,6 +350,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmResetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmResetPassword";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
