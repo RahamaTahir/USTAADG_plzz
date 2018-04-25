@@ -50,6 +50,7 @@
             this.lnklblSTerms = new System.Windows.Forms.LinkLabel();
             this.cmdSRegister = new System.Windows.Forms.Button();
             this.picHome = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -393,12 +394,30 @@
             this.picHome.TabIndex = 3;
             this.picHome.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 573);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(62, 23);
+            this.linkLabel1.TabIndex = 51;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Close";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frmStudentRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(791, 605);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmdSRegister);
             this.Controls.Add(this.lnklblSTerms);
             this.Controls.Add(this.chkBSTerms);
@@ -421,7 +440,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudentRegister";
             this.Text = "frmStudentRegister";
-            this.Click += new System.EventHandler(this.frmStudentRegister_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);
@@ -453,5 +471,6 @@
         private System.Windows.Forms.CheckBox chkBSTerms;
         private System.Windows.Forms.LinkLabel lnklblSTerms;
         private System.Windows.Forms.Button cmdSRegister;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

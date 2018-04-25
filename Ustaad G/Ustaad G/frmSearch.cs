@@ -17,18 +17,33 @@ namespace Ustaad_G
             InitializeComponent();
         }
 
+       
+        private static frmSearch search_frm;
+        public static frmSearch GetInstance()
+        {
+            if (search_frm == null)
+            {
+                search_frm = new frmSearch();
+            }
+            return search_frm;
+        }
         private void cmdSearch_Click(object sender, EventArgs e)
         {
+            
+
             string username = txtUname.Text;
             string password = txtPwd.Text;
             MyServer.Service1 Server = new MyServer.Service1();
             bool isFound;
             bool isFoundPass;
             Server.VerifyByAdmin(username, password, out isFound, out isFoundPass);
-      
+            
             if (isFound == true)
             {
                 MessageBox.Show("You are verified!");
+                frmfiltered_teacher R = new frmfiltered_teacher();
+                this.Hide();
+                R.Show();
             }
             else
             {
@@ -45,7 +60,7 @@ namespace Ustaad_G
 
         private void lnkLogin3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmlogin L = new frmlogin();
+            frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
         }
@@ -65,13 +80,24 @@ namespace Ustaad_G
             txtUname.Clear();
         }
 
-        private void txtSCity_Click(object sender, EventArgs e)
-        {
-        }
-
         private void txtPwd_Click(object sender, EventArgs e)
         {
             txtPwd.Clear();
+        }
+
+        private void picHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSCity_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmdViewDetails_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

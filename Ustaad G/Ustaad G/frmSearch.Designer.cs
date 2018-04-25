@@ -45,7 +45,6 @@
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +66,7 @@
             this.cmdViewDetails.TabIndex = 43;
             this.cmdViewDetails.Text = "View Details";
             this.cmdViewDetails.UseVisualStyleBackColor = true;
+            this.cmdViewDetails.Click += new System.EventHandler(this.cmdViewDetails_Click);
             // 
             // label1
             // 
@@ -116,7 +116,7 @@
             "FSC-PreMedical",
             "ICS",
             "Degree Level"});
-            this.comboBoxLevel.Location = new System.Drawing.Point(376, 263);
+            this.comboBoxLevel.Location = new System.Drawing.Point(379, 239);
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(197, 33);
             this.comboBoxLevel.TabIndex = 40;
@@ -305,6 +305,7 @@
             this.picHome.Size = new System.Drawing.Size(791, 454);
             this.picHome.TabIndex = 30;
             this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // linkLabel1
             // 
@@ -323,31 +324,11 @@
             this.linkLabel1.Text = "Close";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // comboBoxArea
-            // 
-            this.comboBoxArea.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBoxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxArea.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.comboBoxArea.FormattingEnabled = true;
-            this.comboBoxArea.Items.AddRange(new object[] {
-            "Model Town, Lahore",
-            "Johar Town, Lahore",
-            "Defence, Lahore",
-            "Shadrha, Lahore",
-            "Dandoth, Chitral",
-            "Model Town, Gujranwala"});
-            this.comboBoxArea.Location = new System.Drawing.Point(373, 214);
-            this.comboBoxArea.Name = "comboBoxArea";
-            this.comboBoxArea.Size = new System.Drawing.Size(200, 33);
-            this.comboBoxArea.TabIndex = 46;
-            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 454);
-            this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmdViewDetails);
             this.Controls.Add(this.label1);
@@ -364,6 +345,7 @@
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearch";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
@@ -391,6 +373,5 @@
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.ComboBox comboBoxArea;
     }
 }

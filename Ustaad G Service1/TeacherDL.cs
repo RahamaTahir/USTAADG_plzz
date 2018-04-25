@@ -74,6 +74,18 @@ namespace Ustaad_G_Service1
             }
             return false;
         }
+        public List<Teacher> Search_Teacher(string city)
+        {
+            List<Teacher> Avail_Teachers = new List<Teacher>();
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Area == city)
+                {
+                    Avail_Teachers.Add(t);
+                }
+            }
+            return Avail_Teachers;
+        }
 
     }
 }

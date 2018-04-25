@@ -96,5 +96,11 @@ namespace Ustaad_G_Service1
             StudentDL st = new StudentDL();
             return st.VerifyByAdmin(username, password);
         }
+
+        public List<Teacher> Search_Teacher(string city)
+        {
+            TeacherDL tc = new TeacherDL();
+            return tc.Search_Teacher(city);
+        }
     }
 }

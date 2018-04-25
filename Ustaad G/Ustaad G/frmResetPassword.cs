@@ -58,17 +58,8 @@ namespace Ustaad_G
             }
             if (isFound == true)
             {
-                frmNewPassword frm;
-                if (chkT.Checked)
-                {
-                    frm = new frmNewPassword(username, "Teacher");
-                }
-                else
-                {
-                    frm = new frmNewPassword(username, "Student");
-                }
-                this.Hide();
-                frm.Show();              
+                MessageBox.Show("Add new password");
+                this.Hide();             
             }
             else
             {

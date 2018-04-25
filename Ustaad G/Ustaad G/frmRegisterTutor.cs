@@ -35,7 +35,7 @@ namespace Ustaad_G
 
         private void lnkLogin2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmlogin L = new frmlogin();
+            frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
         }
@@ -84,7 +84,7 @@ namespace Ustaad_G
                 }
                 else
                 {
-                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxArea.Text, txtRange.Text);
+                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
                     MessageBox.Show("You have been registered");
                 }
 
@@ -103,9 +103,9 @@ namespace Ustaad_G
 
         }
 
-        private void txtTName_TextChanged(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void txtTName_Click(object sender, EventArgs e)
@@ -116,6 +116,11 @@ namespace Ustaad_G
         private void txtTNo_Click(object sender, EventArgs e)
         {
             txtTNo.Clear();
+        }
+
+        private void txtTage_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void txtTage_Click(object sender, EventArgs e)
@@ -131,11 +136,6 @@ namespace Ustaad_G
         private void txtTiming_Click(object sender, EventArgs e)
         {
             txtTiming.Clear();
-        }
-
-        private void txtRange_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtRange_Click(object sender, EventArgs e)

@@ -54,7 +54,8 @@
             this.chkBTerms = new System.Windows.Forms.CheckBox();
             this.lnklblTerms = new System.Windows.Forms.LinkLabel();
             this.picHome = new System.Windows.Forms.PictureBox();
-            this.comboBoxArea = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -239,7 +240,6 @@
             this.txtTName.Text = "Username";
             this.txtTName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTName.Click += new System.EventHandler(this.txtTName_Click);
-            this.txtTName.TextChanged += new System.EventHandler(this.txtTName_TextChanged);
             // 
             // txtTpassword
             // 
@@ -331,6 +331,7 @@
             this.txtTage.Text = "Age";
             this.txtTage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTage.Click += new System.EventHandler(this.txtTage_Click);
+            this.txtTage.TextChanged += new System.EventHandler(this.txtTage_TextChanged);
             // 
             // chkTM
             // 
@@ -407,7 +408,6 @@
             this.txtRange.Text = "Range (in Rs)";
             this.txtRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRange.Click += new System.EventHandler(this.txtRange_Click);
-            this.txtRange.TextChanged += new System.EventHandler(this.txtRange_TextChanged);
             // 
             // lnkLogin2
             // 
@@ -467,24 +467,41 @@
             this.picHome.TabIndex = 2;
             this.picHome.TabStop = false;
             // 
-            // comboBoxArea
+            // linkLabel1
             // 
-            this.comboBoxArea.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBoxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxArea.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.comboBoxArea.FormattingEnabled = true;
-            this.comboBoxArea.Items.AddRange(new object[] {
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 573);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(62, 23);
+            this.linkLabel1.TabIndex = 51;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Close";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // comboBoxSelectArea
+            // 
+            this.comboBoxSelectArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxSelectArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSelectArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectArea.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.comboBoxSelectArea.FormattingEnabled = true;
+            this.comboBoxSelectArea.Items.AddRange(new object[] {
             "Model Town, Lahore",
             "Johar Town, Lahore",
             "Defence, Lahore",
             "Shadrha, Lahore",
             "Dandoth, Chitral",
             "Model Town, Gujranwala"});
-            this.comboBoxArea.Location = new System.Drawing.Point(56, 383);
-            this.comboBoxArea.Name = "comboBoxArea";
-            this.comboBoxArea.Size = new System.Drawing.Size(298, 33);
-            this.comboBoxArea.TabIndex = 34;
+            this.comboBoxSelectArea.Location = new System.Drawing.Point(56, 382);
+            this.comboBoxSelectArea.Name = "comboBoxSelectArea";
+            this.comboBoxSelectArea.Size = new System.Drawing.Size(298, 33);
+            this.comboBoxSelectArea.TabIndex = 66;
             // 
             // frmRegisterTutor
             // 
@@ -492,7 +509,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(791, 605);
-            this.Controls.Add(this.comboBoxArea);
+            this.Controls.Add(this.comboBoxSelectArea);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lnklblTerms);
             this.Controls.Add(this.chkBTerms);
             this.Controls.Add(this.txtRange);
@@ -554,6 +572,7 @@
         private System.Windows.Forms.CheckBox chkBTerms;
         private System.Windows.Forms.LinkLabel lnklblTerms;
         private System.Windows.Forms.Button cmdAdmin2;
-        private System.Windows.Forms.ComboBox comboBoxArea;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox comboBoxSelectArea;
     }
 }

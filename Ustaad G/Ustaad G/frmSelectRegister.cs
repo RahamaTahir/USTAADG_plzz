@@ -42,7 +42,7 @@ namespace Ustaad_G
 
         private void lnkLogin5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmlogin L = new frmlogin();
+            frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
         }
@@ -88,11 +88,6 @@ namespace Ustaad_G
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Application.Exit();
         }

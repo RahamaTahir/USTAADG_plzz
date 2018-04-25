@@ -49,7 +49,8 @@ namespace Ustaad_G_Service1
         [OperationContract]
         Boolean VerifyByAdmin(string username, string password);
 
-
+        [OperationContract]
+        List<Teacher> Search_Teacher(string city);
 
 
 
