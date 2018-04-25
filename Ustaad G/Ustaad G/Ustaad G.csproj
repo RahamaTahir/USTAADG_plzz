@@ -47,17 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLoginhome.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoginhome.Designer.cs">
-      <DependentUpon>frmLoginhome.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmfiltered_teacher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmfiltered_teacher.Designer.cs">
       <DependentUpon>frmfiltered_teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPassword.Designer.cs">
+      <DependentUpon>frmNewPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegisterTutor.cs">
       <SubType>Form</SubType>
@@ -96,11 +102,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLoginhome.resx">
-      <DependentUpon>frmLoginhome.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmfiltered_teacher.resx">
       <DependentUpon>frmfiltered_teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPassword.resx">
+      <DependentUpon>frmNewPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterTutor.resx">
       <DependentUpon>frmRegisterTutor.cs</DependentUpon>

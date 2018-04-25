@@ -29,8 +29,6 @@ namespace Ustaad_G
         }
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            
-
             string username = txtUname.Text;
             string password = txtPwd.Text;
             MyServer.Service1 Server = new MyServer.Service1();

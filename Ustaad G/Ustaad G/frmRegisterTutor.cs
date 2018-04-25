@@ -157,5 +157,10 @@ namespace Ustaad_G
         {
             txtSecretAnswer.Clear();
         }
+
+        private void txtTName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

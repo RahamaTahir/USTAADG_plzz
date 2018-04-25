@@ -240,6 +240,7 @@
             this.txtTName.Text = "Username";
             this.txtTName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTName.Click += new System.EventHandler(this.txtTName_Click);
+            this.txtTName.TextChanged += new System.EventHandler(this.txtTName_TextChanged);
             // 
             // txtTpassword
             // 
@@ -354,7 +355,7 @@
             this.chkTF.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkTF.Location = new System.Drawing.Point(206, 343);
             this.chkTF.Name = "chkTF";
-            this.chkTF.Size = new System.Drawing.Size(107, 29);
+            this.chkTF.Size = new System.Drawing.Size(108, 29);
             this.chkTF.TabIndex = 27;
             this.chkTF.Text = "Female";
             this.chkTF.UseVisualStyleBackColor = false;
@@ -450,7 +451,7 @@
             this.lnklblTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblTerms.Location = new System.Drawing.Point(379, 565);
             this.lnklblTerms.Name = "lnklblTerms";
-            this.lnklblTerms.Size = new System.Drawing.Size(240, 25);
+            this.lnklblTerms.Size = new System.Drawing.Size(242, 25);
             this.lnklblTerms.TabIndex = 33;
             this.lnklblTerms.TabStop = true;
             this.lnklblTerms.Text = "Terms and Conditions";
