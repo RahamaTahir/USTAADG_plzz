@@ -195,6 +195,7 @@
             this.cmdAdmin3.TabIndex = 11;
             this.cmdAdmin3.Text = "Admin";
             this.cmdAdmin3.UseVisualStyleBackColor = true;
+            this.cmdAdmin3.Click += new System.EventHandler(this.cmdAdmin3_Click);
             // 
             // cmdRegister3
             // 
@@ -232,6 +233,7 @@
             this.cmdHome3.TabIndex = 6;
             this.cmdHome3.Text = "Home";
             this.cmdHome3.UseVisualStyleBackColor = true;
+            this.cmdHome3.Click += new System.EventHandler(this.cmdHome3_Click);
             // 
             // lnkLogin3
             // 

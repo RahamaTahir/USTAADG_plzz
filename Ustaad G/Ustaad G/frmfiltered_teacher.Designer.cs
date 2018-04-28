@@ -81,6 +81,7 @@
             this.cmdAdmin6.TabIndex = 11;
             this.cmdAdmin6.Text = "Admin";
             this.cmdAdmin6.UseVisualStyleBackColor = true;
+            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
             // 
             // cmdRegister6
             // 
@@ -118,6 +119,7 @@
             this.cmdHome6.TabIndex = 6;
             this.cmdHome6.Text = "Home";
             this.cmdHome6.UseVisualStyleBackColor = true;
+            this.cmdHome6.Click += new System.EventHandler(this.cmdHome6_Click);
             // 
             // dataGridViewSearchRecords
             // 

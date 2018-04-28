@@ -21,6 +21,7 @@ namespace Ustaad_G_Service1
         private string timing;
         private string area;
         private string range;
+        private bool select;
 
 
         public string Username { get => username; set => username = value; }
@@ -37,5 +38,6 @@ namespace Ustaad_G_Service1
         public string Timing { get => timing; set => timing = value; }
         public string Area { get => area; set => area = value; }
         public string Range { get => range; set => range = value; }
+        public bool Select { get => select; set => select = value; }
     }
 }

@@ -153,6 +153,7 @@
             this.cmdAdmin9.TabIndex = 11;
             this.cmdAdmin9.Text = "Admin";
             this.cmdAdmin9.UseVisualStyleBackColor = true;
+            this.cmdAdmin9.Click += new System.EventHandler(this.cmdAdmin9_Click);
             // 
             // cmdRegister9
             // 
@@ -190,6 +191,7 @@
             this.cmdHome9.TabIndex = 6;
             this.cmdHome9.Text = "Home";
             this.cmdHome9.UseVisualStyleBackColor = true;
+            this.cmdHome9.Click += new System.EventHandler(this.cmdHome9_Click);
             // 
             // lblUstaadG
             // 

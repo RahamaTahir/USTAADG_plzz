@@ -246,6 +246,7 @@
             this.cmdAdmin5.TabIndex = 11;
             this.cmdAdmin5.Text = "Admin";
             this.cmdAdmin5.UseVisualStyleBackColor = true;
+            this.cmdAdmin5.Click += new System.EventHandler(this.cmdAdmin5_Click);
             // 
             // cmdRegister5
             // 
@@ -283,6 +284,7 @@
             this.cmdHome5.TabIndex = 6;
             this.cmdHome5.Text = "Home";
             this.cmdHome5.UseVisualStyleBackColor = true;
+            this.cmdHome5.Click += new System.EventHandler(this.cmdHome5_Click);
             // 
             // lnkContactUs5
             // 

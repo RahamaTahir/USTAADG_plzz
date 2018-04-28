@@ -24,6 +24,9 @@ namespace Ustaad_G
 
         private void cmdHome8_Click(object sender, EventArgs e)
         {
+            frmLogin L = new frmLogin();
+            this.Hide();
+            L.Show();
             //this.Hide();
             //Form1 Home = new Form1();
             //Home.Show();
@@ -59,6 +62,9 @@ namespace Ustaad_G
 
         private void cmdAdmin8_Click(object sender, EventArgs e)
         {
+            frmAdmin L = new frmAdmin();
+            this.Hide();
+            L.Show();
             //this.Hide();
             //frmAdmin Admin = new frmAdmin();
             //Admin.Show();

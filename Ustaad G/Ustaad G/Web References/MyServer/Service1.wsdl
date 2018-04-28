@@ -91,6 +91,18 @@
   <wsdl:message name="IService1_Search_Teacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:Search_TeacherResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ShowAllTeachers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllTeachers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllTeachers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllTeachersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllStudents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllStudentsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -147,6 +159,14 @@
     <wsdl:operation name="Search_Teacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Search_Teacher" message="tns:IService1_Search_Teacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/Search_TeacherResponse" message="tns:IService1_Search_Teacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllTeachers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllTeachers" message="tns:IService1_ShowAllTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllTeachersResponse" message="tns:IService1_ShowAllTeachers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllStudents" message="tns:IService1_ShowAllStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllStudentsResponse" message="tns:IService1_ShowAllStudents_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -270,6 +290,24 @@
     </wsdl:operation>
     <wsdl:operation name="Search_Teacher">
       <soap:operation soapAction="http://tempuri.org/IService1/Search_Teacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllTeachers">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllTeachers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllStudents">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllStudents" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

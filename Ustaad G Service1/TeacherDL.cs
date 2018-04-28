@@ -87,5 +87,15 @@ namespace Ustaad_G_Service1
             return Avail_Teachers;
         }
 
+        public List<Teacher> ShowAllTeachers()
+        {
+            List<Teacher> All_Teachers = new List<Teacher>();
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                All_Teachers.Add(t);
+            }
+            return All_Teachers;
+        }
+
     }
 }

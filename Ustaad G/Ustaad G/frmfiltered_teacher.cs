@@ -56,5 +56,22 @@ namespace Ustaad_G
             this.Hide();
             R.Show();
         }
+
+        private void cmdAdmin6_Click(object sender, EventArgs e)
+        {
+            frmAdmin L = new frmAdmin();
+            this.Hide();
+            L.Show();
+
+            
+
+        }
+
+        private void cmdHome6_Click(object sender, EventArgs e)
+        {
+            frmLogin L = new frmLogin();
+            this.Hide();
+            L.Show();
+        }
     }
 }

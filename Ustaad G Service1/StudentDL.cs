@@ -85,6 +85,15 @@ namespace Ustaad_G_Service1
             return false;
         }
 
+        public List<Student> ShowAllStudents()
+        {
+            List<Student> All_Students = new List<Student>();
+            foreach (Student s in StudentDL.Students)
+            {
+                All_Students.Add(s);
+            }
+            return All_Students;
+        }
 
 
     }

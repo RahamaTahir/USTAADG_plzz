@@ -123,5 +123,19 @@ namespace Ustaad_G
         {
             Application.Exit();
         }
+
+        private void cmdAdmin5_Click(object sender, EventArgs e)
+        {
+            frmAdmin L = new frmAdmin();
+            this.Hide();
+            L.Show();
+        }
+
+        private void cmdHome5_Click(object sender, EventArgs e)
+        {
+            frmLogin L = new frmLogin();
+            this.Hide();
+            L.Show();
+        }
     }
 }

@@ -102,5 +102,17 @@ namespace Ustaad_G_Service1
             TeacherDL tc = new TeacherDL();
             return tc.Search_Teacher(city);
         }
+
+        public List<Teacher> ShowAllTeachers()
+        {
+            TeacherDL tc = new TeacherDL();
+            return tc.ShowAllTeachers();
+        }
+
+        public List<Student> ShowAllStudents()
+        {
+            StudentDL st = new StudentDL();
+            return st.ShowAllStudents();
+        }
     }
 }

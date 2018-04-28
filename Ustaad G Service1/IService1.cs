@@ -52,6 +52,12 @@ namespace Ustaad_G_Service1
         [OperationContract]
         List<Teacher> Search_Teacher(string city);
 
+        [OperationContract]
+        List<Teacher> ShowAllTeachers();
+
+        [OperationContract]
+        List<Student> ShowAllStudents();
+
 
 
 

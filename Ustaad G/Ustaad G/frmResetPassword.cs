@@ -110,5 +110,19 @@ namespace Ustaad_G
         {
 
         }
+
+        private void cmdAdmin9_Click(object sender, EventArgs e)
+        {
+            frmAdmin L = new frmAdmin();
+            this.Hide();
+            L.Show();
+        }
+
+        private void cmdHome9_Click(object sender, EventArgs e)
+        {
+            frmLogin L = new frmLogin();
+            this.Hide();
+            L.Show();
+        }
     }
 }

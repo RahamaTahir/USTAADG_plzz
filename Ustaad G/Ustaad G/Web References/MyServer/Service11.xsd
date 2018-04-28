@@ -215,4 +215,28 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ShowAllTeachers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowAllTeachersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="ShowAllTeachersResult" nillable="true" type="q4:ArrayOfTeacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowAllStudents">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowAllStudentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="ShowAllStudentsResult" nillable="true" type="q5:ArrayOfStudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
