@@ -72,11 +72,11 @@ namespace Ustaad_G
 
         private void cmdAdmin6_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
 
-            
+
 
         }
 

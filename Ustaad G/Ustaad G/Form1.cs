@@ -70,13 +70,16 @@ namespace Ustaad_G
                 if (isFound == true)
                 {
                     MessageBox.Show("Login Successfully!");
-                    frmSearch search = new frmSearch();
-                    this.Hide();
-                    search.Show();
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username or Password!");
+                }
+                if (!checkBox1.Checked)
+                {
+                    frmSearch search = new frmSearch();
+                    this.Hide();
+                    search.Show();
                 }
             }
         }
@@ -138,7 +141,7 @@ namespace Ustaad_G
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
         }
