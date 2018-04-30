@@ -166,6 +166,7 @@
             this.txtCPassword.TabIndex = 24;
             this.txtCPassword.Text = "Confirm Password";
             this.txtCPassword.Click += new System.EventHandler(this.txtCPassword_Click);
+            this.txtCPassword.TextChanged += new System.EventHandler(this.txtCPassword_TextChanged);
             // 
             // cmdReset
             // 

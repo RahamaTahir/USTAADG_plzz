@@ -76,22 +76,30 @@ namespace Ustaad_G
 
         private void cmdTRegister_Click(object sender, EventArgs e)
         {
-            if (txtTName.Text == "" || txtTpassword.Text == "")
+            if (txtTName.Text == "" || txtTpassword.Text == "" || txtTNo.Text == "" || txtTage.Text =="" || combogenderT.Text =="" || comboBoxSelectArea.Text =="" || txtTSubject.Text == "" || comboBoxTLevel.Text =="" || txtRange.Text =="" || txtTCPassword.Text =="" || comboBoxSecretQs.Text =="" || txtSecretAnswer.Text =="" || txtTiming.Text =="" )
             {
-                MessageBox.Show("Invalid Register Attempt");
+                MessageBox.Show("please enter all the required information to register");
+               
+            }
+            else if (!chkBTerms.Checked)
+            {
+                MessageBox.Show("You have to accept the terms and conditions to register yourself!");
             }
             else
             {
                 MyServer.Service1 Server = new MyServer.Service1();
 
-                if (txtTName.Text == "" || txtTpassword.Text == "")
-                {
-                    MessageBox.Show("Invalid Register Attempt");
+                if (txtTpassword.Text == txtTCPassword.Text)
+                { 
+                    Server.AddTeacher(combogenderT.Text , txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
+                    MessageBox.Show("You have been registered");
+                    frmLogin f = new frmLogin();
+                    f.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
-                    MessageBox.Show("You have been registered");
+                    MessageBox.Show("Your password and confirm password should be same");
                 }
 
             }
@@ -167,6 +175,26 @@ namespace Ustaad_G
         private void txtTName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void combogenderT_Click(object sender, EventArgs e)
+        {
+            combogenderT.ResetText();
+        }
+
+        private void comboBoxSelectArea_Click(object sender, EventArgs e)
+        {
+            comboBoxSelectArea.ResetText();
+        }
+
+        private void comboBoxTLevel_Click(object sender, EventArgs e)
+        {
+            comboBoxTLevel.ResetText();
+        }
+
+        private void comboBoxSecretQs_Click(object sender, EventArgs e)
+        {
+            comboBoxSecretQs.ResetText();
         }
     }
 }

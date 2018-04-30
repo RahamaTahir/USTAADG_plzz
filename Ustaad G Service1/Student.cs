@@ -8,8 +8,6 @@ namespace Ustaad_G_Service1
     public class Student
     {
         private string username;
-        private static string idNo;
-        private string verify;
         private string age;
         private string gender;
         private string secret_Question;
@@ -25,8 +23,6 @@ namespace Ustaad_G_Service1
 
 
         public string Username { get => username; set => username = value; }
-        public static string IdNo { get => idNo; set => idNo = value; }
-        public string Verify { get => verify; set => verify = value; }
         public string Age { get => age; set => age = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Secret_Question { get => secret_Question; set => secret_Question = value; }

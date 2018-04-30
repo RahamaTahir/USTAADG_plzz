@@ -40,7 +40,6 @@
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.cmdReset = new System.Windows.Forms.Button();
-            this.cmdAsk = new System.Windows.Forms.Button();
             this.txtAnswerReset = new System.Windows.Forms.TextBox();
             this.txtResetName = new System.Windows.Forms.TextBox();
             this.chkT = new System.Windows.Forms.CheckBox();
@@ -237,25 +236,6 @@
             this.cmdReset.UseVisualStyleBackColor = true;
             this.cmdReset.Click += new System.EventHandler(this.cmdReset_Click);
             // 
-            // cmdAsk
-            // 
-            this.cmdAsk.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAsk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdAsk.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAsk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAsk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdAsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAsk.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAsk.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdAsk.Location = new System.Drawing.Point(283, 239);
-            this.cmdAsk.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdAsk.Name = "cmdAsk";
-            this.cmdAsk.Size = new System.Drawing.Size(150, 45);
-            this.cmdAsk.TabIndex = 47;
-            this.cmdAsk.Text = "Ask";
-            this.cmdAsk.UseVisualStyleBackColor = true;
-            this.cmdAsk.Click += new System.EventHandler(this.cmdAsk_Click);
-            // 
             // txtAnswerReset
             // 
             this.txtAnswerReset.BackColor = System.Drawing.Color.Gainsboro;
@@ -269,6 +249,7 @@
             this.txtAnswerReset.TabIndex = 46;
             this.txtAnswerReset.Text = "Answer";
             this.txtAnswerReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAnswerReset.Click += new System.EventHandler(this.txtAnswerReset_Click);
             // 
             // txtResetName
             // 
@@ -283,6 +264,7 @@
             this.txtResetName.TabIndex = 44;
             this.txtResetName.Text = "Username";
             this.txtResetName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtResetName.Click += new System.EventHandler(this.txtResetName_Click);
             // 
             // chkT
             // 
@@ -290,9 +272,9 @@
             this.chkT.BackColor = System.Drawing.Color.Gainsboro;
             this.chkT.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.chkT.Location = new System.Drawing.Point(438, 247);
+            this.chkT.Location = new System.Drawing.Point(357, 247);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(142, 29);
+            this.chkT.Size = new System.Drawing.Size(140, 29);
             this.chkT.TabIndex = 49;
             this.chkT.Text = "Is Teacher";
             this.chkT.UseVisualStyleBackColor = false;
@@ -329,6 +311,8 @@
             this.comboBoxSecretQs.Name = "comboBoxSecretQs";
             this.comboBoxSecretQs.Size = new System.Drawing.Size(298, 33);
             this.comboBoxSecretQs.TabIndex = 51;
+            this.comboBoxSecretQs.Text = "            Sectret Ques";
+            this.comboBoxSecretQs.Click += new System.EventHandler(this.comboBoxSecretQs_Click);
             // 
             // frmResetPassword
             // 
@@ -339,7 +323,6 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.chkT);
             this.Controls.Add(this.cmdReset);
-            this.Controls.Add(this.cmdAsk);
             this.Controls.Add(this.txtAnswerReset);
             this.Controls.Add(this.txtResetName);
             this.Controls.Add(this.lblPLP);
@@ -376,7 +359,6 @@
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Button cmdReset;
-        private System.Windows.Forms.Button cmdAsk;
         private System.Windows.Forms.TextBox txtAnswerReset;
         private System.Windows.Forms.TextBox txtResetName;
         private System.Windows.Forms.CheckBox chkT;

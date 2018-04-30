@@ -28,14 +28,27 @@ namespace Ustaad_G
 
         private void Search_Click(object sender, EventArgs e)
         {
-            MyServer.Service1 Server = new MyServer.Service1();
-            List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
+            comboBoxSelectArea.DropDownStyle = ComboBoxStyle.DropDownList;
+            if (comboBoxSelectArea.Text == "")
+            {
+                MessageBox.Show("Please select the area *_*");
+            }
+            else
+            {
+                MyServer.Service1 Server = new MyServer.Service1();
+                List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
+                if (list.Count == 0)
+                {
+                    MessageBox.Show("No teachers found in the given area");
+}
+                else
+                {
+                    BindingSource S = new BindingSource();
+                    S.DataSource = list;
+                    dataGridViewSearchRecords.DataSource = S;
 
-            BindingSource S = new BindingSource();
-            S.DataSource = list;
-            dataGridViewSearchRecords.DataSource = S;
-
-
+                }
+            }
         }
 
         private void comboBoxSSecretQs_SelectedIndexChanged(object sender, EventArgs e)

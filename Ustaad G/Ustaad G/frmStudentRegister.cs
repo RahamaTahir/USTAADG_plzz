@@ -74,14 +74,29 @@ namespace Ustaad_G
         {
             MyServer.Service1 Server = new MyServer.Service1();
 
-            if (txtSName.Text == "" || txtSpassword.Text == "")
+            if (txtRange.Text=="" || comboBoxSelectArea.Text == "" || txttiming.Text =="" || txtSName.Text == "" || txtSpassword.Text == "" || txtSName.Text == ""  || txtSage.Text =="" || txtSCPassword.Text =="" || comboBoxSSecretQs.Text == "" || txtSSecretAnswer.Text=="")
             {
-                MessageBox.Show("Invalid Register Attempt");
+             
+                MessageBox.Show("please enter all the required information to register"); 
+            }
+            else if (!chkBSTerms.Checked)
+            {
+                MessageBox.Show("You have to accept the terms and conditions to register yourself!");
             }
             else
             {
-                Server.AddStudent(txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text);
-                MessageBox.Show("You have been registered");
+                if (txtSpassword.Text == txtSCPassword.Text)
+                {
+                    Server.AddStudent( txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text ,comboGender.Text, txtRange.Text , comboBoxSelectArea.Text , txttiming.Text);
+                    MessageBox.Show("You have been registered");
+                    frmLogin f = new frmLogin();
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Your password and confirm password should be same");
+                }
             }
         }
 
@@ -124,6 +139,56 @@ namespace Ustaad_G
         private void txtSSecretAnswer_Click(object sender, EventArgs e)
         {
             txtSSecretAnswer.Clear();
+        }
+
+        private void chkSF_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboGender_Click(object sender, EventArgs e)
+        {
+            comboGender.ResetText();
+        }
+
+        private void comboBoxSSecretQs_Click(object sender, EventArgs e)
+        {
+            comboBoxSSecretQs.ResetText();
+        }
+
+        private void txtCreditcard_Click(object sender, EventArgs e)
+        {
+            txtCreditcard.Clear();
+        }
+
+        private void txtRange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRange_Click(object sender, EventArgs e)
+        {
+            txtRange.Clear();
+        }
+
+        private void comboBoxSelectArea_Click(object sender, EventArgs e)
+        {
+            comboBoxSelectArea.ResetText();
+        }
+
+        private void txttiming_Click(object sender, EventArgs e)
+        {
+            txttiming.Clear();
         }
     }
 }

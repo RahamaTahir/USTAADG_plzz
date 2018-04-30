@@ -292,6 +292,7 @@
             // comboBoxSelectArea
             // 
             this.comboBoxSelectArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxSelectArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSelectArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectArea.ForeColor = System.Drawing.Color.DarkSlateGray;

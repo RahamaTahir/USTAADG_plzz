@@ -120,6 +120,8 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(197, 33);
             this.comboBoxLevel.TabIndex = 40;
+            this.comboBoxLevel.Text = "        Level";
+            this.comboBoxLevel.Click += new System.EventHandler(this.comboBoxLevel_Click);
             // 
             // txtPwd
             // 

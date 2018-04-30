@@ -47,30 +47,37 @@ namespace Ustaad_G
 
         private void cmdLogin_Click_1(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            MyServer.Service1 Server = new MyServer.Service1();
-            bool isFound;
-            bool isFoundPass;
-            if (checkBox1.Checked)
+            if (txtPassword.Text == "" || txtUsername.Text == "")
             {
-                Server.verifyteacher(username, password, out isFound, out isFoundPass);
+                MessageBox.Show("All the required information should be filled :|");
             }
+            else
+            {
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                MyServer.Service1 Server = new MyServer.Service1();
+                bool isFound;
+                bool isFoundPass;
+                if (checkBox1.Checked)
+                {
+                    Server.verifyteacher(username, password, out isFound, out isFoundPass);
+                }
 
-            else
-            {
-                Server.verifyStudent(username, password, out isFound, out isFoundPass);
-            }
-            if (isFound == true)
-            {
-                MessageBox.Show("Login Successfully!");
-                frmSearch search = new frmSearch();
-                this.Hide();
-                search.Show();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Username or Password!");
+                else
+                {
+                    Server.verifyStudent(username, password, out isFound, out isFoundPass);
+                }
+                if (isFound == true)
+                {
+                    MessageBox.Show("Login Successfully!");
+                    frmSearch search = new frmSearch();
+                    this.Hide();
+                    search.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password!");
+                }
             }
         }
 
@@ -85,33 +92,48 @@ namespace Ustaad_G
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "Username" )
-            {
-                txtUsername.Text = "" ;
-            }
-            if(txtPassword.Text == "" || txtPassword.Text == "Password")
-            {
-                txtPassword.Text = "Password";
-            }
+            txtUsername.Clear();
         }
+
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Password" )
-            {
-                txtPassword.Text = "" ;
-            }
-            if(txtUsername.Text == "" || txtUsername.Text == "Username")
-            {
-                txtUsername.Text = "Username";
-            }
+            txtPassword.Clear();
         }
 
         private void lnkReset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmResetPassword f = new frmResetPassword();
-            f.Show();
-            this.Hide();
+            if (txtUsername.Text == "")
+            {
+                MessageBox.Show("Enter Username @ _ @");
+            }
+            else
+            {
+                string username = txtUsername.Text;
+                MyServer.Service1 Server = new MyServer.Service1();
+                bool isFound;
+                bool isFoundPass;
+
+                if (checkBox1.Checked)
+                {
+                    Server.isfoundT(username, out isFound, out isFoundPass);
+
+                }
+                else
+                {
+                    Server.isfoundS(username, out isFound, out isFoundPass);
+                }
+                if (isFound == true)
+                {
+                    frmResetPassword f = new frmResetPassword();
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username");
+                }
+            }
         }
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
