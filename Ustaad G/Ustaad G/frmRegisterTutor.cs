@@ -66,37 +66,32 @@ namespace Ustaad_G
 
         private void cmdAdmin2_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
+            //this.Hide();
+            //frmAdmin Admin = new frmAdmin();
+            //Admin.Show();
         }
 
         private void cmdTRegister_Click(object sender, EventArgs e)
         {
-            if (txtTName.Text == "" || txtTpassword.Text == "" || txtTNo.Text == "" || txtTage.Text =="" || combogenderT.Text =="" || comboBoxSelectArea.Text =="" || txtTSubject.Text == "" || comboBoxTLevel.Text =="" || txtRange.Text =="" || txtTCPassword.Text =="" || comboBoxSecretQs.Text =="" || txtSecretAnswer.Text =="" || txtTiming.Text =="" )
+            if (txtTName.Text == "" || txtTpassword.Text == "")
             {
-                MessageBox.Show("please enter all the required information to register");
-               
-            }
-            else if (!chkBTerms.Checked)
-            {
-                MessageBox.Show("You have to accept the terms and conditions to register yourself!");
+                MessageBox.Show("Invalid Register Attempt");
             }
             else
             {
                 MyServer.Service1 Server = new MyServer.Service1();
 
-                if (txtTpassword.Text == txtTCPassword.Text)
-                { 
-                    Server.AddTeacher(combogenderT.Text , txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
-                    MessageBox.Show("You have been registered");
-                    frmLogin f = new frmLogin();
-                    f.Show();
-                    this.Hide();
+                if (txtTName.Text == "" || txtTpassword.Text == "")
+                {
+                    MessageBox.Show("Invalid Register Attempt");
                 }
                 else
                 {
-                    MessageBox.Show("Your password and confirm password should be same");
+                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
+                    MessageBox.Show("You have been registered");
                 }
 
             }
@@ -172,26 +167,6 @@ namespace Ustaad_G
         private void txtTName_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void combogenderT_Click(object sender, EventArgs e)
-        {
-            combogenderT.ResetText();
-        }
-
-        private void comboBoxSelectArea_Click(object sender, EventArgs e)
-        {
-            comboBoxSelectArea.ResetText();
-        }
-
-        private void comboBoxTLevel_Click(object sender, EventArgs e)
-        {
-            comboBoxTLevel.ResetText();
-        }
-
-        private void comboBoxSecretQs_Click(object sender, EventArgs e)
-        {
-            comboBoxSecretQs.ResetText();
         }
     }
 }

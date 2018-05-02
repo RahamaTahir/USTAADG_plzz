@@ -7,9 +7,11 @@ namespace Ustaad_G_Service1
 {
     public class Admin
     {
-        private int rating;
+        public static List<string> ratings = new List<string>();
 
-        public int Rating { get => rating; set => rating = value; }
-
+        public static void addRating(string rating)
+        {
+            ratings.Add(rating);
+        }
     }
 }

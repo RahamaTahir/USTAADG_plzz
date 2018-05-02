@@ -79,6 +79,7 @@
             this.label1.Size = new System.Drawing.Size(335, 40);
             this.label1.TabIndex = 42;
             this.label1.Text = "View MyAccount ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmdSearch
             // 
@@ -120,8 +121,6 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(197, 33);
             this.comboBoxLevel.TabIndex = 40;
-            this.comboBoxLevel.Text = "        Level";
-            this.comboBoxLevel.Click += new System.EventHandler(this.comboBoxLevel_Click);
             // 
             // txtPwd
             // 

@@ -23,7 +23,7 @@ namespace Ustaad_G.MyServer {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -44,6 +44,8 @@ namespace Ustaad_G.MyServer {
         private System.Threading.SendOrPostCallback verifyStudentOperationCompleted;
         
         private System.Threading.SendOrPostCallback verifyteacherOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addRatingOperationCompleted;
         
         private System.Threading.SendOrPostCallback isfoundTOperationCompleted;
         
@@ -122,6 +124,9 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event verifyteacherCompletedEventHandler verifyteacherCompleted;
+        
+        /// <remarks/>
+        public event addRatingCompletedEventHandler addRatingCompleted;
         
         /// <remarks/>
         public event isfoundTCompletedEventHandler isfoundTCompleted;
@@ -271,7 +276,7 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddStudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string contact_no, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cPassword, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string gender, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string range, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string area, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string timing) {
+        public void AddStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string contact_no, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cPassword) {
             this.Invoke("AddStudent", new object[] {
                         username,
                         age,
@@ -279,20 +284,16 @@ namespace Ustaad_G.MyServer {
                         answer,
                         contact_no,
                         password,
-                        cPassword,
-                        gender,
-                        range,
-                        area,
-                        timing});
+                        cPassword});
         }
         
         /// <remarks/>
-        public void AddStudentAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing) {
-            this.AddStudentAsync(username, age, secret_Question, answer, contact_no, password, cPassword, gender, range, area, timing, null);
+        public void AddStudentAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword) {
+            this.AddStudentAsync(username, age, secret_Question, answer, contact_no, password, cPassword, null);
         }
         
         /// <remarks/>
-        public void AddStudentAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing, object userState) {
+        public void AddStudentAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, object userState) {
             if ((this.AddStudentOperationCompleted == null)) {
                 this.AddStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddStudentOperationCompleted);
             }
@@ -303,11 +304,7 @@ namespace Ustaad_G.MyServer {
                         answer,
                         contact_no,
                         password,
-                        cPassword,
-                        gender,
-                        range,
-                        area,
-                        timing}, this.AddStudentOperationCompleted, userState);
+                        cPassword}, this.AddStudentOperationCompleted, userState);
         }
         
         private void OnAddStudentOperationCompleted(object arg) {
@@ -319,9 +316,8 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddTeacher", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddTeacher([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string gender, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string contact_no, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cPassword, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string subject, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string level, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string timing, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string area, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string range) {
+        public void AddTeacher([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string secret_Question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string contact_no, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cPassword, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string subject, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string level, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string timing, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string area, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string range) {
             this.Invoke("AddTeacher", new object[] {
-                        gender,
                         username,
                         age,
                         secret_Question,
@@ -337,17 +333,16 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
-        public void AddTeacherAsync(string gender, string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range) {
-            this.AddTeacherAsync(gender, username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range, null);
+        public void AddTeacherAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range) {
+            this.AddTeacherAsync(username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range, null);
         }
         
         /// <remarks/>
-        public void AddTeacherAsync(string gender, string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range, object userState) {
+        public void AddTeacherAsync(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range, object userState) {
             if ((this.AddTeacherOperationCompleted == null)) {
                 this.AddTeacherOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddTeacherOperationCompleted);
             }
             this.InvokeAsync("AddTeacher", new object[] {
-                        gender,
                         username,
                         age,
                         secret_Question,
@@ -371,12 +366,12 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/verifyStudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void verifyStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool verifyStudentResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool verifyStudentResultSpecified) {
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Student verifyStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password) {
             object[] results = this.Invoke("verifyStudent", new object[] {
                         username,
                         password});
-            verifyStudentResult = ((bool)(results[0]));
-            verifyStudentResultSpecified = ((bool)(results[1]));
+            return ((Student)(results[0]));
         }
         
         /// <remarks/>
@@ -403,12 +398,12 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/verifyteacher", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void verifyteacher([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool verifyteacherResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool verifyteacherResultSpecified) {
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Teacher verifyteacher([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password) {
             object[] results = this.Invoke("verifyteacher", new object[] {
                         username,
                         password});
-            verifyteacherResult = ((bool)(results[0]));
-            verifyteacherResultSpecified = ((bool)(results[1]));
+            return ((Teacher)(results[0]));
         }
         
         /// <remarks/>
@@ -430,6 +425,34 @@ namespace Ustaad_G.MyServer {
             if ((this.verifyteacherCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.verifyteacherCompleted(this, new verifyteacherCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addRating", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addRating([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string rating) {
+            this.Invoke("addRating", new object[] {
+                        rating});
+        }
+        
+        /// <remarks/>
+        public void addRatingAsync(string rating) {
+            this.addRatingAsync(rating, null);
+        }
+        
+        /// <remarks/>
+        public void addRatingAsync(string rating, object userState) {
+            if ((this.addRatingOperationCompleted == null)) {
+                this.addRatingOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddRatingOperationCompleted);
+            }
+            this.InvokeAsync("addRating", new object[] {
+                        rating}, this.addRatingOperationCompleted, userState);
+        }
+        
+        private void OnaddRatingOperationCompleted(object arg) {
+            if ((this.addRatingCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addRatingCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -702,7 +725,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -749,197 +772,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1")]
-    public partial class Student {
-        
-        private string ageField;
-        
-        private string answerField;
-        
-        private string areaField;
-        
-        private string cPasswordField;
-        
-        private string contact_noField;
-        
-        private string credit_card_noField;
-        
-        private string genderField;
-        
-        private string passwordField;
-        
-        private string rangeField;
-        
-        private string secret_QuestionField;
-        
-        private bool selectField;
-        
-        private bool selectFieldSpecified;
-        
-        private string timingField;
-        
-        private string usernameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Age {
-            get {
-                return this.ageField;
-            }
-            set {
-                this.ageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Answer {
-            get {
-                return this.answerField;
-            }
-            set {
-                this.answerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Area {
-            get {
-                return this.areaField;
-            }
-            set {
-                this.areaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string CPassword {
-            get {
-                return this.cPasswordField;
-            }
-            set {
-                this.cPasswordField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Contact_no {
-            get {
-                return this.contact_noField;
-            }
-            set {
-                this.contact_noField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Credit_card_no {
-            get {
-                return this.credit_card_noField;
-            }
-            set {
-                this.credit_card_noField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Gender {
-            get {
-                return this.genderField;
-            }
-            set {
-                this.genderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Range {
-            get {
-                return this.rangeField;
-            }
-            set {
-                this.rangeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Secret_Question {
-            get {
-                return this.secret_QuestionField;
-            }
-            set {
-                this.secret_QuestionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool Select {
-            get {
-                return this.selectField;
-            }
-            set {
-                this.selectField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SelectSpecified {
-            get {
-                return this.selectFieldSpecified;
-            }
-            set {
-                this.selectFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Timing {
-            get {
-                return this.timingField;
-            }
-            set {
-                this.timingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                this.usernameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1155,11 +988,214 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1")]
+    public partial class Student {
+        
+        private string ageField;
+        
+        private string answerField;
+        
+        private string areaField;
+        
+        private string cPasswordField;
+        
+        private string contact_noField;
+        
+        private string credit_card_noField;
+        
+        private string genderField;
+        
+        private string passwordField;
+        
+        private string rangeField;
+        
+        private string secret_QuestionField;
+        
+        private bool selectField;
+        
+        private bool selectFieldSpecified;
+        
+        private string timingField;
+        
+        private string usernameField;
+        
+        private string verifyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Age {
+            get {
+                return this.ageField;
+            }
+            set {
+                this.ageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Answer {
+            get {
+                return this.answerField;
+            }
+            set {
+                this.answerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Area {
+            get {
+                return this.areaField;
+            }
+            set {
+                this.areaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CPassword {
+            get {
+                return this.cPasswordField;
+            }
+            set {
+                this.cPasswordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Contact_no {
+            get {
+                return this.contact_noField;
+            }
+            set {
+                this.contact_noField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Credit_card_no {
+            get {
+                return this.credit_card_noField;
+            }
+            set {
+                this.credit_card_noField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                this.genderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Range {
+            get {
+                return this.rangeField;
+            }
+            set {
+                this.rangeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Secret_Question {
+            get {
+                return this.secret_QuestionField;
+            }
+            set {
+                this.secret_QuestionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Select {
+            get {
+                return this.selectField;
+            }
+            set {
+                this.selectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SelectSpecified {
+            get {
+                return this.selectFieldSpecified;
+            }
+            set {
+                this.selectFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Timing {
+            get {
+                return this.timingField;
+            }
+            set {
+                this.timingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Verify {
+            get {
+                return this.verifyField;
+            }
+            set {
+                this.verifyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1181,19 +1217,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void NewPasswordTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void NewPasswordSCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1215,19 +1251,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void AddStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void AddTeacherCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void verifyStudentCompletedEventHandler(object sender, verifyStudentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1240,28 +1276,20 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
-        public bool verifyStudentResult {
+        public Student Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public bool verifyStudentResultSpecified {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[1]));
+                return ((Student)(this.results[0]));
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void verifyteacherCompletedEventHandler(object sender, verifyteacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyteacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1274,28 +1302,24 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
-        public bool verifyteacherResult {
+        public Teacher Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public bool verifyteacherResultSpecified {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[1]));
+                return ((Teacher)(this.results[0]));
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void addRatingCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void isfoundTCompletedEventHandler(object sender, isfoundTCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1325,11 +1349,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void isfoundSCompletedEventHandler(object sender, isfoundSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1359,11 +1383,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void ResetPasswordSCompletedEventHandler(object sender, ResetPasswordSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResetPasswordSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1393,11 +1417,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void ResetPasswordTCompletedEventHandler(object sender, ResetPasswordTCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResetPasswordTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1427,11 +1451,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void VerifyByAdminCompletedEventHandler(object sender, VerifyByAdminCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class VerifyByAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1461,11 +1485,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void Search_TeacherCompletedEventHandler(object sender, Search_TeacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Search_TeacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1487,11 +1511,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void ShowAllTeachersCompletedEventHandler(object sender, ShowAllTeachersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowAllTeachersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1513,11 +1537,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void ShowAllStudentsCompletedEventHandler(object sender, ShowAllStudentsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowAllStudentsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

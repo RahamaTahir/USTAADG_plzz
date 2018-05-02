@@ -97,7 +97,7 @@ namespace Ustaad_G
             }
             if (txtPassword.Text == "" || txtPassword.Text == "Password")
             {
-                txtCPassword.Text = "";
+                txtCPassword.Text = "Password";
             }
         }
 
@@ -108,32 +108,15 @@ namespace Ustaad_G
 
         private void cmdReset_Click(object sender, EventArgs e)
         {
-            if (txtCPassword.Text == "" || txtPassword.Text == "")
+            if(this_role== "Teacher")
             {
-                MessageBox.Show("please enter all required information!");
+                Server.NewPasswordT(this_username , txtPassword.Text);
             }
             else
             {
-                if (txtPassword.Text == txtCPassword.Text)
-                {
-                    if (this_role == "Teacher")
-                    {
-                        Server.NewPasswordT(this_username, txtPassword.Text);
-                    }
-                    else
-                    {
-                        Server.NewPasswordS(this_username, txtPassword.Text);
-                    }
-                    MessageBox.Show("Your Password Has Been Reset");
-                    frmLogin L = new frmLogin();
-                    this.Hide();
-                    L.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Your password and confirm password should be same :)");
-                }
+                Server.NewPasswordS(this_username, txtPassword.Text);
             }
+            MessageBox.Show("Your Password Has Been Reset");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -143,7 +126,7 @@ namespace Ustaad_G
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
         }
@@ -153,11 +136,6 @@ namespace Ustaad_G
             frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
-        }
-
-        private void txtCPassword_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

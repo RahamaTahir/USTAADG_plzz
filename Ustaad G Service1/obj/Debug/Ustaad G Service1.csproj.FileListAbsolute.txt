@@ -47,3 +47,10 @@ C:\Users\derll\Desktop\New folder (4)\USTAADG_plzz\Ustaad G Service1\obj\Debug\U
 C:\Users\derll\Desktop\New folder (4)\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.csproj.CoreCompileInputs.cache
 C:\Users\derll\Desktop\New folder (4)\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.dll
 C:\Users\derll\Desktop\New folder (4)\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.pdb
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.dll.config
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.dll
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\bin\Ustaad G Service1.pdb
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.csprojResolveAssemblyReference.cache
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.csproj.CoreCompileInputs.cache
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.dll
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G Service1\obj\Debug\Ustaad G Service1.pdb

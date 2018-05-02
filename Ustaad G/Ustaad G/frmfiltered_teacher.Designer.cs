@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin6 = new System.Windows.Forms.Button();
             this.cmdRegister6 = new System.Windows.Forms.Button();
@@ -45,9 +46,11 @@
             this.picHome = new System.Windows.Forms.PictureBox();
             this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
             this.Search = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -292,7 +295,6 @@
             // comboBoxSelectArea
             // 
             this.comboBoxSelectArea.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBoxSelectArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSelectArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectArea.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -355,6 +357,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +382,6 @@
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.ComboBox comboBoxSelectArea;
         private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

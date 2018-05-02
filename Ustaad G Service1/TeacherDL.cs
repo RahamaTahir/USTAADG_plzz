@@ -9,12 +9,11 @@ namespace Ustaad_G_Service1
     {
         public static List<Teacher> Teachers = new List<Teacher>();
 
-        public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
+        public void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             Teacher tc = new Teacher();
             tc.Username = username;
             tc.Password = password;
-            tc.Gender = gender;
             tc.Range = range;
             tc.Secret_Question = secret_Question;
             tc.Timing = timing;
@@ -37,16 +36,16 @@ namespace Ustaad_G_Service1
                 }
             }
         }
-        public static bool verify(string username, string password)
+        public static Teacher verify(string username, string password)
         {
             foreach (Teacher tc in Teachers)
             {
                 if (tc.Username == username && tc.Password == password)
                 {
-                    return true;
+                    return tc;
                 }
             }
-            return false;
+            return null;
         }
 
         public  bool isfoundT(string username)

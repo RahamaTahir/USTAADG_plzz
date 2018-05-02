@@ -31,7 +31,7 @@ namespace Ustaad_G
 
         }
 
-      
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -47,40 +47,49 @@ namespace Ustaad_G
 
         private void cmdLogin_Click_1(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "" || txtUsername.Text == "")
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            MyServer.Service1 Server = new MyServer.Service1();
+
+            MyServer.Teacher teacherFound = null;
+            MyServer.Student studentFound = null;
+
+            bool isFound;
+            bool isFoundPass;
+            if (checkBox1.Checked)
             {
-                MessageBox.Show("All the required information should be filled :|");
+
+                teacherFound = Server.verifyteacher(username, password);
+            }
+
+            else
+            {
+                studentFound = Server.verifyStudent(username, password);
+            }
+            if (teacherFound != null || studentFound !=null)
+            {
+                if (checkBox1.Checked)
+                {
+                    myUtil.loggedin_user_role = "Teacher";
+                    myUtil.teacher_loggedIn = teacherFound;
+
+                    studentDetails sD = new studentDetails("Teacher");
+                    sD.Show();
+                }
+                else
+                {
+                    myUtil.loggedin_user_role = "Student";
+                    myUtil.std_loggedin = studentFound;
+                    MessageBox.Show("Login Successfully!");
+                    frmSearch search = new frmSearch();
+                    search.Show();
+                }
+                
+                this.Hide();
             }
             else
             {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
-                MyServer.Service1 Server = new MyServer.Service1();
-                bool isFound;
-                bool isFoundPass;
-                if (checkBox1.Checked)
-                {
-                    Server.verifyteacher(username, password, out isFound, out isFoundPass);
-                }
-
-                else
-                {
-                    Server.verifyStudent(username, password, out isFound, out isFoundPass);
-                }
-                if (isFound == true)
-                {
-                    MessageBox.Show("Login Successfully!");
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Username or Password!");
-                }
-                if (!checkBox1.Checked)
-                {
-                    frmSearch search = new frmSearch();
-                    this.Hide();
-                    search.Show();
-                }
+                MessageBox.Show("Invalid Username or Password!");
             }
         }
 
@@ -95,53 +104,38 @@ namespace Ustaad_G
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
-            txtUsername.Clear();
+            if(txtUsername.Text == "Username" )
+            {
+                txtUsername.Text = "" ;
+            }
+            if(txtPassword.Text == "" || txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "Password";
+            }
         }
-
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
+            if (txtPassword.Text == "Password" )
+            {
+                txtPassword.Text = "" ;
+            }
+            if(txtUsername.Text == "" || txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "Username";
+            }
         }
 
         private void lnkReset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (txtUsername.Text == "")
-            {
-                MessageBox.Show("Enter Username @ _ @");
-            }
-            else
-            {
-                string username = txtUsername.Text;
-                MyServer.Service1 Server = new MyServer.Service1();
-                bool isFound;
-                bool isFoundPass;
-
-                if (checkBox1.Checked)
-                {
-                    Server.isfoundT(username, out isFound, out isFoundPass);
-
-                }
-                else
-                {
-                    Server.isfoundS(username, out isFound, out isFoundPass);
-                }
-                if (isFound == true)
-                {
-                    frmResetPassword f = new frmResetPassword();
-                    f.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Username");
-                }
-            }
+            frmResetPassword f = new frmResetPassword();
+            f.Show();
+            this.Hide();
         }
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
         }

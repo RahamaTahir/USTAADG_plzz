@@ -28,27 +28,14 @@ namespace Ustaad_G
 
         private void Search_Click(object sender, EventArgs e)
         {
-            comboBoxSelectArea.DropDownStyle = ComboBoxStyle.DropDownList;
-            if (comboBoxSelectArea.Text == "")
-            {
-                MessageBox.Show("Please select the area *_*");
-            }
-            else
-            {
-                MyServer.Service1 Server = new MyServer.Service1();
-                List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
-                if (list.Count == 0)
-                {
-                    MessageBox.Show("No teachers found in the given area");
-}
-                else
-                {
-                    BindingSource S = new BindingSource();
-                    S.DataSource = list;
-                    dataGridViewSearchRecords.DataSource = S;
+            MyServer.Service1 Server = new MyServer.Service1();
+            List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
 
-                }
-            }
+            BindingSource S = new BindingSource();
+            S.DataSource = list;
+            dataGridViewSearchRecords.DataSource = S;
+
+
         }
 
         private void comboBoxSSecretQs_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,11 +59,11 @@ namespace Ustaad_G
 
         private void cmdAdmin6_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
 
-
+            
 
         }
 

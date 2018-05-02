@@ -23,17 +23,18 @@ namespace Ustaad_G_Service1
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword , string gender , string range , string area , string timing);
+        void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword);
 
         [OperationContract]
 
-        void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range);
+        void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range);
 
         [OperationContract]
-        bool verifyStudent(string username, string password);
+        Student verifyStudent(string username, string password);
         [OperationContract]
-        bool verifyteacher(string username, string password);
-
+        Teacher verifyteacher(string username, string password);
+        [OperationContract]
+        void addRating(string rating);
         [OperationContract]
         bool isfoundT(string username);
 

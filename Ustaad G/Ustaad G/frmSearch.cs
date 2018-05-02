@@ -29,30 +29,23 @@ namespace Ustaad_G
         }
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            if (txtPwd.Text == "" || txtUname.Text == "" || comboBoxLevel.Text == "")
+            string username = txtUname.Text;
+            string password = txtPwd.Text;
+            MyServer.Service1 Server = new MyServer.Service1();
+            bool isFound;
+            bool isFoundPass;
+            Server.VerifyByAdmin(username, password, out isFound, out isFoundPass);
+            
+            if (isFound == true)
             {
-                MessageBox.Show("All the required information should be entered :(");
+                MessageBox.Show("You are verified!");
+                frmfiltered_teacher R = new frmfiltered_teacher();
+                this.Hide();
+                R.Show();
             }
             else
             {
-                string username = txtUname.Text;
-                string password = txtPwd.Text;
-                MyServer.Service1 Server = new MyServer.Service1();
-                bool isFound;
-                bool isFoundPass;
-                Server.VerifyByAdmin(username, password, out isFound, out isFoundPass);
-
-                if (isFound == true)
-                {
-                    MessageBox.Show("You are verified!");
-                    frmfiltered_teacher R = new frmfiltered_teacher();
-                    this.Hide();
-                    R.Show();
-                }
-                else
-                {
-                    MessageBox.Show("You are not verified!!");
-                }
+                MessageBox.Show("You are not verified!!");
             }
         }
 
@@ -92,7 +85,7 @@ namespace Ustaad_G
 
         private void picHome_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtSCity_TextChanged(object sender, EventArgs e)
@@ -107,7 +100,7 @@ namespace Ustaad_G
 
         private void cmdAdmin3_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
         }
@@ -119,9 +112,10 @@ namespace Ustaad_G
             L.Show();
         }
 
-        private void comboBoxLevel_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            comboBoxLevel.ResetText();
+            studentDetails sd = new studentDetails();
+            sd.Show();
         }
     }
 }

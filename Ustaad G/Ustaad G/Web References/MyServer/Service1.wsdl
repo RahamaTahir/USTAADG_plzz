@@ -55,6 +55,12 @@
   <wsdl:message name="IService1_verifyteacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:verifyteacherResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_addRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:addRating" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addRatingResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_isfoundT_InputMessage">
     <wsdl:part name="parameters" element="tns:isfoundT" />
   </wsdl:message>
@@ -135,6 +141,10 @@
     <wsdl:operation name="verifyteacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/verifyteacher" message="tns:IService1_verifyteacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/verifyteacherResponse" message="tns:IService1_verifyteacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addRating" message="tns:IService1_addRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addRatingResponse" message="tns:IService1_addRating_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="isfoundT">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/isfoundT" message="tns:IService1_isfoundT_InputMessage" />
@@ -236,6 +246,15 @@
     </wsdl:operation>
     <wsdl:operation name="verifyteacher">
       <soap:operation soapAction="http://tempuri.org/IService1/verifyteacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRating">
+      <soap:operation soapAction="http://tempuri.org/IService1/addRating" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

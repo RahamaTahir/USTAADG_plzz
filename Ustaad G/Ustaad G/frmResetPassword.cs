@@ -41,45 +41,38 @@ namespace Ustaad_G
 
         private void cmdReset_Click(object sender, EventArgs e)
         {
-            if (txtResetName.Text == "" || txtAnswerReset.Text == "" || comboBoxSecretQs.Text == "")
+            string username = txtResetName.Text;
+            string answer = txtAnswerReset.Text;
+            string Question = comboBoxSecretQs.Text;
+            MyServer.Service1 Server = new MyServer.Service1();
+            bool isFound;
+            bool isFoundPass;
+            
+            if (chkT.Checked)
             {
-                MessageBox.Show("All the required information should be entered! -_-");
+                Server.ResetPasswordT(username,Question, answer, out isFound, out isFoundPass);
             }
             else
             {
-                string username = txtResetName.Text;
-                string answer = txtAnswerReset.Text;
-                string Question = comboBoxSecretQs.Text;
-                MyServer.Service1 Server = new MyServer.Service1();
-                bool isFound;
-                bool isFoundPass;
-
+                Server.ResetPasswordS(username,Question, answer, out isFound, out isFoundPass);
+            }
+            if (isFound == true)
+            {
+                frmNewPassword frm;
                 if (chkT.Checked)
                 {
-                    Server.ResetPasswordT(username, Question, answer, out isFound, out isFoundPass);
+                    frm = new frmNewPassword(username, "Teacher");
                 }
                 else
                 {
-                    Server.ResetPasswordS(username, Question, answer, out isFound, out isFoundPass);
+                    frm = new frmNewPassword(username, "Student");
                 }
-                if (isFound == true)
-                {
-                    frmNewPassword frm;
-                    if (chkT.Checked)
-                    {
-                        frm = new frmNewPassword(username, "Teacher");
-                    }
-                    else
-                    {
-                        frm = new frmNewPassword(username, "Student");
-                    }
-                    this.Hide();
-                    frm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Username or Answer!");
-                }
+                this.Hide();
+                frm.Show();              
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Answer!");
             }
         }
 
@@ -93,7 +86,6 @@ namespace Ustaad_G
             if (chkT.Checked)
             {
                 Server.isfoundT(username, out isFound, out isFoundPass);
-               
             }
             else
             {
@@ -121,7 +113,7 @@ namespace Ustaad_G
 
         private void cmdAdmin9_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
         }
@@ -131,21 +123,6 @@ namespace Ustaad_G
             frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
-        }
-
-        private void txtResetName_Click(object sender, EventArgs e)
-        {
-            txtResetName.Clear();
-        }
-
-        private void txtAnswerReset_Click(object sender, EventArgs e)
-        {
-            txtAnswerReset.Clear();
-        }
-
-        private void comboBoxSecretQs_Click(object sender, EventArgs e)
-        {
-            comboBoxSecretQs.ResetText();
         }
     }
 }

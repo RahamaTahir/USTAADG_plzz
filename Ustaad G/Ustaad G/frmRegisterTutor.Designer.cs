@@ -45,6 +45,8 @@
             this.txtSecretAnswer = new System.Windows.Forms.TextBox();
             this.txtTNo = new System.Windows.Forms.TextBox();
             this.txtTage = new System.Windows.Forms.TextBox();
+            this.chkTM = new System.Windows.Forms.CheckBox();
+            this.chkTF = new System.Windows.Forms.CheckBox();
             this.cmdTRegister = new System.Windows.Forms.Button();
             this.txtTiming = new System.Windows.Forms.TextBox();
             this.txtRange = new System.Windows.Forms.TextBox();
@@ -54,7 +56,6 @@
             this.picHome = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
-            this.combogenderT = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -224,8 +225,6 @@
             this.comboBoxTLevel.Name = "comboBoxTLevel";
             this.comboBoxTLevel.Size = new System.Drawing.Size(298, 33);
             this.comboBoxTLevel.TabIndex = 18;
-            this.comboBoxTLevel.Text = "                Level";
-            this.comboBoxTLevel.Click += new System.EventHandler(this.comboBoxTLevel_Click);
             // 
             // txtTName
             // 
@@ -288,8 +287,6 @@
             this.comboBoxSecretQs.Name = "comboBoxSecretQs";
             this.comboBoxSecretQs.Size = new System.Drawing.Size(298, 33);
             this.comboBoxSecretQs.TabIndex = 22;
-            this.comboBoxSecretQs.Text = "          Secret Question";
-            this.comboBoxSecretQs.Click += new System.EventHandler(this.comboBoxSecretQs_Click);
             // 
             // txtSecretAnswer
             // 
@@ -337,6 +334,32 @@
             this.txtTage.Click += new System.EventHandler(this.txtTage_Click);
             this.txtTage.TextChanged += new System.EventHandler(this.txtTage_TextChanged);
             // 
+            // chkTM
+            // 
+            this.chkTM.AutoSize = true;
+            this.chkTM.BackColor = System.Drawing.Color.Gainsboro;
+            this.chkTM.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTM.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.chkTM.Location = new System.Drawing.Point(90, 343);
+            this.chkTM.Name = "chkTM";
+            this.chkTM.Size = new System.Drawing.Size(81, 29);
+            this.chkTM.TabIndex = 26;
+            this.chkTM.Text = "Male";
+            this.chkTM.UseVisualStyleBackColor = false;
+            // 
+            // chkTF
+            // 
+            this.chkTF.AutoSize = true;
+            this.chkTF.BackColor = System.Drawing.Color.Gainsboro;
+            this.chkTF.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTF.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.chkTF.Location = new System.Drawing.Point(206, 343);
+            this.chkTF.Name = "chkTF";
+            this.chkTF.Size = new System.Drawing.Size(108, 29);
+            this.chkTF.TabIndex = 27;
+            this.chkTF.Text = "Female";
+            this.chkTF.UseVisualStyleBackColor = false;
+            // 
             // cmdTRegister
             // 
             this.cmdTRegister.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -347,7 +370,7 @@
             this.cmdTRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdTRegister.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdTRegister.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdTRegister.Location = new System.Drawing.Point(449, 474);
+            this.cmdTRegister.Location = new System.Drawing.Point(447, 443);
             this.cmdTRegister.Margin = new System.Windows.Forms.Padding(0);
             this.cmdTRegister.Name = "cmdTRegister";
             this.cmdTRegister.Size = new System.Drawing.Size(300, 69);
@@ -363,7 +386,7 @@
             this.txtTiming.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTiming.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiming.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtTiming.Location = new System.Drawing.Point(449, 426);
+            this.txtTiming.Location = new System.Drawing.Point(56, 510);
             this.txtTiming.Multiline = true;
             this.txtTiming.Name = "txtTiming";
             this.txtTiming.Size = new System.Drawing.Size(298, 33);
@@ -428,7 +451,7 @@
             this.lnklblTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblTerms.Location = new System.Drawing.Point(379, 565);
             this.lnklblTerms.Name = "lnklblTerms";
-            this.lnklblTerms.Size = new System.Drawing.Size(240, 25);
+            this.lnklblTerms.Size = new System.Drawing.Size(242, 25);
             this.lnklblTerms.TabIndex = 33;
             this.lnklblTerms.TabStop = true;
             this.lnklblTerms.Text = "Terms and Conditions";
@@ -480,25 +503,6 @@
             this.comboBoxSelectArea.Name = "comboBoxSelectArea";
             this.comboBoxSelectArea.Size = new System.Drawing.Size(298, 33);
             this.comboBoxSelectArea.TabIndex = 66;
-            this.comboBoxSelectArea.Text = "             Enter Area";
-            this.comboBoxSelectArea.Click += new System.EventHandler(this.comboBoxSelectArea_Click);
-            // 
-            // combogenderT
-            // 
-            this.combogenderT.BackColor = System.Drawing.Color.Gainsboro;
-            this.combogenderT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combogenderT.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combogenderT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.combogenderT.FormattingEnabled = true;
-            this.combogenderT.Items.AddRange(new object[] {
-            "Male",
-            "Famale"});
-            this.combogenderT.Location = new System.Drawing.Point(56, 337);
-            this.combogenderT.Name = "combogenderT";
-            this.combogenderT.Size = new System.Drawing.Size(298, 33);
-            this.combogenderT.TabIndex = 67;
-            this.combogenderT.Text = "               Gender";
-            this.combogenderT.Click += new System.EventHandler(this.combogenderT_Click);
             // 
             // frmRegisterTutor
             // 
@@ -506,7 +510,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(791, 605);
-            this.Controls.Add(this.combogenderT);
             this.Controls.Add(this.comboBoxSelectArea);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lnklblTerms);
@@ -514,6 +517,8 @@
             this.Controls.Add(this.txtRange);
             this.Controls.Add(this.txtTiming);
             this.Controls.Add(this.cmdTRegister);
+            this.Controls.Add(this.chkTF);
+            this.Controls.Add(this.chkTM);
             this.Controls.Add(this.txtTage);
             this.Controls.Add(this.txtTNo);
             this.Controls.Add(this.txtSecretAnswer);
@@ -559,6 +564,8 @@
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.TextBox txtTNo;
         private System.Windows.Forms.TextBox txtTage;
+        private System.Windows.Forms.CheckBox chkTM;
+        private System.Windows.Forms.CheckBox chkTF;
         private System.Windows.Forms.Button cmdTRegister;
         private System.Windows.Forms.TextBox txtTiming;
         private System.Windows.Forms.TextBox txtRange;
@@ -568,6 +575,5 @@
         private System.Windows.Forms.Button cmdAdmin2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ComboBox comboBoxSelectArea;
-        private System.Windows.Forms.ComboBox combogenderT;
     }
 }

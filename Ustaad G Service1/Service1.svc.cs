@@ -43,25 +43,29 @@ namespace Ustaad_G_Service1
             return composite;
         }
 
-        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword , string gender, string range, string area, string timing)
+        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword)
         {
             StudentDL st = new StudentDL();
-            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword, gender , range ,area , timing);
+            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword);
         }
 
-        public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
+        public void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             TeacherDL tc = new TeacherDL();
-            tc.AddTeacher(gender ,username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
+            tc.AddTeacher(username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
         }
 
 
-        public bool verifyStudent(string username, string password)
+        public Student verifyStudent(string username, string password)
         {
             return StudentDL.verify(username, password);
         }
 
-        public bool verifyteacher(string username, string password)
+        public void addRating(string rating)
+        {
+            Admin.addRating(rating);
+        }
+        public Teacher verifyteacher(string username, string password)
         {
            
             return TeacherDL.verify(username, password);

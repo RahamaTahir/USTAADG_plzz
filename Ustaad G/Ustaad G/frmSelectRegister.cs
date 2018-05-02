@@ -66,9 +66,12 @@ namespace Ustaad_G
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdminPassword L = new frmAdminPassword();
+            frmAdmin L = new frmAdmin();
             this.Hide();
             L.Show();
+            //this.Hide();
+            //frmAdmin Admin = new frmAdmin();
+            //Admin.Show();
         }
 
         private void cmdTutor_Click(object sender, EventArgs e)

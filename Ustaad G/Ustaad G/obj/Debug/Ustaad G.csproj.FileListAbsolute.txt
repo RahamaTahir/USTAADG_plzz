@@ -142,4 +142,23 @@ C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
-C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdminPassword.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmLogin.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdmin.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmfiltered_teacher.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmNewPassword.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSearch.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.Cache
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.studentDetails.resources
+C:\Users\derll\Desktop\New Copy\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.FeedBack.resources
