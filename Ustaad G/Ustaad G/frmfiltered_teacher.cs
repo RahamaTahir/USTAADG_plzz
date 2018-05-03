@@ -31,9 +31,21 @@ namespace Ustaad_G
             MyServer.Service1 Server = new MyServer.Service1();
             List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
 
+
+
             BindingSource S = new BindingSource();
             S.DataSource = list;
             dataGridViewSearchRecords.DataSource = S;
+            dataGridViewSearchRecords.Columns.Remove("account_no");
+            dataGridViewSearchRecords.Columns.Remove("cPassword");
+            dataGridViewSearchRecords.Columns.Remove("password");
+            dataGridViewSearchRecords.Columns.Remove("answer");
+            dataGridViewSearchRecords.Columns.Remove("secret_Question");
+
+
+
+
+
 
 
         }

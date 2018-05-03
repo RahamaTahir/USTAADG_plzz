@@ -97,5 +97,22 @@ namespace Ustaad_G_Service1
             return All_Teachers;
         }
 
+        public List<Teacher> selected_teachers(Teacher t)
+        {
+            StudentDL.selectedteachers.Add(t);
+            return StudentDL.selectedteachers;
+        }
+
+        public Boolean isUniqueT(string username)
+        {
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Username == username)
+                { return false; }
+            }
+            return true;
+
+        }
+
     }
 }

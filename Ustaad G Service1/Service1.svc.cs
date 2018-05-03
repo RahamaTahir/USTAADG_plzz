@@ -118,5 +118,23 @@ namespace Ustaad_G_Service1
             StudentDL st = new StudentDL();
             return st.ShowAllStudents();
         }
+
+        public Boolean isUniqueT(string username)
+        {
+            TeacherDL t = new TeacherDL();
+            return t.isUniqueT(username);
+        }
+
+        public Boolean isUniqueS(string username)
+        {
+            StudentDL s = new StudentDL();
+            return s.isUniqueS(username);
+        }
+
+        public List<Teacher> selected_teachers(Teacher t)
+        {
+            TeacherDL T = new TeacherDL();
+            return T.selected_teachers(t);
+        }
     }
 }

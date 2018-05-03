@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
 
 namespace Ustaad_G_Service1
 {
     public class StudentDL
     {
         public static List<Student> Students = new List<Student>();
+
+        [DataMember]
+        public static List<Teacher> selectedteachers = new List<Teacher>();
+
 
         public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword)
         {
@@ -93,6 +98,17 @@ namespace Ustaad_G_Service1
                 All_Students.Add(s);
             }
             return All_Students;
+        }
+
+        public Boolean isUniqueS (string username)
+        {
+            foreach (Student s in StudentDL.Students)
+            {
+                if (s.Username == username)
+                { return false; }
+            }
+            return true;
+
         }
 
 

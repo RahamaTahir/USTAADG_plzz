@@ -73,6 +73,8 @@ namespace Ustaad_G
         private void cmdSRegister_Click(object sender, EventArgs e)
         {
             MyServer.Service1 Server = new MyServer.Service1();
+            bool isFound;
+            bool isFoundPass;
 
             if (txtSName.Text == "" || txtSpassword.Text == "")
             {
@@ -80,8 +82,16 @@ namespace Ustaad_G
             }
             else
             {
-                Server.AddStudent(txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text);
-                MessageBox.Show("You have been registered");
+                Server.isUniqueS(txtSName.Text, out isFound, out isFoundPass);
+                if (isFound== true)
+                {
+                    Server.AddStudent(txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text);
+                    MessageBox.Show("You have been registered");
+                }
+                else
+                {
+                    MessageBox.Show("Username is not unique");
+                }
             }
         }
 

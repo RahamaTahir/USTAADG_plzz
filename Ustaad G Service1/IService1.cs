@@ -59,8 +59,14 @@ namespace Ustaad_G_Service1
         [OperationContract]
         List<Student> ShowAllStudents();
 
+        [OperationContract]
+        Boolean isUniqueT(string username);
 
+        [OperationContract]
+        Boolean isUniqueS(string username);
 
+        [OperationContract]
+        List<Teacher> selected_teachers(Teacher t);
 
         // TODO: Add your service operations here
     }

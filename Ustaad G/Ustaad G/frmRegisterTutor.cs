@@ -76,23 +76,25 @@ namespace Ustaad_G
 
         private void cmdTRegister_Click(object sender, EventArgs e)
         {
+            bool isFound;
+            bool isFoundPass;
+            MyServer.Service1 Server = new MyServer.Service1();
             if (txtTName.Text == "" || txtTpassword.Text == "")
             {
                 MessageBox.Show("Invalid Register Attempt");
             }
             else
             {
-                MyServer.Service1 Server = new MyServer.Service1();
-
-                if (txtTName.Text == "" || txtTpassword.Text == "")
-                {
-                    MessageBox.Show("Invalid Register Attempt");
-                }
-                else
-                {
-                    Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
-                    MessageBox.Show("You have been registered");
-                }
+                 Server.isUniqueT(txtTName.Text, out isFound, out isFoundPass);
+                    if (isFound == true)
+                    {
+                        Server.AddTeacher(txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
+                        MessageBox.Show("You have been registered");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username is not unique");
+                    }
 
             }
         }
