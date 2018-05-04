@@ -12,6 +12,9 @@ namespace Ustaad_G
 {
     public partial class frmfiltered_teacher : Form
     {
+        public static List<MyServer.Teacher> list;
+        public static List<MyServer.Teacher> Steachers;
+        static DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
         public frmfiltered_teacher()
         {
             InitializeComponent();
@@ -29,20 +32,29 @@ namespace Ustaad_G
         private void Search_Click(object sender, EventArgs e)
         {
             MyServer.Service1 Server = new MyServer.Service1();
-            List<MyServer.Teacher> list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
+            list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
+
+            if (comboBoxSelectArea.Text != " ")
+            {
+                DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
+                c.ValueType = typeof(bool);
+                c.Name = "Chk";
+                c.HeaderText = "Select";
 
 
+                BindingSource S = new BindingSource();
+                S.DataSource = list;
+                dataGridViewSearchRecords.DataSource = S;
+                dataGridViewSearchRecords.Columns.Add(c);
 
-            BindingSource S = new BindingSource();
-            S.DataSource = list;
-            dataGridViewSearchRecords.DataSource = S;
-            dataGridViewSearchRecords.Columns.Remove("account_no");
-            dataGridViewSearchRecords.Columns.Remove("cPassword");
-            dataGridViewSearchRecords.Columns.Remove("password");
-            dataGridViewSearchRecords.Columns.Remove("answer");
-            dataGridViewSearchRecords.Columns.Remove("secret_Question");
-
-
+                dataGridViewSearchRecords.Columns.Remove("account_no");
+                dataGridViewSearchRecords.Columns.Remove("cPassword");
+                dataGridViewSearchRecords.Columns.Remove("password");
+                dataGridViewSearchRecords.Columns.Remove("answer");
+                dataGridViewSearchRecords.Columns.Remove("secret_Question");
+                dataGridViewSearchRecords.Columns.Remove("account");
+            }
+                
 
 
 
@@ -84,6 +96,24 @@ namespace Ustaad_G
             frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
+        }
+
+        private void cmdSelect_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            MyServer.Service1 Server = new MyServer.Service1();
+            foreach (DataGridViewRow row in dataGridViewSearchRecords.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[9].Value))
+                {
+                    Steachers = Server.selected_teachers(list.ElementAt(i)).ToList<MyServer.Teacher>();
+                    MessageBox.Show("Teacher Selected");
+                }
+                i++;
+            }
+            studentDetails sd = new studentDetails();
+            sd.Show();
+
         }
     }
 }

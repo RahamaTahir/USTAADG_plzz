@@ -22,6 +22,7 @@ namespace Ustaad_G_Service1
         private string subject;
         private string level;
         private string account_no;
+        private string account;
 
         public string Username { get => username; set => username = value; }
         public static string IdNo { get => idNo; set => idNo = value; }
@@ -38,5 +39,6 @@ namespace Ustaad_G_Service1
         public string Subject { get => subject; set => subject = value; }
         public string Level { get => level; set => level = value; }
         public string Account_no { get => account_no; set => account_no = value; }
+        public string Account { get => account; set => account = value; }
     }
 }

@@ -885,6 +885,8 @@ namespace Ustaad_G.MyServer {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1")]
     public partial class Teacher {
         
+        private string accountField;
+        
         private string account_noField;
         
         private string ageField;
@@ -912,6 +914,17 @@ namespace Ustaad_G.MyServer {
         private string timingField;
         
         private string usernameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Account {
+            get {
+                return this.accountField;
+            }
+            set {
+                this.accountField = value;
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1076,6 +1089,8 @@ namespace Ustaad_G.MyServer {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1")]
     public partial class Student {
         
+        private string accountField;
+        
         private string ageField;
         
         private string answerField;
@@ -1101,6 +1116,17 @@ namespace Ustaad_G.MyServer {
         private string usernameField;
         
         private string verifyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Account {
+            get {
+                return this.accountField;
+            }
+            set {
+                this.accountField = value;
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]

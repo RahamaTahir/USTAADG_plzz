@@ -34,16 +34,13 @@
             this.cmdHome6 = new System.Windows.Forms.Button();
             this.dataGridViewSearchRecords = new System.Windows.Forms.DataGridView();
             this.lblUstaadG = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cmdFeedback = new System.Windows.Forms.Button();
             this.lnkLogin6 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout6 = new System.Windows.Forms.LinkLabel();
             this.lnkContactUs6 = new System.Windows.Forms.LinkLabel();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.cmdReceive = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
@@ -52,6 +49,10 @@
             this.number = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.cmdShowSelected = new System.Windows.Forms.Button();
+            this.cmdPay = new System.Windows.Forms.Button();
+            this.lblAccount = new System.Windows.Forms.Label();
+            this.Account = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -107,6 +108,7 @@
             this.cmdRegister6.TabIndex = 8;
             this.cmdRegister6.Text = "Register";
             this.cmdRegister6.UseVisualStyleBackColor = true;
+            this.cmdRegister6.Click += new System.EventHandler(this.cmdRegister6_Click);
             // 
             // cmdHome6
             // 
@@ -125,15 +127,17 @@
             this.cmdHome6.TabIndex = 6;
             this.cmdHome6.Text = "Home";
             this.cmdHome6.UseVisualStyleBackColor = true;
+            this.cmdHome6.Click += new System.EventHandler(this.cmdHome6_Click);
             // 
             // dataGridViewSearchRecords
             // 
             this.dataGridViewSearchRecords.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridViewSearchRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSearchRecords.Location = new System.Drawing.Point(19, 220);
+            this.dataGridViewSearchRecords.Location = new System.Drawing.Point(432, 226);
             this.dataGridViewSearchRecords.Name = "dataGridViewSearchRecords";
-            this.dataGridViewSearchRecords.Size = new System.Drawing.Size(737, 231);
+            this.dataGridViewSearchRecords.Size = new System.Drawing.Size(324, 223);
             this.dataGridViewSearchRecords.TabIndex = 74;
+            this.dataGridViewSearchRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSearchRecords_CellContentClick);
             // 
             // lblUstaadG
             // 
@@ -146,25 +150,26 @@
             this.lblUstaadG.Size = new System.Drawing.Size(256, 55);
             this.lblUstaadG.TabIndex = 68;
             this.lblUstaadG.Text = "Ustaad G";
+            this.lblUstaadG.Click += new System.EventHandler(this.lblUstaadG_Click);
             // 
-            // button3
+            // cmdFeedback
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(19, 466);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 36);
-            this.button3.TabIndex = 78;
-            this.button3.Text = "FeedBack";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.cmdFeedback.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdFeedback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdFeedback.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdFeedback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdFeedback.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdFeedback.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdFeedback.Location = new System.Drawing.Point(33, 467);
+            this.cmdFeedback.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdFeedback.Name = "cmdFeedback";
+            this.cmdFeedback.Size = new System.Drawing.Size(126, 36);
+            this.cmdFeedback.TabIndex = 78;
+            this.cmdFeedback.Text = "FeedBack";
+            this.cmdFeedback.UseVisualStyleBackColor = true;
+            this.cmdFeedback.Click += new System.EventHandler(this.button3_Click);
             // 
             // lnkLogin6
             // 
@@ -181,6 +186,7 @@
             this.lnkLogin6.TabIndex = 73;
             this.lnkLogin6.TabStop = true;
             this.lnkLogin6.Text = "Login";
+            this.lnkLogin6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin6_LinkClicked);
             // 
             // lnkAbout6
             // 
@@ -227,163 +233,180 @@
             this.picHome.TabStop = false;
             this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
-            // button1
+            // cmdReceive
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(165, 466);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 36);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "FeedBack";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(312, 466);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 36);
-            this.button2.TabIndex = 78;
-            this.button2.Text = "FeedBack";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(457, 466);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 36);
-            this.button4.TabIndex = 78;
-            this.button4.Text = "FeedBack";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(596, 466);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 36);
-            this.button5.TabIndex = 78;
-            this.button5.Text = "FeedBack";
-            this.button5.UseVisualStyleBackColor = true;
+            this.cmdReceive.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReceive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdReceive.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReceive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReceive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdReceive.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReceive.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdReceive.Location = new System.Drawing.Point(627, 467);
+            this.cmdReceive.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdReceive.Name = "cmdReceive";
+            this.cmdReceive.Size = new System.Drawing.Size(129, 36);
+            this.cmdReceive.TabIndex = 78;
+            this.cmdReceive.Text = "Receive";
+            this.cmdReceive.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 147);
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 23);
+            this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 79;
             this.label1.Text = "Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 187);
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(49, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 23);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 79;
             this.label2.Text = "Gender";
             // 
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(147, 147);
+            this.name.BackColor = System.Drawing.Color.Gainsboro;
+            this.name.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(174, 164);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(196, 23);
+            this.name.Size = new System.Drawing.Size(134, 29);
             this.name.TabIndex = 79;
-            this.name.Text = "Muhammad Numair";
+            this.name.Text = "Username";
+            this.name.Click += new System.EventHandler(this.name_Click);
             // 
             // gender
             // 
             this.gender.AutoSize = true;
-            this.gender.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender.Location = new System.Drawing.Point(147, 187);
+            this.gender.BackColor = System.Drawing.Color.Gainsboro;
+            this.gender.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender.Location = new System.Drawing.Point(174, 208);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(54, 23);
+            this.gender.Size = new System.Drawing.Size(100, 29);
             this.gender.TabIndex = 79;
-            this.gender.Text = "Male";
+            this.gender.Text = "Gender";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(385, 147);
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(50, 255);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 23);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 79;
             this.label5.Text = "Contact";
             // 
             // number
             // 
             this.number.AutoSize = true;
-            this.number.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.number.Location = new System.Drawing.Point(480, 147);
+            this.number.BackColor = System.Drawing.Color.Gainsboro;
+            this.number.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.number.Location = new System.Drawing.Point(175, 255);
             this.number.Name = "number";
-            this.number.Size = new System.Drawing.Size(151, 23);
+            this.number.Size = new System.Drawing.Size(105, 29);
             this.number.TabIndex = 79;
-            this.number.Text = "0332-2652270";
+            this.number.Text = "Contact";
             // 
             // age
             // 
             this.age.AutoSize = true;
-            this.age.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.age.Location = new System.Drawing.Point(480, 187);
+            this.age.BackColor = System.Drawing.Color.Gainsboro;
+            this.age.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age.Location = new System.Drawing.Point(175, 307);
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(34, 23);
+            this.age.Size = new System.Drawing.Size(58, 29);
             this.age.TabIndex = 79;
-            this.age.Text = "20";
+            this.age.Text = "Age";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(385, 187);
+            this.label8.BackColor = System.Drawing.Color.Gainsboro;
+            this.label8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(50, 307);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 23);
+            this.label8.Size = new System.Drawing.Size(52, 25);
             this.label8.TabIndex = 79;
             this.label8.Text = "Age";
+            // 
+            // cmdShowSelected
+            // 
+            this.cmdShowSelected.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdShowSelected.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdShowSelected.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdShowSelected.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdShowSelected.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdShowSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdShowSelected.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdShowSelected.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdShowSelected.Location = new System.Drawing.Point(432, 164);
+            this.cmdShowSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdShowSelected.Name = "cmdShowSelected";
+            this.cmdShowSelected.Size = new System.Drawing.Size(178, 36);
+            this.cmdShowSelected.TabIndex = 80;
+            this.cmdShowSelected.Text = "Show Selected";
+            this.cmdShowSelected.UseVisualStyleBackColor = true;
+            this.cmdShowSelected.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // cmdPay
+            // 
+            this.cmdPay.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdPay.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPay.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdPay.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdPay.Location = new System.Drawing.Point(484, 467);
+            this.cmdPay.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdPay.Name = "cmdPay";
+            this.cmdPay.Size = new System.Drawing.Size(126, 36);
+            this.cmdPay.TabIndex = 81;
+            this.cmdPay.Text = "Pay";
+            this.cmdPay.UseVisualStyleBackColor = true;
+            // 
+            // lblAccount
+            // 
+            this.lblAccount.AutoSize = true;
+            this.lblAccount.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblAccount.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccount.Location = new System.Drawing.Point(50, 367);
+            this.lblAccount.Name = "lblAccount";
+            this.lblAccount.Size = new System.Drawing.Size(95, 25);
+            this.lblAccount.TabIndex = 82;
+            this.lblAccount.Text = "Account";
+            // 
+            // Account
+            // 
+            this.Account.AutoSize = true;
+            this.Account.BackColor = System.Drawing.Color.Gainsboro;
+            this.Account.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Account.Location = new System.Drawing.Point(174, 363);
+            this.Account.Name = "Account";
+            this.Account.Size = new System.Drawing.Size(117, 29);
+            this.Account.TabIndex = 83;
+            this.Account.Text = "Account ";
             // 
             // studentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 521);
+            this.Controls.Add(this.Account);
+            this.Controls.Add(this.lblAccount);
+            this.Controls.Add(this.cmdPay);
+            this.Controls.Add(this.cmdShowSelected);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.age);
@@ -395,11 +418,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewSearchRecords);
             this.Controls.Add(this.lblUstaadG);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.cmdReceive);
+            this.Controls.Add(this.cmdFeedback);
             this.Controls.Add(this.lnkLogin6);
             this.Controls.Add(this.lnkAbout6);
             this.Controls.Add(this.lnkContactUs6);
@@ -425,15 +445,12 @@
         private System.Windows.Forms.Button cmdHome6;
         private System.Windows.Forms.DataGridView dataGridViewSearchRecords;
         private System.Windows.Forms.Label lblUstaadG;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cmdFeedback;
         private System.Windows.Forms.LinkLabel lnkLogin6;
         private System.Windows.Forms.LinkLabel lnkAbout6;
         private System.Windows.Forms.LinkLabel lnkContactUs6;
         private System.Windows.Forms.PictureBox picHome;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button cmdReceive;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label name;
@@ -442,5 +459,9 @@
         private System.Windows.Forms.Label number;
         private System.Windows.Forms.Label age;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button cmdShowSelected;
+        private System.Windows.Forms.Button cmdPay;
+        private System.Windows.Forms.Label lblAccount;
+        private System.Windows.Forms.Label Account;
     }
 }

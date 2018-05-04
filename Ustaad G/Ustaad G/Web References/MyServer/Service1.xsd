@@ -9,6 +9,7 @@
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
   <xs:complexType name="Student">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
@@ -27,6 +28,7 @@
   <xs:element name="Student" nillable="true" type="tns:Student" />
   <xs:complexType name="Teacher">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Account_no" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
