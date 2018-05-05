@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin5 = new System.Windows.Forms.Button();
-            this.cmdRegister5 = new System.Windows.Forms.Button();
             this.cmdHome5 = new System.Windows.Forms.Button();
             this.lnkLogin5 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout5 = new System.Windows.Forms.LinkLabel();
@@ -49,7 +48,6 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmdAdmin5);
-            this.panel1.Controls.Add(this.cmdRegister5);
             this.panel1.Controls.Add(this.cmdHome5);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -77,25 +75,6 @@
             this.cmdAdmin5.UseVisualStyleBackColor = true;
             this.cmdAdmin5.Click += new System.EventHandler(this.cmdAdmin5_Click);
             // 
-            // cmdRegister5
-            // 
-            this.cmdRegister5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdRegister5.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdRegister5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdRegister5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegister5.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdRegister5.Location = new System.Drawing.Point(570, 1);
-            this.cmdRegister5.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdRegister5.Name = "cmdRegister5";
-            this.cmdRegister5.Size = new System.Drawing.Size(128, 49);
-            this.cmdRegister5.TabIndex = 8;
-            this.cmdRegister5.Text = "Register";
-            this.cmdRegister5.UseVisualStyleBackColor = true;
-            this.cmdRegister5.Click += new System.EventHandler(this.cmdRegister5_Click);
-            // 
             // cmdHome5
             // 
             this.cmdHome5.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -106,7 +85,7 @@
             this.cmdHome5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdHome5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdHome5.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdHome5.Location = new System.Drawing.Point(502, 1);
+            this.cmdHome5.Location = new System.Drawing.Point(606, 1);
             this.cmdHome5.Margin = new System.Windows.Forms.Padding(0);
             this.cmdHome5.Name = "cmdHome5";
             this.cmdHome5.Size = new System.Drawing.Size(75, 49);
@@ -270,7 +249,6 @@
 
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button cmdRegister5;
         private System.Windows.Forms.Button cmdHome5;
         private System.Windows.Forms.LinkLabel lnkLogin5;
         private System.Windows.Forms.LinkLabel lnkAbout5;

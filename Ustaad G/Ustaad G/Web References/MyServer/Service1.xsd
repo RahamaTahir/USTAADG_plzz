@@ -20,9 +20,9 @@
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Select" type="xs:boolean" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Verify" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Student" nillable="true" type="tns:Student" />
@@ -40,6 +40,7 @@
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Select" type="xs:boolean" />
       <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />

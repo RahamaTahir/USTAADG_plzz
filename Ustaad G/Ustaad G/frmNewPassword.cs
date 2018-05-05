@@ -62,7 +62,7 @@ namespace Ustaad_G
         {
             frmSelectRegister f = new frmSelectRegister();
             f.Show();
-            this.Show();
+            this.Hide();
         }
 
         private void lnkLogin5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -97,7 +97,7 @@ namespace Ustaad_G
             }
             if (txtPassword.Text == "" || txtPassword.Text == "Password")
             {
-                txtCPassword.Text = "Password";
+                txtCPassword.Text = "";
             }
         }
 
@@ -108,15 +108,33 @@ namespace Ustaad_G
 
         private void cmdReset_Click(object sender, EventArgs e)
         {
-            if(this_role== "Teacher")
+            if (txtCPassword.Text == "" || txtPassword.Text == "")
             {
-                Server.NewPasswordT(this_username , txtPassword.Text);
+                MessageBox.Show("please enter all required information!");
             }
             else
             {
-                Server.NewPasswordS(this_username, txtPassword.Text);
+
+                if (txtPassword.Text == txtCPassword.Text)
+                {
+                    if (this_role == "Teacher")
+                    {
+                        Server.NewPasswordT(this_username, txtPassword.Text);
+                    }
+                    else
+                    {
+                        Server.NewPasswordS(this_username, txtPassword.Text);
+                    }
+                    MessageBox.Show("Your Password Has Been Reset");
+                    frmLogin L = new frmLogin();
+                    this.Hide();
+                    L.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Your password and confirm password should be same :)");
+                }
             }
-            MessageBox.Show("Your Password Has Been Reset");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -126,7 +144,7 @@ namespace Ustaad_G
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
         }
@@ -136,6 +154,11 @@ namespace Ustaad_G
             frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

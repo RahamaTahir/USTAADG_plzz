@@ -37,9 +37,7 @@
             this.lblPLP = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin3 = new System.Windows.Forms.Button();
-            this.cmdRegister3 = new System.Windows.Forms.Button();
             this.cmdHome3 = new System.Windows.Forms.Button();
-            this.lnkLogin3 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout3 = new System.Windows.Forms.LinkLabel();
             this.lnkContactUs3 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
@@ -121,6 +119,8 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(197, 33);
             this.comboBoxLevel.TabIndex = 40;
+            this.comboBoxLevel.Text = "         Level";
+            this.comboBoxLevel.Click += new System.EventHandler(this.comboBoxLevel_Click);
             // 
             // txtPwd
             // 
@@ -170,7 +170,6 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmdAdmin3);
-            this.panel1.Controls.Add(this.cmdRegister3);
             this.panel1.Controls.Add(this.cmdHome3);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -198,25 +197,6 @@
             this.cmdAdmin3.UseVisualStyleBackColor = true;
             this.cmdAdmin3.Click += new System.EventHandler(this.cmdAdmin3_Click);
             // 
-            // cmdRegister3
-            // 
-            this.cmdRegister3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdRegister3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdRegister3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdRegister3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegister3.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdRegister3.Location = new System.Drawing.Point(570, 1);
-            this.cmdRegister3.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdRegister3.Name = "cmdRegister3";
-            this.cmdRegister3.Size = new System.Drawing.Size(128, 49);
-            this.cmdRegister3.TabIndex = 8;
-            this.cmdRegister3.Text = "Register";
-            this.cmdRegister3.UseVisualStyleBackColor = true;
-            this.cmdRegister3.Click += new System.EventHandler(this.cmdRegister3_Click);
-            // 
             // cmdHome3
             // 
             this.cmdHome3.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -227,7 +207,7 @@
             this.cmdHome3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdHome3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdHome3.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdHome3.Location = new System.Drawing.Point(502, 1);
+            this.cmdHome3.Location = new System.Drawing.Point(636, 1);
             this.cmdHome3.Margin = new System.Windows.Forms.Padding(0);
             this.cmdHome3.Name = "cmdHome3";
             this.cmdHome3.Size = new System.Drawing.Size(75, 49);
@@ -235,23 +215,6 @@
             this.cmdHome3.Text = "Home";
             this.cmdHome3.UseVisualStyleBackColor = true;
             this.cmdHome3.Click += new System.EventHandler(this.cmdHome3_Click);
-            // 
-            // lnkLogin3
-            // 
-            this.lnkLogin3.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkLogin3.AutoSize = true;
-            this.lnkLogin3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkLogin3.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkLogin3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkLogin3.ForeColor = System.Drawing.Color.White;
-            this.lnkLogin3.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkLogin3.Location = new System.Drawing.Point(684, 48);
-            this.lnkLogin3.Name = "lnkLogin3";
-            this.lnkLogin3.Size = new System.Drawing.Size(63, 23);
-            this.lnkLogin3.TabIndex = 34;
-            this.lnkLogin3.TabStop = true;
-            this.lnkLogin3.Text = "Login";
-            this.lnkLogin3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin3_LinkClicked);
             // 
             // lnkAbout3
             // 
@@ -262,7 +225,7 @@
             this.lnkAbout3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkAbout3.ForeColor = System.Drawing.Color.White;
             this.lnkAbout3.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkAbout3.Location = new System.Drawing.Point(610, 48);
+            this.lnkAbout3.Location = new System.Drawing.Point(680, 48);
             this.lnkAbout3.Name = "lnkAbout3";
             this.lnkAbout3.Size = new System.Drawing.Size(66, 23);
             this.lnkAbout3.TabIndex = 33;
@@ -278,7 +241,7 @@
             this.lnkContactUs3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkContactUs3.ForeColor = System.Drawing.Color.White;
             this.lnkContactUs3.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs3.Location = new System.Drawing.Point(494, 48);
+            this.lnkContactUs3.Location = new System.Drawing.Point(565, 48);
             this.lnkContactUs3.Name = "lnkContactUs3";
             this.lnkContactUs3.Size = new System.Drawing.Size(106, 23);
             this.lnkContactUs3.TabIndex = 32;
@@ -341,7 +304,6 @@
             this.Controls.Add(this.txtUname);
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lnkLogin3);
             this.Controls.Add(this.lnkAbout3);
             this.Controls.Add(this.lnkContactUs3);
             this.Controls.Add(this.lblUstaadG);
@@ -368,9 +330,7 @@
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdAdmin3;
-        private System.Windows.Forms.Button cmdRegister3;
         private System.Windows.Forms.Button cmdHome3;
-        private System.Windows.Forms.LinkLabel lnkLogin3;
         private System.Windows.Forms.LinkLabel lnkAbout3;
         private System.Windows.Forms.LinkLabel lnkContactUs3;
         private System.Windows.Forms.Label lblUstaadG;

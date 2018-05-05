@@ -14,11 +14,15 @@ namespace Ustaad_G_Service1
         public static List<Teacher> selectedteachers = new List<Teacher>();
 
 
-        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword)
+        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing)
         {
             Student st = new Student();
             st.Username = username;
             st.Password = password;
+            st.Area = area;
+            st.Range = range;
+            st.Timing = timing;
+            st.Gender = gender;
             st.Secret_Question = secret_Question;
             st.Age = age;
             st.Answer = answer;

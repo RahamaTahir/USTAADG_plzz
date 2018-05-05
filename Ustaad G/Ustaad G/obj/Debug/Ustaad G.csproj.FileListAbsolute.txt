@@ -182,3 +182,24 @@ C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.c
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
 C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csprojResolveAssemblyReference.cache
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.FeedBack.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmLogin.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdmin.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdminPassword.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmfiltered_teacher.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmNewPassword.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmRegisterTutor.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmResetPassword.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSearch.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmSelectRegister.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmStudentRegister.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.Properties.Resources.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.studentDetails.resources
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.GenerateResource.cache
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
+C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb

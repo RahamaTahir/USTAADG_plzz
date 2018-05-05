@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdAdmin6 = new System.Windows.Forms.Button();
             this.cmdRegister6 = new System.Windows.Forms.Button();
             this.cmdHome6 = new System.Windows.Forms.Button();
             this.dataGridViewSearchRecords = new System.Windows.Forms.DataGridView();
@@ -44,6 +43,7 @@
             this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
             this.Search = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmdAdmin6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -63,25 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(795, 54);
             this.panel1.TabIndex = 55;
-            // 
-            // cmdAdmin6
-            // 
-            this.cmdAdmin6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdAdmin6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdAdmin6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAdmin6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAdmin6.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdAdmin6.Location = new System.Drawing.Point(5, -1);
-            this.cmdAdmin6.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdAdmin6.Name = "cmdAdmin6";
-            this.cmdAdmin6.Size = new System.Drawing.Size(109, 49);
-            this.cmdAdmin6.TabIndex = 11;
-            this.cmdAdmin6.Text = "Admin";
-            this.cmdAdmin6.UseVisualStyleBackColor = true;
-            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
             // 
             // cmdRegister6
             // 
@@ -239,6 +220,7 @@
             // comboBoxSelectArea
             // 
             this.comboBoxSelectArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxSelectArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSelectArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectArea.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -275,6 +257,25 @@
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
+            // cmdAdmin6
+            // 
+            this.cmdAdmin6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdAdmin6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdAdmin6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAdmin6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAdmin6.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdAdmin6.Location = new System.Drawing.Point(5, -1);
+            this.cmdAdmin6.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdAdmin6.Name = "cmdAdmin6";
+            this.cmdAdmin6.Size = new System.Drawing.Size(109, 49);
+            this.cmdAdmin6.TabIndex = 11;
+            this.cmdAdmin6.Text = "Admin";
+            this.cmdAdmin6.UseVisualStyleBackColor = true;
+            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
+            // 
             // frmfiltered_teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,7 +308,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button cmdAdmin6;
         private System.Windows.Forms.Button cmdRegister6;
         private System.Windows.Forms.Button cmdHome6;
         private System.Windows.Forms.DataGridView dataGridViewSearchRecords;
@@ -321,5 +321,6 @@
         private System.Windows.Forms.ComboBox comboBoxSelectArea;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button cmdAdmin6;
     }
 }

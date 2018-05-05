@@ -31,35 +31,44 @@ namespace Ustaad_G
 
         private void Search_Click(object sender, EventArgs e)
         {
-            MyServer.Service1 Server = new MyServer.Service1();
-            list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
-
-            if (comboBoxSelectArea.Text != " ")
+            comboBoxSelectArea.DropDownStyle = ComboBoxStyle.DropDownList;
+            if (comboBoxSelectArea.Text == "")
             {
-                DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
-                c.ValueType = typeof(bool);
-                c.Name = "Chk";
-                c.HeaderText = "Select";
-
-
-                BindingSource S = new BindingSource();
-                S.DataSource = list;
-                dataGridViewSearchRecords.DataSource = S;
-                dataGridViewSearchRecords.Columns.Add(c);
-
-                dataGridViewSearchRecords.Columns.Remove("account_no");
-                dataGridViewSearchRecords.Columns.Remove("cPassword");
-                dataGridViewSearchRecords.Columns.Remove("password");
-                dataGridViewSearchRecords.Columns.Remove("answer");
-                dataGridViewSearchRecords.Columns.Remove("secret_Question");
-                dataGridViewSearchRecords.Columns.Remove("account");
+                MessageBox.Show("Please select the area *_*");
             }
-                
+            else
+            {
+                MyServer.Service1 Server = new MyServer.Service1();
+                list = Server.Search_Teacher(comboBoxSelectArea.Text).ToList<MyServer.Teacher>();
+                if (list.Count == 0)
+                {
+                    MessageBox.Show("No teachers found in the given area");
+                }
+                else
+                {
+
+                    if (comboBoxSelectArea.Text != " ")
+                    {
+                        DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
+                        c.ValueType = typeof(bool);
+                        c.Name = "Chk";
+                        c.HeaderText = "Select";
 
 
+                        BindingSource S = new BindingSource();
+                        S.DataSource = list;
+                        dataGridViewSearchRecords.DataSource = S;
+                        dataGridViewSearchRecords.Columns.Add(c);
 
-
-
+                        dataGridViewSearchRecords.Columns.Remove("account_no");
+                        dataGridViewSearchRecords.Columns.Remove("cPassword");
+                        dataGridViewSearchRecords.Columns.Remove("password");
+                        dataGridViewSearchRecords.Columns.Remove("answer");
+                        dataGridViewSearchRecords.Columns.Remove("secret_Question");
+                        dataGridViewSearchRecords.Columns.Remove("account");
+                    }
+                }
+            }
         }
 
         private void comboBoxSSecretQs_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,11 +92,11 @@ namespace Ustaad_G
 
         private void cmdAdmin6_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
 
-            
+
 
         }
 
@@ -113,6 +122,7 @@ namespace Ustaad_G
             }
             studentDetails sd = new studentDetails();
             sd.Show();
+            
 
         }
     }

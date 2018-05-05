@@ -23,11 +23,11 @@ namespace Ustaad_G_Service1
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword);
+        void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing);
 
         [OperationContract]
 
-        void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range);
+        void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range);
 
         [OperationContract]
         Student verifyStudent(string username, string password);
@@ -67,6 +67,9 @@ namespace Ustaad_G_Service1
 
         [OperationContract]
         List<Teacher> selected_teachers(Teacher t);
+
+        [OperationContract]
+        string Calculate_rating();
 
         // TODO: Add your service operations here
     }

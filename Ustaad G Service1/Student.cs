@@ -8,8 +8,6 @@ namespace Ustaad_G_Service1
     public class Student
     {
         private string username;
-        private static string idNo;
-        private string verify;
         private string age;
         private string gender;
         private string secret_Question;
@@ -21,13 +19,11 @@ namespace Ustaad_G_Service1
         private string timing;
         private string area;
         private string range;
+        private bool select;
         private string account = "50000";
 
 
-        public string Username { get => username; set => username = value; }
-        public static string IdNo { get => idNo; set => idNo = value; }
-        public string Verify { get => verify; set => verify = value; }
-        public string Age { get => age; set => age = value; }
+        public string Username { get => username; set => username = value; }public string Age { get => age; set => age = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Secret_Question { get => secret_Question; set => secret_Question = value; }
         public string Answer { get => answer; set => answer = value; }
@@ -39,5 +35,6 @@ namespace Ustaad_G_Service1
         public string Area { get => area; set => area = value; }
         public string Range { get => range; set => range = value; }
         public string Account { get => account; set => account = value; }
+        public bool Select { get => select; set => select = value; }
     }
 }

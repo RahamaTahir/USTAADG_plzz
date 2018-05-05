@@ -9,12 +9,13 @@ namespace Ustaad_G_Service1
     {
         public static List<Teacher> Teachers = new List<Teacher>();
 
-        public void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
+        public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             Teacher tc = new Teacher();
             tc.Username = username;
             tc.Password = password;
             tc.Range = range;
+            tc.Gender = gender;
             tc.Secret_Question = secret_Question;
             tc.Timing = timing;
             tc.Age = age;

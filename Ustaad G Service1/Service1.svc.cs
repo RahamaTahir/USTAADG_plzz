@@ -43,16 +43,16 @@ namespace Ustaad_G_Service1
             return composite;
         }
 
-        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword)
+        public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing)
         {
             StudentDL st = new StudentDL();
-            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword);
+            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword,  gender,  range,  area,  timing);
         }
 
-        public void AddTeacher(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
+        public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             TeacherDL tc = new TeacherDL();
-            tc.AddTeacher(username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
+            tc.AddTeacher( gender, username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
         }
 
 
@@ -135,6 +135,12 @@ namespace Ustaad_G_Service1
         {
             TeacherDL T = new TeacherDL();
             return T.selected_teachers(t);
+        }
+        public string Calculate_rating()
+        {
+            Admin st = new Admin();
+            return st.Calculate_rating();
+
         }
     }
 }

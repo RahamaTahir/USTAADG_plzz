@@ -40,8 +40,6 @@
             this.txtSName = new System.Windows.Forms.TextBox();
             this.txtSNo = new System.Windows.Forms.TextBox();
             this.txtSage = new System.Windows.Forms.TextBox();
-            this.chkSM = new System.Windows.Forms.CheckBox();
-            this.chkSF = new System.Windows.Forms.CheckBox();
             this.comboBoxSSecretQs = new System.Windows.Forms.ComboBox();
             this.txtSSecretAnswer = new System.Windows.Forms.TextBox();
             this.txtSpassword = new System.Windows.Forms.TextBox();
@@ -51,6 +49,11 @@
             this.cmdSRegister = new System.Windows.Forms.Button();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.comboGender = new System.Windows.Forms.ComboBox();
+            this.txtCreditcard = new System.Windows.Forms.TextBox();
+            this.txttiming = new System.Windows.Forms.TextBox();
+            this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
+            this.txtRange = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
@@ -207,7 +210,7 @@
             this.txtSName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSName.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSName.Location = new System.Drawing.Point(36, 260);
+            this.txtSName.Location = new System.Drawing.Point(36, 230);
             this.txtSName.Multiline = true;
             this.txtSName.Name = "txtSName";
             this.txtSName.Size = new System.Drawing.Size(298, 33);
@@ -222,7 +225,7 @@
             this.txtSNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSNo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSNo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSNo.Location = new System.Drawing.Point(36, 305);
+            this.txtSNo.Location = new System.Drawing.Point(36, 277);
             this.txtSNo.Multiline = true;
             this.txtSNo.Name = "txtSNo";
             this.txtSNo.Size = new System.Drawing.Size(298, 33);
@@ -237,7 +240,7 @@
             this.txtSage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSage.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSage.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSage.Location = new System.Drawing.Point(36, 353);
+            this.txtSage.Location = new System.Drawing.Point(36, 322);
             this.txtSage.Multiline = true;
             this.txtSage.Name = "txtSage";
             this.txtSage.Size = new System.Drawing.Size(298, 33);
@@ -245,32 +248,6 @@
             this.txtSage.Text = "Age";
             this.txtSage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSage.Click += new System.EventHandler(this.txtSage_Click);
-            // 
-            // chkSM
-            // 
-            this.chkSM.AutoSize = true;
-            this.chkSM.BackColor = System.Drawing.Color.Gainsboro;
-            this.chkSM.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSM.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.chkSM.Location = new System.Drawing.Point(61, 395);
-            this.chkSM.Name = "chkSM";
-            this.chkSM.Size = new System.Drawing.Size(81, 29);
-            this.chkSM.TabIndex = 27;
-            this.chkSM.Text = "Male";
-            this.chkSM.UseVisualStyleBackColor = false;
-            // 
-            // chkSF
-            // 
-            this.chkSF.AutoSize = true;
-            this.chkSF.BackColor = System.Drawing.Color.Gainsboro;
-            this.chkSF.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSF.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.chkSF.Location = new System.Drawing.Point(196, 395);
-            this.chkSF.Name = "chkSF";
-            this.chkSF.Size = new System.Drawing.Size(107, 29);
-            this.chkSF.TabIndex = 28;
-            this.chkSF.Text = "Female";
-            this.chkSF.UseVisualStyleBackColor = false;
             // 
             // comboBoxSSecretQs
             // 
@@ -283,10 +260,12 @@
             "Who are you?",
             "What is your favourite colour?",
             "What is your date of birth?"});
-            this.comboBoxSSecretQs.Location = new System.Drawing.Point(449, 260);
+            this.comboBoxSSecretQs.Location = new System.Drawing.Point(449, 230);
             this.comboBoxSSecretQs.Name = "comboBoxSSecretQs";
             this.comboBoxSSecretQs.Size = new System.Drawing.Size(298, 33);
             this.comboBoxSSecretQs.TabIndex = 29;
+            this.comboBoxSSecretQs.Text = "            Secret Ques";
+            this.comboBoxSSecretQs.Click += new System.EventHandler(this.comboBoxSSecretQs_Click);
             // 
             // txtSSecretAnswer
             // 
@@ -294,7 +273,7 @@
             this.txtSSecretAnswer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSSecretAnswer.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSSecretAnswer.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSSecretAnswer.Location = new System.Drawing.Point(451, 305);
+            this.txtSSecretAnswer.Location = new System.Drawing.Point(451, 272);
             this.txtSSecretAnswer.Multiline = true;
             this.txtSSecretAnswer.Name = "txtSSecretAnswer";
             this.txtSSecretAnswer.Size = new System.Drawing.Size(298, 33);
@@ -309,7 +288,7 @@
             this.txtSpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSpassword.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpassword.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSpassword.Location = new System.Drawing.Point(36, 439);
+            this.txtSpassword.Location = new System.Drawing.Point(36, 410);
             this.txtSpassword.Multiline = true;
             this.txtSpassword.Name = "txtSpassword";
             this.txtSpassword.Size = new System.Drawing.Size(298, 33);
@@ -325,7 +304,7 @@
             this.txtSCPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSCPassword.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSCPassword.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSCPassword.Location = new System.Drawing.Point(36, 478);
+            this.txtSCPassword.Location = new System.Drawing.Point(36, 455);
             this.txtSCPassword.Multiline = true;
             this.txtSCPassword.Name = "txtSCPassword";
             this.txtSCPassword.Size = new System.Drawing.Size(298, 33);
@@ -373,7 +352,7 @@
             this.cmdSRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSRegister.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSRegister.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdSRegister.Location = new System.Drawing.Point(451, 374);
+            this.cmdSRegister.Location = new System.Drawing.Point(449, 463);
             this.cmdSRegister.Margin = new System.Windows.Forms.Padding(0);
             this.cmdSRegister.Name = "cmdSRegister";
             this.cmdSRegister.Size = new System.Drawing.Size(300, 69);
@@ -393,6 +372,7 @@
             this.picHome.Size = new System.Drawing.Size(791, 605);
             this.picHome.TabIndex = 3;
             this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // linkLabel1
             // 
@@ -411,12 +391,101 @@
             this.linkLabel1.Text = "Close";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // comboGender
+            // 
+            this.comboGender.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboGender.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGender.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.comboGender.FormattingEnabled = true;
+            this.comboGender.Items.AddRange(new object[] {
+            "Male ",
+            "Female"});
+            this.comboGender.Location = new System.Drawing.Point(38, 366);
+            this.comboGender.Name = "comboGender";
+            this.comboGender.Size = new System.Drawing.Size(298, 33);
+            this.comboGender.TabIndex = 53;
+            this.comboGender.Text = "               Gender";
+            this.comboGender.Click += new System.EventHandler(this.comboGender_Click);
+            // 
+            // txtCreditcard
+            // 
+            this.txtCreditcard.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCreditcard.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCreditcard.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreditcard.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtCreditcard.Location = new System.Drawing.Point(36, 498);
+            this.txtCreditcard.Multiline = true;
+            this.txtCreditcard.Name = "txtCreditcard";
+            this.txtCreditcard.Size = new System.Drawing.Size(298, 33);
+            this.txtCreditcard.TabIndex = 70;
+            this.txtCreditcard.Text = "Credit Card Number";
+            this.txtCreditcard.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCreditcard.Click += new System.EventHandler(this.txtCreditcard_Click);
+            // 
+            // txttiming
+            // 
+            this.txttiming.BackColor = System.Drawing.Color.Gainsboro;
+            this.txttiming.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txttiming.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttiming.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txttiming.Location = new System.Drawing.Point(450, 398);
+            this.txttiming.Multiline = true;
+            this.txttiming.Name = "txttiming";
+            this.txttiming.Size = new System.Drawing.Size(298, 33);
+            this.txttiming.TabIndex = 73;
+            this.txttiming.Text = "Enter Timing";
+            this.txttiming.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txttiming.Click += new System.EventHandler(this.txttiming_Click);
+            this.txttiming.TextChanged += new System.EventHandler(this.txttiming_TextChanged);
+            // 
+            // comboBoxSelectArea
+            // 
+            this.comboBoxSelectArea.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxSelectArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSelectArea.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectArea.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.comboBoxSelectArea.FormattingEnabled = true;
+            this.comboBoxSelectArea.Items.AddRange(new object[] {
+            "Model Town, Lahore",
+            "Johar Town, Lahore",
+            "Defence, Lahore",
+            "Shadrha, Lahore",
+            "Dandoth, Chitral",
+            "Model Town, Gujranwala"});
+            this.comboBoxSelectArea.Location = new System.Drawing.Point(450, 356);
+            this.comboBoxSelectArea.Name = "comboBoxSelectArea";
+            this.comboBoxSelectArea.Size = new System.Drawing.Size(298, 33);
+            this.comboBoxSelectArea.TabIndex = 72;
+            this.comboBoxSelectArea.Text = "           Select Area";
+            this.comboBoxSelectArea.Click += new System.EventHandler(this.comboBoxSelectArea_Click);
+            // 
+            // txtRange
+            // 
+            this.txtRange.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtRange.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRange.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRange.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtRange.Location = new System.Drawing.Point(449, 315);
+            this.txtRange.Multiline = true;
+            this.txtRange.Name = "txtRange";
+            this.txtRange.Size = new System.Drawing.Size(298, 33);
+            this.txtRange.TabIndex = 71;
+            this.txtRange.Text = "Range";
+            this.txtRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRange.Click += new System.EventHandler(this.txtRange_Click);
+            // 
             // frmStudentRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(791, 605);
+            this.Controls.Add(this.txttiming);
+            this.Controls.Add(this.comboBoxSelectArea);
+            this.Controls.Add(this.txtRange);
+            this.Controls.Add(this.txtCreditcard);
+            this.Controls.Add(this.comboGender);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmdSRegister);
             this.Controls.Add(this.lnklblSTerms);
@@ -425,8 +494,6 @@
             this.Controls.Add(this.txtSpassword);
             this.Controls.Add(this.txtSSecretAnswer);
             this.Controls.Add(this.comboBoxSSecretQs);
-            this.Controls.Add(this.chkSF);
-            this.Controls.Add(this.chkSM);
             this.Controls.Add(this.txtSage);
             this.Controls.Add(this.txtSNo);
             this.Controls.Add(this.txtSName);
@@ -462,8 +529,6 @@
         private System.Windows.Forms.TextBox txtSName;
         private System.Windows.Forms.TextBox txtSNo;
         private System.Windows.Forms.TextBox txtSage;
-        private System.Windows.Forms.CheckBox chkSM;
-        private System.Windows.Forms.CheckBox chkSF;
         private System.Windows.Forms.ComboBox comboBoxSSecretQs;
         private System.Windows.Forms.TextBox txtSSecretAnswer;
         private System.Windows.Forms.TextBox txtSpassword;
@@ -472,5 +537,10 @@
         private System.Windows.Forms.LinkLabel lnklblSTerms;
         private System.Windows.Forms.Button cmdSRegister;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox comboGender;
+        private System.Windows.Forms.TextBox txtCreditcard;
+        private System.Windows.Forms.TextBox txttiming;
+        private System.Windows.Forms.ComboBox comboBoxSelectArea;
+        private System.Windows.Forms.TextBox txtRange;
     }
 }

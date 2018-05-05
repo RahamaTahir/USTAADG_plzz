@@ -29,23 +29,30 @@ namespace Ustaad_G
         }
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            string username = txtUname.Text;
-            string password = txtPwd.Text;
-            MyServer.Service1 Server = new MyServer.Service1();
-            bool isFound;
-            bool isFoundPass;
-            Server.VerifyByAdmin(username, password, out isFound, out isFoundPass);
-            
-            if (isFound == true)
+            if (txtPwd.Text == "" || txtUname.Text == "" || comboBoxLevel.Text == "")
             {
-                MessageBox.Show("You are verified!");
-                frmfiltered_teacher R = new frmfiltered_teacher();
-                this.Hide();
-                R.Show();
+                MessageBox.Show("All the required information should be entered :(");
             }
             else
             {
-                MessageBox.Show("You are not verified!!");
+                string username = txtUname.Text;
+                string password = txtPwd.Text;
+                MyServer.Service1 Server = new MyServer.Service1();
+                bool isFound;
+                bool isFoundPass;
+                Server.VerifyByAdmin(username, password, out isFound, out isFoundPass);
+
+                if (isFound == true)
+                {
+                    MessageBox.Show("You are verified!");
+                    frmfiltered_teacher R = new frmfiltered_teacher();
+                    this.Hide();
+                    R.Show();
+                }
+                else
+                {
+                    MessageBox.Show("You are not verified either your password or username is incorrect *_* ");
+                }
             }
         }
 
@@ -100,7 +107,7 @@ namespace Ustaad_G
 
         private void cmdAdmin3_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
         }
@@ -114,8 +121,14 @@ namespace Ustaad_G
 
         private void label1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             studentDetails sd = new studentDetails();
             sd.Show();
+        }
+
+        private void comboBoxLevel_Click(object sender, EventArgs e)
+        {
+            comboBoxLevel.ResetText();
         }
     }
 }

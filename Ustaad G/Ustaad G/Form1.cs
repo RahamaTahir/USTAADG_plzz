@@ -47,50 +47,56 @@ namespace Ustaad_G
 
         private void cmdLogin_Click_1(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            MyServer.Service1 Server = new MyServer.Service1();
-
-            MyServer.Teacher teacherFound = null;
-            MyServer.Student studentFound = null;
-
-            bool isFound;
-            bool isFoundPass;
-
-            if (checkBox1.Checked)
+            if (txtPassword.Text == "" || txtUsername.Text == "")
             {
-
-                teacherFound = Server.verifyteacher(username, password);
+                MessageBox.Show("All the required information should be filled :|");
             }
-
             else
             {
-                studentFound = Server.verifyStudent(username, password);
-            }
-            if (teacherFound != null || studentFound !=null)
-            {
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                MyServer.Service1 Server = new MyServer.Service1();
+
+                MyServer.Teacher teacherFound = null;
+                MyServer.Student studentFound = null;
+
+                
+
                 if (checkBox1.Checked)
                 {
-                    myUtil.loggedin_user_role = "Teacher";
-                    myUtil.teacher_loggedIn = teacherFound;
 
-                    studentDetails sD = new studentDetails("Teacher");
-                    sD.Show();
+                    teacherFound = Server.verifyteacher(username, password);
+                }
+
+                else
+                {
+                    studentFound = Server.verifyStudent(username, password);
+                }
+                if (teacherFound != null || studentFound != null)
+                {
+                    if (checkBox1.Checked)
+                    {
+                        myUtil.loggedin_user_role = "Teacher";
+                        myUtil.teacher_loggedIn = teacherFound;
+
+                        studentDetails sD = new studentDetails("Teacher");
+                        sD.Show();
+                    }
+                    else
+                    {
+                        myUtil.loggedin_user_role = "Student";
+                        myUtil.std_loggedin = studentFound;
+                        MessageBox.Show("Login Successfully!");
+                        frmSearch search = new frmSearch();
+                        search.Show();
+                    }
+
+                    this.Hide();
                 }
                 else
                 {
-                    myUtil.loggedin_user_role = "Student";
-                    myUtil.std_loggedin = studentFound;
-                    MessageBox.Show("Login Successfully!");
-                    frmSearch search = new frmSearch();
-                    search.Show();
+                    MessageBox.Show("Invalid Username or Password!");
                 }
-                
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Username or Password!");
             }
         }
 
@@ -129,14 +135,42 @@ namespace Ustaad_G
 
         private void lnkReset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmResetPassword f = new frmResetPassword();
-            f.Show();
-            this.Hide();
+            if (txtUsername.Text == "")
+            {
+                MessageBox.Show("Enter Username @ _ @");
+            }
+            else
+            {
+                string username = txtUsername.Text;
+                MyServer.Service1 Server = new MyServer.Service1();
+                bool isFound;
+                bool isFoundPass;
+
+                if (checkBox1.Checked)
+                {
+                    Server.isfoundT(username, out isFound, out isFoundPass);
+
+                }
+                else
+                {
+                    Server.isfoundS(username, out isFound, out isFoundPass);
+                }
+                if (isFound == true)
+                {
+                    frmResetPassword f = new frmResetPassword();
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username");
+                }
+            }
         }
 
         private void cmdAdmin5_Click(object sender, EventArgs e)
         {
-            frmAdmin L = new frmAdmin();
+            frmAdminPassword L = new frmAdminPassword();
             this.Hide();
             L.Show();
         }
@@ -146,6 +180,42 @@ namespace Ustaad_G
             frmLogin L = new frmLogin();
             this.Hide();
             L.Show();
+        }
+
+        private void lnkLogin5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdrating_Click(object sender, EventArgs e)
+        {
+            MyServer.Service1 Server = new MyServer.Service1();
+            cmdrating.Text = Server.Calculate_rating();
+            if(cmdrating.Text == "1")
+            {
+                cmdrating.Text = "1 *";
+            }
+            else if (cmdrating.Text == "2")
+            {
+                cmdrating.Text = "2 **";
+            }
+            else if (cmdrating.Text == "3")
+            {
+                cmdrating.Text = "3 ***";
+            }
+            else if (cmdrating.Text == "4")
+            {
+                cmdrating.Text = "4 ****";
+            }
+            else if(cmdrating.Text == "5")
+            {
+                cmdrating.Text = "5 *****";
+            }
         }
     }
  }

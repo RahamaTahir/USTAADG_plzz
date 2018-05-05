@@ -39,6 +39,7 @@ namespace Ustaad_G
             }
             MyServer.Service1 Server = new MyServer.Service1();
             Server.addRating(ratings);
+            MessageBox.Show("Thank you for your response. It would be helpful for us :D");
             this.Hide();
         }
     }
