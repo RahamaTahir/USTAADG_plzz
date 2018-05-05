@@ -115,6 +115,33 @@ namespace Ustaad_G_Service1
 
         }
 
+        public void EditStudentDetails(string password, string username, string age, string contactno)
+        {
+            foreach (Student s in Students)
+            {
+                if (s.Password == password)
+                {
+                    s.Username = username;
+                    s.Age = age;
+                    s.Contact_no = contactno;
+                }
+            }
+        }
+
+        public bool isfoundStudent(string password)
+        {
+
+            foreach (Student s in StudentDL.Students)
+            {
+                if (s.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
     }
 }

@@ -115,5 +115,30 @@ namespace Ustaad_G_Service1
 
         }
 
+        public void EditTeacherDetails(string password, string username, string age, string contactno)
+        {
+            foreach (Teacher t in Teachers)
+            {
+                if (t.Password == password)
+                {
+                    t.Username = username;
+                    t.Age = age;
+                    t.Contact_no = contactno;
+                }
+            }
+        }
+
+        public bool isfoundTeacher(string password)
+        {
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

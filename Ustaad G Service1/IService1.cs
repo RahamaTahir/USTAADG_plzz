@@ -71,6 +71,18 @@ namespace Ustaad_G_Service1
         [OperationContract]
         string Calculate_rating();
 
+        [OperationContract]
+        void EditStudentDetails(string password, string username, string age, string contactno);
+
+        [OperationContract]
+        void EditTeacherDetails(string password, string username, string age, string contactno);
+
+        [OperationContract]
+        bool isfoundTeacher(string password);
+
+        [OperationContract]
+        bool isfoundStudent(string password);
+
         // TODO: Add your service operations here
     }
 

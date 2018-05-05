@@ -51,6 +51,7 @@
             this.cmdPay = new System.Windows.Forms.Button();
             this.lblAccount = new System.Windows.Forms.Label();
             this.Account = new System.Windows.Forms.Label();
+            this.cmdEditDetails = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -204,10 +205,10 @@
             this.cmdReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdReceive.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdReceive.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdReceive.Location = new System.Drawing.Point(627, 467);
+            this.cmdReceive.Location = new System.Drawing.Point(615, 467);
             this.cmdReceive.Margin = new System.Windows.Forms.Padding(0);
             this.cmdReceive.Name = "cmdReceive";
-            this.cmdReceive.Size = new System.Drawing.Size(129, 36);
+            this.cmdReceive.Size = new System.Drawing.Size(141, 36);
             this.cmdReceive.TabIndex = 78;
             this.cmdReceive.Text = "Receive";
             this.cmdReceive.UseVisualStyleBackColor = true;
@@ -329,10 +330,10 @@
             this.cmdPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdPay.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdPay.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdPay.Location = new System.Drawing.Point(484, 467);
+            this.cmdPay.Location = new System.Drawing.Point(432, 467);
             this.cmdPay.Margin = new System.Windows.Forms.Padding(0);
             this.cmdPay.Name = "cmdPay";
-            this.cmdPay.Size = new System.Drawing.Size(126, 36);
+            this.cmdPay.Size = new System.Drawing.Size(139, 36);
             this.cmdPay.TabIndex = 81;
             this.cmdPay.Text = "Pay";
             this.cmdPay.UseVisualStyleBackColor = true;
@@ -359,11 +360,31 @@
             this.Account.TabIndex = 83;
             this.Account.Text = "Account ";
             // 
+            // cmdEditDetails
+            // 
+            this.cmdEditDetails.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdEditDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdEditDetails.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdEditDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdEditDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdEditDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEditDetails.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEditDetails.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdEditDetails.Location = new System.Drawing.Point(209, 467);
+            this.cmdEditDetails.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdEditDetails.Name = "cmdEditDetails";
+            this.cmdEditDetails.Size = new System.Drawing.Size(178, 36);
+            this.cmdEditDetails.TabIndex = 85;
+            this.cmdEditDetails.Text = "Edit Details";
+            this.cmdEditDetails.UseVisualStyleBackColor = true;
+            this.cmdEditDetails.Click += new System.EventHandler(this.cmdEditDetails_Click);
+            // 
             // studentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 521);
+            this.Controls.Add(this.cmdEditDetails);
             this.Controls.Add(this.Account);
             this.Controls.Add(this.lblAccount);
             this.Controls.Add(this.cmdPay);
@@ -421,5 +442,6 @@
         private System.Windows.Forms.Button cmdPay;
         private System.Windows.Forms.Label lblAccount;
         private System.Windows.Forms.Label Account;
+        private System.Windows.Forms.Button cmdEditDetails;
     }
 }

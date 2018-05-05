@@ -39,14 +39,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin10 = new System.Windows.Forms.Button();
             this.lblUstaadG = new System.Windows.Forms.Label();
-            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAminPassword
@@ -62,6 +62,7 @@
             this.txtAminPassword.TabIndex = 67;
             this.txtAminPassword.Text = "Password";
             this.txtAminPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAminPassword.Click += new System.EventHandler(this.txtAminPassword_Click);
             // 
             // cmdAdminPassword
             // 
@@ -223,19 +224,6 @@
             this.lblUstaadG.TabIndex = 60;
             this.lblUstaadG.Text = "Ustaad G";
             // 
-            // picHome
-            // 
-            this.picHome.BackColor = System.Drawing.Color.Transparent;
-            this.picHome.BackgroundImage = global::Ustaad_G.Properties.Resources.bigstock_Apple_on_School_Books_with_cop_14086715;
-            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picHome.Location = new System.Drawing.Point(0, 0);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(791, 454);
-            this.picHome.TabIndex = 59;
-            this.picHome.TabStop = false;
-            this.picHome.Click += new System.EventHandler(this.picHome_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -299,6 +287,19 @@
             this.label1.TabIndex = 68;
             this.label1.Text = "Ustaad G";
             // 
+            // picHome
+            // 
+            this.picHome.BackColor = System.Drawing.Color.Transparent;
+            this.picHome.BackgroundImage = global::Ustaad_G.Properties.Resources.bigstock_Apple_on_School_Books_with_cop_14086715;
+            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picHome.Location = new System.Drawing.Point(0, 0);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(791, 454);
+            this.picHome.TabIndex = 59;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
+            // 
             // frmAdminPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,8 +320,8 @@
             this.Name = "frmAdminPassword";
             this.Text = "frmAdminPassword";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

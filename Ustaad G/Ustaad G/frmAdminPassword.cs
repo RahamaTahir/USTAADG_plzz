@@ -63,5 +63,10 @@ namespace Ustaad_G
             this.Hide();
             R.Show();
         }
+
+        private void txtAminPassword_Click(object sender, EventArgs e)
+        {
+            txtAminPassword.Clear();
+        }
     }
 }

@@ -203,3 +203,7 @@ C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Us
 C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.csproj.CoreCompileInputs.cache
 C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.exe
 C:\Users\Hmna76\Desktop\new saturday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.FeedBack.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdminPassword.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmEditDetals.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.studentDetails.resources

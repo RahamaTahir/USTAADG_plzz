@@ -142,5 +142,29 @@ namespace Ustaad_G_Service1
             return st.Calculate_rating();
 
         }
+
+        public void EditStudentDetails(string password, string username, string age, string contactno)
+        {
+            StudentDL st = new StudentDL();
+            st.EditStudentDetails(password, username, age, contactno);
+        }
+
+        public void EditTeacherDetails(string password, string username, string age, string contactno)
+        {
+            TeacherDL T = new TeacherDL();
+            T.EditTeacherDetails(password, username, age, contactno);
+        }
+
+        public bool isfoundStudent(string password)
+        {
+            StudentDL s = new StudentDL();
+            return s.isfoundStudent(password);
+        }
+
+        public bool isfoundTeacher(string password)
+        {
+            TeacherDL T = new TeacherDL();
+            return T.isfoundTeacher(password);
+        }
     }
 }

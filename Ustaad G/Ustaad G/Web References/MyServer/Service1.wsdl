@@ -133,6 +133,30 @@
   <wsdl:message name="IService1_Calculate_rating_OutputMessage">
     <wsdl:part name="parameters" element="tns:Calculate_ratingResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_EditStudentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditStudentDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditStudentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditStudentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditTeacherDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditTeacherDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditTeacherDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditTeacherDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundTeacher" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundTeacherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundStudent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isfoundStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isfoundStudentResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -217,6 +241,22 @@
     <wsdl:operation name="Calculate_rating">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Calculate_rating" message="tns:IService1_Calculate_rating_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/Calculate_ratingResponse" message="tns:IService1_Calculate_rating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditStudentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditStudentDetails" message="tns:IService1_EditStudentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditStudentDetailsResponse" message="tns:IService1_EditStudentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTeacherDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditTeacherDetails" message="tns:IService1_EditTeacherDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditTeacherDetailsResponse" message="tns:IService1_EditTeacherDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isfoundTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isfoundTeacher" message="tns:IService1_isfoundTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isfoundTeacherResponse" message="tns:IService1_isfoundTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isfoundStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isfoundStudent" message="tns:IService1_isfoundStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isfoundStudentResponse" message="tns:IService1_isfoundStudent_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -403,6 +443,42 @@
     </wsdl:operation>
     <wsdl:operation name="Calculate_rating">
       <soap:operation soapAction="http://tempuri.org/IService1/Calculate_rating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditStudentDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditStudentDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTeacherDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditTeacherDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isfoundTeacher">
+      <soap:operation soapAction="http://tempuri.org/IService1/isfoundTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isfoundStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/isfoundStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

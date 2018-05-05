@@ -101,5 +101,12 @@ namespace Ustaad_G
         {
 
         }
+
+        private void cmdEditDetails_Click(object sender, EventArgs e)
+        {
+            frmEditDetals R = new frmEditDetals();
+            this.Hide();
+            R.Show();
+        }
     }
 }
