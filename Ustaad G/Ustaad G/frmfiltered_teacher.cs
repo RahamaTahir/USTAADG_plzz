@@ -115,6 +115,7 @@ namespace Ustaad_G
 
         private void cmdSelect_Click(object sender, EventArgs e)
         {
+            bool isfound = false;
             int i = 0;
             MyServer.Service1 Server = new MyServer.Service1();
             foreach (DataGridViewRow row in dataGridViewSearchRecords.Rows)
@@ -123,13 +124,21 @@ namespace Ustaad_G
                 {
                     Steachers = Server.selected_teachers(list.ElementAt(i)).ToList<MyServer.Teacher>();
                     MessageBox.Show("Teacher Selected");
+                    isfound = true;
+
                 }
                 i++;
             }
-            studentDetails sd = new studentDetails();
-            this.Hide();
-            sd.Show();
-            
+            if (isfound == true)
+            {
+                studentDetails sd = new studentDetails();
+                this.Hide();
+                sd.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select teacher first!");
+            }
 
         }
     }
