@@ -65,7 +65,13 @@ namespace Ustaad_G
                         dataGridViewSearchRecords.Columns.Remove("password");
                         dataGridViewSearchRecords.Columns.Remove("answer");
                         dataGridViewSearchRecords.Columns.Remove("secret_Question");
-                        dataGridViewSearchRecords.Columns.Remove("account");
+                        dataGridViewSearchRecords.Columns.Remove("Account");
+                        dataGridViewSearchRecords.Columns.Remove("Id");
+                        dataGridViewSearchRecords.Columns.Remove("IdSpecified");
+                        dataGridViewSearchRecords.Columns.Remove("Paid");
+                        dataGridViewSearchRecords.Columns.Remove("PaidSpecified");
+                        dataGridViewSearchRecords.Columns.Remove("receive");
+                        dataGridViewSearchRecords.Columns.Remove("receiveSpecified");
                     }
                 }
             }
@@ -121,6 +127,7 @@ namespace Ustaad_G
                 i++;
             }
             studentDetails sd = new studentDetails();
+            this.Hide();
             sd.Show();
             
 

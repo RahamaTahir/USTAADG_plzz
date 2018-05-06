@@ -207,3 +207,5 @@ C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.FeedBa
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdminPassword.resources
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmEditDetals.resources
 C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.studentDetails.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAdminPassword.resources
+C:\Users\Aleena Riaz\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmEditDetals.resources

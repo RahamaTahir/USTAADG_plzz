@@ -20,7 +20,6 @@
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Select" type="xs:boolean" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -36,14 +35,16 @@
       <xs:element minOccurs="0" name="CPassword" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Contact_no" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paid" type="xs:boolean" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Select" type="xs:boolean" />
       <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="receive" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Teacher" nillable="true" type="tns:Teacher" />

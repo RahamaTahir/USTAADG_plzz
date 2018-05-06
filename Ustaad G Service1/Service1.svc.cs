@@ -166,5 +166,17 @@ namespace Ustaad_G_Service1
             TeacherDL T = new TeacherDL();
             return T.isfoundTeacher(password);
         }
+
+        public string pay(string ID, string account)
+        {
+            StudentDL s = new StudentDL();
+            return s.pay(ID, account);
+        }
+
+        public string receive(string username, string account)
+        {
+            TeacherDL t = new TeacherDL();
+            return t.receive(username, account);
+        }
     }
 }

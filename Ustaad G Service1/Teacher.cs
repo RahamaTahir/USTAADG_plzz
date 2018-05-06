@@ -21,8 +21,10 @@ namespace Ustaad_G_Service1
         private string subject;
         private string level;
         private string account_no;
-        private string account;
-        private bool select;
+        private string account = "0";
+        private bool paid = false;
+        public bool receive = false;
+        private int id;
 
         public string Username { get => username; set => username = value; }
         public string Age { get => age; set => age = value; }
@@ -39,6 +41,7 @@ namespace Ustaad_G_Service1
         public string Level { get => level; set => level = value; }
         public string Account_no { get => account_no; set => account_no = value; }
         public string Account { get => account; set => account = value; }
-        public bool Select { get => select; set => select = value; }
+        public int Id { get => id; set => id = value; }
+        public bool Paid { get => paid; set => paid = value; }
     }
 }

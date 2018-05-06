@@ -9,6 +9,8 @@ namespace Ustaad_G_Service1
     {
         public static List<Teacher> Teachers = new List<Teacher>();
 
+        public static int idno = 1200;
+
         public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             Teacher tc = new Teacher();
@@ -24,6 +26,9 @@ namespace Ustaad_G_Service1
             tc.CPassword = cPassword;
             tc.Subject = subject;
             tc.Level = level;
+            idno = idno + 5;
+            tc.Id = idno;
+            tc.Contact_no = contact_no;
             Teachers.Add(tc);
         }
 
@@ -138,6 +143,26 @@ namespace Ustaad_G_Service1
                 }
             }
             return false;
+        }
+
+        public string receive(string username, string account)
+        {
+            foreach (Teacher T in StudentDL.selectedteachers)
+            {
+                if (T.Paid == true)
+                {
+                    int a, b;
+                    T.receive = true;
+                    a = int.Parse(T.Account) + int.Parse(T.Range) / 2;
+                    T.Account = a.ToString();
+                    b = int.Parse(Admin.Profit) + int.Parse(T.Range) / 2;
+                    Admin.Profit = b.ToString();
+                    account = a.ToString();
+                    T.Paid = false;
+                }
+
+            }
+            return account;
         }
 
     }

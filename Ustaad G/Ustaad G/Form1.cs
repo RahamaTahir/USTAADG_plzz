@@ -80,6 +80,7 @@ namespace Ustaad_G
                         myUtil.teacher_loggedIn = teacherFound;
 
                         studentDetails sD = new studentDetails("Teacher");
+                        this.Hide();
                         sD.Show();
                     }
                     else
@@ -88,10 +89,9 @@ namespace Ustaad_G
                         myUtil.std_loggedin = studentFound;
                         MessageBox.Show("Login Successfully!");
                         frmSearch search = new frmSearch();
+                        this.Hide();
                         search.Show();
                     }
-
-                    this.Hide();
                 }
                 else
                 {

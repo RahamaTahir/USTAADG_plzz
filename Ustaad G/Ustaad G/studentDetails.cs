@@ -12,6 +12,9 @@ namespace Ustaad_G
 {
     public partial class studentDetails : Form
     {
+        string accountS;
+        string UserT;
+        string accountT;
         public studentDetails()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace Ustaad_G
             age.Text = myUtil.std_loggedin.Age;
             gender.Text = myUtil.std_loggedin.Gender;
             Account.Text = myUtil.std_loggedin.Account;
+            accountS = myUtil.std_loggedin.Account;
             cmdReceive.Hide();
         }
 
@@ -33,7 +37,10 @@ namespace Ustaad_G
             number.Text = myUtil.teacher_loggedIn.Contact_no;
             age.Text = myUtil.teacher_loggedIn.Age;
             gender.Text = myUtil.teacher_loggedIn.Gender;
-            Account.Text = myUtil.std_loggedin.Account;
+            Account.Text = myUtil.teacher_loggedIn.Account;
+            UserT = myUtil.teacher_loggedIn.Username;
+            accountT = myUtil.teacher_loggedIn.Account;
+            txtIDno.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -58,6 +65,12 @@ namespace Ustaad_G
             dataGridViewSearchRecords.Columns.Remove("password");
             dataGridViewSearchRecords.Columns.Remove("answer");
             dataGridViewSearchRecords.Columns.Remove("secret_Question");
+            dataGridViewSearchRecords.Columns.Remove("IdSpecified");
+            dataGridViewSearchRecords.Columns.Remove("Account");
+            dataGridViewSearchRecords.Columns.Remove("Paid");
+            dataGridViewSearchRecords.Columns.Remove("PaidSpecified");
+            dataGridViewSearchRecords.Columns.Remove("receive");
+            dataGridViewSearchRecords.Columns.Remove("receiveSpecified");
 
         }
 
@@ -107,6 +120,49 @@ namespace Ustaad_G
             frmEditDetals R = new frmEditDetals();
             this.Hide();
             R.Show();
+        }
+
+        private void cmdPay_Click(object sender, EventArgs e)
+        {
+            MyServer.Service1 Server = new MyServer.Service1();
+            string pay = Server.pay(txtIDno.Text, accountS);
+            if (pay != "50000")
+            {
+                MessageBox.Show("Fee has been paid!");
+                myUtil.std_loggedin.Account = pay;
+                Account.Text = pay;
+            }
+            else
+            {
+                MessageBox.Show("Unable to Pay!");
+            }
+        }
+
+        private void cmdReceive_Click(object sender, EventArgs e)
+        {
+            MyServer.Service1 Server = new MyServer.Service1();
+            string fee = Server.receive(UserT, accountT);
+            if (fee != "0")
+            {
+                MessageBox.Show("Fee has been received!");
+                Account.Text = fee;
+                myUtil.teacher_loggedIn.Account = fee;
+
+            }
+            else
+            {
+                MessageBox.Show("Fee has not been paid yet!");
+            }
+        }
+
+        private void txtIDno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDno_Click(object sender, EventArgs e)
+        {
+            txtIDno.Clear();
         }
     }
 }

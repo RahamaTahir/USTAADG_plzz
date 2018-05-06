@@ -23,7 +23,7 @@ namespace Ustaad_G.MyServer {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -78,6 +78,10 @@ namespace Ustaad_G.MyServer {
         private System.Threading.SendOrPostCallback isfoundTeacherOperationCompleted;
         
         private System.Threading.SendOrPostCallback isfoundStudentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback payOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback receiveOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -191,6 +195,12 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event isfoundStudentCompletedEventHandler isfoundStudentCompleted;
+        
+        /// <remarks/>
+        public event payCompletedEventHandler payCompleted;
+        
+        /// <remarks/>
+        public event receiveCompletedEventHandler receiveCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1003,6 +1013,70 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/pay", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pay([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ID, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string account) {
+            object[] results = this.Invoke("pay", new object[] {
+                        ID,
+                        account});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void payAsync(string ID, string account) {
+            this.payAsync(ID, account, null);
+        }
+        
+        /// <remarks/>
+        public void payAsync(string ID, string account, object userState) {
+            if ((this.payOperationCompleted == null)) {
+                this.payOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpayOperationCompleted);
+            }
+            this.InvokeAsync("pay", new object[] {
+                        ID,
+                        account}, this.payOperationCompleted, userState);
+        }
+        
+        private void OnpayOperationCompleted(object arg) {
+            if ((this.payCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.payCompleted(this, new payCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/receive", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string receive([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string account) {
+            object[] results = this.Invoke("receive", new object[] {
+                        username,
+                        account});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void receiveAsync(string username, string account) {
+            this.receiveAsync(username, account, null);
+        }
+        
+        /// <remarks/>
+        public void receiveAsync(string username, string account, object userState) {
+            if ((this.receiveOperationCompleted == null)) {
+                this.receiveOperationCompleted = new System.Threading.SendOrPostCallback(this.OnreceiveOperationCompleted);
+            }
+            this.InvokeAsync("receive", new object[] {
+                        username,
+                        account}, this.receiveOperationCompleted, userState);
+        }
+        
+        private void OnreceiveOperationCompleted(object arg) {
+            if ((this.receiveCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.receiveCompleted(this, new receiveCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1022,7 +1096,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1069,7 +1143,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1092,7 +1166,15 @@ namespace Ustaad_G.MyServer {
         
         private string genderField;
         
+        private int idField;
+        
+        private bool idFieldSpecified;
+        
         private string levelField;
+        
+        private bool paidField;
+        
+        private bool paidFieldSpecified;
         
         private string passwordField;
         
@@ -1100,15 +1182,15 @@ namespace Ustaad_G.MyServer {
         
         private string secret_QuestionField;
         
-        private bool selectField;
-        
-        private bool selectFieldSpecified;
-        
         private string subjectField;
         
         private string timingField;
         
         private string usernameField;
+        
+        private bool receiveField;
+        
+        private bool receiveFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1199,6 +1281,27 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IdSpecified {
+            get {
+                return this.idFieldSpecified;
+            }
+            set {
+                this.idFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string Level {
             get {
@@ -1206,6 +1309,27 @@ namespace Ustaad_G.MyServer {
             }
             set {
                 this.levelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Paid {
+            get {
+                return this.paidField;
+            }
+            set {
+                this.paidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PaidSpecified {
+            get {
+                return this.paidFieldSpecified;
+            }
+            set {
+                this.paidFieldSpecified = value;
             }
         }
         
@@ -1243,27 +1367,6 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
-        public bool Select {
-            get {
-                return this.selectField;
-            }
-            set {
-                this.selectField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SelectSpecified {
-            get {
-                return this.selectFieldSpecified;
-            }
-            set {
-                this.selectFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string Subject {
             get {
@@ -1295,10 +1398,31 @@ namespace Ustaad_G.MyServer {
                 this.usernameField = value;
             }
         }
+        
+        /// <remarks/>
+        public bool receive {
+            get {
+                return this.receiveField;
+            }
+            set {
+                this.receiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool receiveSpecified {
+            get {
+                return this.receiveFieldSpecified;
+            }
+            set {
+                this.receiveFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1326,10 +1450,6 @@ namespace Ustaad_G.MyServer {
         private string rangeField;
         
         private string secret_QuestionField;
-        
-        private bool selectField;
-        
-        private bool selectFieldSpecified;
         
         private string timingField;
         
@@ -1457,27 +1577,6 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
-        public bool Select {
-            get {
-                return this.selectField;
-            }
-            set {
-                this.selectField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SelectSpecified {
-            get {
-                return this.selectFieldSpecified;
-            }
-            set {
-                this.selectFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string Timing {
             get {
@@ -1501,11 +1600,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1527,19 +1626,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void NewPasswordTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void NewPasswordSCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1561,19 +1660,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AddStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AddTeacherCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void verifyStudentCompletedEventHandler(object sender, verifyStudentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1595,11 +1694,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void verifyteacherCompletedEventHandler(object sender, verifyteacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verifyteacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1621,15 +1720,15 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addRatingCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isfoundTCompletedEventHandler(object sender, isfoundTCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1659,11 +1758,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isfoundSCompletedEventHandler(object sender, isfoundSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1693,11 +1792,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ResetPasswordSCompletedEventHandler(object sender, ResetPasswordSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResetPasswordSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1727,11 +1826,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ResetPasswordTCompletedEventHandler(object sender, ResetPasswordTCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResetPasswordTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1761,11 +1860,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void VerifyByAdminCompletedEventHandler(object sender, VerifyByAdminCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class VerifyByAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1795,11 +1894,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void Search_TeacherCompletedEventHandler(object sender, Search_TeacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Search_TeacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1821,11 +1920,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ShowAllTeachersCompletedEventHandler(object sender, ShowAllTeachersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowAllTeachersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1847,11 +1946,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ShowAllStudentsCompletedEventHandler(object sender, ShowAllStudentsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowAllStudentsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1873,11 +1972,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isUniqueTCompletedEventHandler(object sender, isUniqueTCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isUniqueTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1907,11 +2006,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isUniqueSCompletedEventHandler(object sender, isUniqueSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isUniqueSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1941,11 +2040,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void selected_teachersCompletedEventHandler(object sender, selected_teachersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class selected_teachersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1967,11 +2066,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void Calculate_ratingCompletedEventHandler(object sender, Calculate_ratingCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Calculate_ratingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1993,19 +2092,19 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void EditStudentDetailsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void EditTeacherDetailsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isfoundTeacherCompletedEventHandler(object sender, isfoundTeacherCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundTeacherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2035,11 +2134,11 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void isfoundStudentCompletedEventHandler(object sender, isfoundStudentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class isfoundStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2064,6 +2163,58 @@ namespace Ustaad_G.MyServer {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void payCompletedEventHandler(object sender, payCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class payCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal payCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void receiveCompletedEventHandler(object sender, receiveCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class receiveCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal receiveCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }

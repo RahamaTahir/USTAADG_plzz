@@ -19,7 +19,6 @@ namespace Ustaad_G_Service1
         private string timing;
         private string area;
         private string range;
-        private bool select;
         private string account = "50000";
 
 
@@ -35,6 +34,6 @@ namespace Ustaad_G_Service1
         public string Area { get => area; set => area = value; }
         public string Range { get => range; set => range = value; }
         public string Account { get => account; set => account = value; }
-        public bool Select { get => select; set => select = value; }
+       
     }
 }

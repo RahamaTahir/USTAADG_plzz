@@ -7,11 +7,11 @@ namespace Ustaad_G_Service1
 {
     public class Admin
     {
-        private string profit;
+        private static string profit = "0";
 
         public static List<string> ratings = new List<string>();
 
-        public string Profit { get => profit; set => profit = value; }
+        public static string Profit { get => profit; set => profit = value; }
 
         public static void addRating(string rating)
         {

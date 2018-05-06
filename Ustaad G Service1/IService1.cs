@@ -83,6 +83,12 @@ namespace Ustaad_G_Service1
         [OperationContract]
         bool isfoundStudent(string password);
 
+        [OperationContract]
+        string pay(string ID, string account);
+
+        [OperationContract]
+        string receive(string username, string account);
+
         // TODO: Add your service operations here
     }
 

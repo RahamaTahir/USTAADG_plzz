@@ -27,6 +27,7 @@ namespace Ustaad_G_Service1
             st.Age = age;
             st.Answer = answer;
             st.CPassword = cPassword;
+            st.Contact_no = contact_no;
             Students.Add(st);
         }
 
@@ -139,6 +140,27 @@ namespace Ustaad_G_Service1
                 }
             }
             return false;
+        }
+
+        public string pay(string ID, string account)
+        {
+
+            foreach (Teacher T in StudentDL.selectedteachers)
+            {
+                if (T.Id.ToString() == ID)
+                {
+                    if (T.receive == false)
+                    {
+                        int m;
+                        m = int.Parse(account) - int.Parse(T.Range);
+                        T.Paid = true;
+                        account = m.ToString();
+                        T.receive = true;
+                    }
+
+                }
+            }
+            return account;
         }
 
 

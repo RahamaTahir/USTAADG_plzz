@@ -94,9 +94,9 @@ namespace Ustaad_G
                     {
                         Server.AddStudent( txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text , comboGender.Text , txtRange.Text , comboBoxSelectArea.Text, txttiming.Text);
                         MessageBox.Show("You have been registered");
-                        frmLogin L = new frmLogin();
-                        this.Hide();
-                        L.Show();
+                        //frmLogin L = new frmLogin();
+                        //this.Hide();
+                        //L.Show();
                     }
                     else
                     {

@@ -95,11 +95,11 @@ namespace Ustaad_G
                     Server.isUniqueT(txtTName.Text, out isFound, out isFoundPass);
                     if (isFound == true)
                     {
-                        Server.AddTeacher(txtRange.Text, txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
+                        Server.AddTeacher( combogenderT.Text  , txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
                         MessageBox.Show("You have been registered");
-                        frmLogin f = new frmLogin();
-                        f.Show();
-                        this.Hide();
+                        //frmLogin f = new frmLogin();
+                        //f.Show();
+                        //this.Hide();
                     }
                     else
                     {

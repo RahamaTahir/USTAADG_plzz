@@ -492,7 +492,7 @@
             this.combogenderT.FormattingEnabled = true;
             this.combogenderT.Items.AddRange(new object[] {
             "Male",
-            "Famale"});
+            "Female"});
             this.combogenderT.Location = new System.Drawing.Point(54, 341);
             this.combogenderT.Name = "combogenderT";
             this.combogenderT.Size = new System.Drawing.Size(298, 33);

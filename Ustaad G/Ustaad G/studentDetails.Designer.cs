@@ -52,6 +52,7 @@
             this.lblAccount = new System.Windows.Forms.Label();
             this.Account = new System.Windows.Forms.Label();
             this.cmdEditDetails = new System.Windows.Forms.Button();
+            this.txtIDno = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -141,7 +142,7 @@
             this.cmdFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdFeedback.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdFeedback.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdFeedback.Location = new System.Drawing.Point(33, 467);
+            this.cmdFeedback.Location = new System.Drawing.Point(14, 467);
             this.cmdFeedback.Margin = new System.Windows.Forms.Padding(0);
             this.cmdFeedback.Name = "cmdFeedback";
             this.cmdFeedback.Size = new System.Drawing.Size(126, 36);
@@ -205,13 +206,14 @@
             this.cmdReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdReceive.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdReceive.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdReceive.Location = new System.Drawing.Point(615, 467);
+            this.cmdReceive.Location = new System.Drawing.Point(635, 467);
             this.cmdReceive.Margin = new System.Windows.Forms.Padding(0);
             this.cmdReceive.Name = "cmdReceive";
             this.cmdReceive.Size = new System.Drawing.Size(141, 36);
             this.cmdReceive.TabIndex = 78;
             this.cmdReceive.Text = "Receive";
             this.cmdReceive.UseVisualStyleBackColor = true;
+            this.cmdReceive.Click += new System.EventHandler(this.cmdReceive_Click);
             // 
             // label1
             // 
@@ -330,13 +332,14 @@
             this.cmdPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdPay.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdPay.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdPay.Location = new System.Drawing.Point(432, 467);
+            this.cmdPay.Location = new System.Drawing.Point(482, 467);
             this.cmdPay.Margin = new System.Windows.Forms.Padding(0);
             this.cmdPay.Name = "cmdPay";
             this.cmdPay.Size = new System.Drawing.Size(139, 36);
             this.cmdPay.TabIndex = 81;
             this.cmdPay.Text = "Pay";
             this.cmdPay.UseVisualStyleBackColor = true;
+            this.cmdPay.Click += new System.EventHandler(this.cmdPay_Click);
             // 
             // lblAccount
             // 
@@ -370,7 +373,7 @@
             this.cmdEditDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEditDetails.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEditDetails.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdEditDetails.Location = new System.Drawing.Point(209, 467);
+            this.cmdEditDetails.Location = new System.Drawing.Point(150, 467);
             this.cmdEditDetails.Margin = new System.Windows.Forms.Padding(0);
             this.cmdEditDetails.Name = "cmdEditDetails";
             this.cmdEditDetails.Size = new System.Drawing.Size(178, 36);
@@ -379,11 +382,28 @@
             this.cmdEditDetails.UseVisualStyleBackColor = true;
             this.cmdEditDetails.Click += new System.EventHandler(this.cmdEditDetails_Click);
             // 
+            // txtIDno
+            // 
+            this.txtIDno.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtIDno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIDno.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDno.ForeColor = System.Drawing.Color.Black;
+            this.txtIDno.Location = new System.Drawing.Point(353, 467);
+            this.txtIDno.Multiline = true;
+            this.txtIDno.Name = "txtIDno";
+            this.txtIDno.Size = new System.Drawing.Size(110, 36);
+            this.txtIDno.TabIndex = 86;
+            this.txtIDno.Text = "ID no";
+            this.txtIDno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIDno.Click += new System.EventHandler(this.txtIDno_Click);
+            this.txtIDno.TextChanged += new System.EventHandler(this.txtIDno_TextChanged);
+            // 
             // studentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 521);
+            this.Controls.Add(this.txtIDno);
             this.Controls.Add(this.cmdEditDetails);
             this.Controls.Add(this.Account);
             this.Controls.Add(this.lblAccount);
@@ -443,5 +463,6 @@
         private System.Windows.Forms.Label lblAccount;
         private System.Windows.Forms.Label Account;
         private System.Windows.Forms.Button cmdEditDetails;
+        private System.Windows.Forms.TextBox txtIDno;
     }
 }
