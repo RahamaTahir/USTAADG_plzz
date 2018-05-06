@@ -25,7 +25,6 @@ namespace Ustaad_G_Service1
         private bool paid = false;
         public bool receive = false;
         private int id;
-        public int l;
 
         public string Username { get => username; set => username = value; }
         public string Age { get => age; set => age = value; }

@@ -20,6 +20,7 @@ namespace Ustaad_G_Service1
         private string area;
         private string range;
         private string account = "50000";
+        //public  List<Student> Students = new List<Student>();
 
 
         public string Username { get => username; set => username = value; }public string Age { get => age; set => age = value; }
