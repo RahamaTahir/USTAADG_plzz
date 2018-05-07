@@ -38,7 +38,6 @@
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdRegister4 = new System.Windows.Forms.Button();
             this.cmdHome4 = new System.Windows.Forms.Button();
             this.dataGridViewAllTeachersRecord = new System.Windows.Forms.DataGridView();
             this.lblTeachers = new System.Windows.Forms.Label();
@@ -102,6 +101,7 @@
             this.cmdVerify.TabIndex = 41;
             this.cmdVerify.Text = "Verify";
             this.cmdVerify.UseVisualStyleBackColor = true;
+            this.cmdVerify.Click += new System.EventHandler(this.cmdVerify_Click);
             // 
             // dataGridViewShowAllStudents
             // 
@@ -186,7 +186,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmdRegister4);
             this.panel1.Controls.Add(this.cmdHome4);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -194,25 +193,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(795, 54);
             this.panel1.TabIndex = 44;
-            // 
-            // cmdRegister4
-            // 
-            this.cmdRegister4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdRegister4.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdRegister4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdRegister4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegister4.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdRegister4.Location = new System.Drawing.Point(570, 1);
-            this.cmdRegister4.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdRegister4.Name = "cmdRegister4";
-            this.cmdRegister4.Size = new System.Drawing.Size(128, 49);
-            this.cmdRegister4.TabIndex = 8;
-            this.cmdRegister4.Text = "Register";
-            this.cmdRegister4.UseVisualStyleBackColor = true;
-            this.cmdRegister4.Click += new System.EventHandler(this.cmdRegister4_Click);
             // 
             // cmdHome4
             // 
@@ -224,7 +204,7 @@
             this.cmdHome4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdHome4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdHome4.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdHome4.Location = new System.Drawing.Point(502, 1);
+            this.cmdHome4.Location = new System.Drawing.Point(559, 1);
             this.cmdHome4.Margin = new System.Windows.Forms.Padding(0);
             this.cmdHome4.Name = "cmdHome4";
             this.cmdHome4.Size = new System.Drawing.Size(75, 49);
@@ -310,7 +290,6 @@
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button cmdRegister4;
         private System.Windows.Forms.Button cmdHome4;
         private System.Windows.Forms.DataGridView dataGridViewAllTeachersRecord;
         private System.Windows.Forms.Label lblTeachers;

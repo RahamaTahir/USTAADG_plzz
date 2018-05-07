@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin6 = new System.Windows.Forms.Button();
             this.cmdHome6 = new System.Windows.Forms.Button();
-            this.dataGridViewSearchRecords = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSearchRecords1 = new System.Windows.Forms.DataGridView();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.cmdFeedback = new System.Windows.Forms.Button();
             this.lnkAbout6 = new System.Windows.Forms.LinkLabel();
@@ -53,8 +53,10 @@
             this.Account = new System.Windows.Forms.Label();
             this.cmdEditDetails = new System.Windows.Forms.Button();
             this.txtIDno = new System.Windows.Forms.TextBox();
+            this.cmdReport = new System.Windows.Forms.Button();
+            this.cmdshowstudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +73,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(795, 54);
             this.panel1.TabIndex = 69;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cmdAdmin6
             // 
@@ -109,15 +112,15 @@
             this.cmdHome6.UseVisualStyleBackColor = true;
             this.cmdHome6.Click += new System.EventHandler(this.cmdHome6_Click);
             // 
-            // dataGridViewSearchRecords
+            // dataGridViewSearchRecords1
             // 
-            this.dataGridViewSearchRecords.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridViewSearchRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSearchRecords.Location = new System.Drawing.Point(432, 226);
-            this.dataGridViewSearchRecords.Name = "dataGridViewSearchRecords";
-            this.dataGridViewSearchRecords.Size = new System.Drawing.Size(324, 223);
-            this.dataGridViewSearchRecords.TabIndex = 74;
-            this.dataGridViewSearchRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSearchRecords_CellContentClick);
+            this.dataGridViewSearchRecords1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridViewSearchRecords1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSearchRecords1.Location = new System.Drawing.Point(432, 226);
+            this.dataGridViewSearchRecords1.Name = "dataGridViewSearchRecords1";
+            this.dataGridViewSearchRecords1.Size = new System.Drawing.Size(324, 223);
+            this.dataGridViewSearchRecords1.TabIndex = 74;
+            this.dataGridViewSearchRecords1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSearchRecords_CellContentClick);
             // 
             // lblUstaadG
             // 
@@ -398,11 +401,51 @@
             this.txtIDno.Click += new System.EventHandler(this.txtIDno_Click);
             this.txtIDno.TextChanged += new System.EventHandler(this.txtIDno_TextChanged);
             // 
+            // cmdReport
+            // 
+            this.cmdReport.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdReport.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdReport.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReport.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdReport.Location = new System.Drawing.Point(443, 467);
+            this.cmdReport.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdReport.Name = "cmdReport";
+            this.cmdReport.Size = new System.Drawing.Size(178, 36);
+            this.cmdReport.TabIndex = 87;
+            this.cmdReport.Text = "Report";
+            this.cmdReport.UseVisualStyleBackColor = true;
+            this.cmdReport.Click += new System.EventHandler(this.cmdReport_Click);
+            // 
+            // cmdshowstudent
+            // 
+            this.cmdshowstudent.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdshowstudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdshowstudent.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdshowstudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdshowstudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdshowstudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdshowstudent.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdshowstudent.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdshowstudent.Location = new System.Drawing.Point(432, 164);
+            this.cmdshowstudent.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdshowstudent.Name = "cmdshowstudent";
+            this.cmdshowstudent.Size = new System.Drawing.Size(224, 36);
+            this.cmdshowstudent.TabIndex = 88;
+            this.cmdshowstudent.Text = "Show All Students";
+            this.cmdshowstudent.UseVisualStyleBackColor = true;
+            this.cmdshowstudent.Click += new System.EventHandler(this.cmdshowstudent_Click);
+            // 
             // studentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 521);
+            this.Controls.Add(this.cmdshowstudent);
+            this.Controls.Add(this.cmdReport);
             this.Controls.Add(this.txtIDno);
             this.Controls.Add(this.cmdEditDetails);
             this.Controls.Add(this.Account);
@@ -418,7 +461,7 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridViewSearchRecords);
+            this.Controls.Add(this.dataGridViewSearchRecords1);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.cmdReceive);
             this.Controls.Add(this.cmdFeedback);
@@ -428,8 +471,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "studentDetails";
             this.Text = "studentDetails";
+            this.Load += new System.EventHandler(this.studentDetails_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -443,7 +487,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdAdmin6;
         private System.Windows.Forms.Button cmdHome6;
-        private System.Windows.Forms.DataGridView dataGridViewSearchRecords;
+        private System.Windows.Forms.DataGridView dataGridViewSearchRecords1;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.Button cmdFeedback;
         private System.Windows.Forms.LinkLabel lnkAbout6;
@@ -464,5 +508,7 @@
         private System.Windows.Forms.Label Account;
         private System.Windows.Forms.Button cmdEditDetails;
         private System.Windows.Forms.TextBox txtIDno;
+        private System.Windows.Forms.Button cmdReport;
+        private System.Windows.Forms.Button cmdshowstudent;
     }
 }

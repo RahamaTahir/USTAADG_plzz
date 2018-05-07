@@ -83,6 +83,8 @@ namespace Ustaad_G.MyServer {
         
         private System.Threading.SendOrPostCallback receiveOperationCompleted;
         
+        private System.Threading.SendOrPostCallback reportStudentOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -201,6 +203,9 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event receiveCompletedEventHandler receiveCompleted;
+        
+        /// <remarks/>
+        public event reportStudentCompletedEventHandler reportStudentCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1077,6 +1082,34 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/reportStudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void reportStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] Student s) {
+            this.Invoke("reportStudent", new object[] {
+                        s});
+        }
+        
+        /// <remarks/>
+        public void reportStudentAsync(Student s) {
+            this.reportStudentAsync(s, null);
+        }
+        
+        /// <remarks/>
+        public void reportStudentAsync(Student s, object userState) {
+            if ((this.reportStudentOperationCompleted == null)) {
+                this.reportStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnreportStudentOperationCompleted);
+            }
+            this.InvokeAsync("reportStudent", new object[] {
+                        s}, this.reportStudentOperationCompleted, userState);
+        }
+        
+        private void OnreportStudentOperationCompleted(object arg) {
+            if ((this.reportStudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.reportStudentCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1096,7 +1129,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1143,7 +1176,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1422,7 +1455,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1448,6 +1481,8 @@ namespace Ustaad_G.MyServer {
         private string passwordField;
         
         private string rangeField;
+        
+        private string reportField;
         
         private string secret_QuestionField;
         
@@ -1562,6 +1597,17 @@ namespace Ustaad_G.MyServer {
             }
             set {
                 this.rangeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Report {
+            get {
+                return this.reportField;
+            }
+            set {
+                this.reportField = value;
             }
         }
         
@@ -2218,6 +2264,10 @@ namespace Ustaad_G.MyServer {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void reportStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

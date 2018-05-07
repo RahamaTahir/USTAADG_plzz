@@ -67,7 +67,7 @@ namespace Ustaad_G_Service1
 
         [OperationContract]
         List<Teacher> selected_teachers(Teacher t);
-
+        
         [OperationContract]
         string Calculate_rating();
 
@@ -88,6 +88,9 @@ namespace Ustaad_G_Service1
 
         [OperationContract]
         string receive(string username, string account);
+ 
+        [OperationContract]
+        void reportStudent(Student s);
 
         // TODO: Add your service operations here
     }

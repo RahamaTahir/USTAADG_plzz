@@ -163,6 +163,22 @@ namespace Ustaad_G_Service1
             return account;
         }
 
+        public void reportStudent(Student s)
+        {
+            int R;
+ 
+            foreach(Student x in StudentDL.Students)
+            {
+                if(s.Username == x.Username)
+                {
+                    R =int.Parse(x.Report);
+                    R++;
+                    x.Report = R.ToString();
+                }
+            }
+            
+        }
+
 
 
     }

@@ -20,10 +20,12 @@ namespace Ustaad_G_Service1
         private string area;
         private string range;
         private string account = "50000";
+        private string report="0"; 
         //public  List<Student> Students = new List<Student>();
 
 
-        public string Username { get => username; set => username = value; }public string Age { get => age; set => age = value; }
+        public string Username { get => username; set => username = value; }
+        public string Age { get => age; set => age = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Secret_Question { get => secret_Question; set => secret_Question = value; }
         public string Answer { get => answer; set => answer = value; }
@@ -35,6 +37,6 @@ namespace Ustaad_G_Service1
         public string Area { get => area; set => area = value; }
         public string Range { get => range; set => range = value; }
         public string Account { get => account; set => account = value; }
-       
+        public string Report { get => report; set => report = value; }
     }
 }

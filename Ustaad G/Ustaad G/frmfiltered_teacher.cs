@@ -14,6 +14,7 @@ namespace Ustaad_G
     {
         public static List<MyServer.Teacher> list;
         public static List<MyServer.Teacher> Steachers;
+
         static DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
         public frmfiltered_teacher()
         {
@@ -91,9 +92,9 @@ namespace Ustaad_G
 
         private void cmdRegister6_Click(object sender, EventArgs e)
         {
-            frmSelectRegister R = new frmSelectRegister();
             this.Hide();
-            R.Show();
+            studentDetails sd = new studentDetails();
+            sd.Show();
         }
 
         private void cmdAdmin6_Click(object sender, EventArgs e)

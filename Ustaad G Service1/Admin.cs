@@ -18,6 +18,7 @@ namespace Ustaad_G_Service1
             ratings.Add(rating);
         }
 
+
         public string Calculate_rating()
         {
             int stars = 0;

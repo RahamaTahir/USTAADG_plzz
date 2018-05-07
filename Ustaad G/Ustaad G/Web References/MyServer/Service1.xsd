@@ -19,6 +19,7 @@
       <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Report" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />

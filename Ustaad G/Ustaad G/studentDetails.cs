@@ -15,22 +15,26 @@ namespace Ustaad_G
         string accountS;
         string UserT;
         string accountT;
+        public static List<MyServer.Student> Slist;
         public studentDetails()
         {
             InitializeComponent();
             name.Text = myUtil.std_loggedin.Username;
             number.Text = myUtil.std_loggedin.Contact_no;
             age.Text = myUtil.std_loggedin.Age;
-            gender.Text = myUtil.std_loggedin.Gender;
+            gender.Text = myUtil.std_loggedin.Report;
             Account.Text = myUtil.std_loggedin.Account;
             accountS = myUtil.std_loggedin.Account;
+        
             cmdReceive.Hide();
+            cmdReport.Hide();
+            cmdshowstudent.Hide();
+
         }
 
         public studentDetails(string role)
         {
             InitializeComponent();
-            dataGridViewSearchRecords.Hide();
             cmdShowSelected.Hide();
             cmdPay.Hide();
             name.Text = myUtil.teacher_loggedIn.Username;
@@ -41,7 +45,8 @@ namespace Ustaad_G
             UserT = myUtil.teacher_loggedIn.Username;
             accountT = myUtil.teacher_loggedIn.Account;
             txtIDno.Hide();
-        }
+
+                    }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -51,26 +56,26 @@ namespace Ustaad_G
 
         private void picHome_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             BindingSource s = new BindingSource();
             s.DataSource = frmfiltered_teacher.Steachers;
-            dataGridViewSearchRecords.DataSource = s;
+            dataGridViewSearchRecords1.DataSource = s;
 
-            dataGridViewSearchRecords.Columns.Remove("account_no");
-            dataGridViewSearchRecords.Columns.Remove("cPassword");
-            dataGridViewSearchRecords.Columns.Remove("password");
-            dataGridViewSearchRecords.Columns.Remove("answer");
-            dataGridViewSearchRecords.Columns.Remove("secret_Question");
-            dataGridViewSearchRecords.Columns.Remove("IdSpecified");
-            dataGridViewSearchRecords.Columns.Remove("Account");
-            dataGridViewSearchRecords.Columns.Remove("Paid");
-            dataGridViewSearchRecords.Columns.Remove("PaidSpecified");
-            dataGridViewSearchRecords.Columns.Remove("receive");
-            dataGridViewSearchRecords.Columns.Remove("receiveSpecified");
+            dataGridViewSearchRecords1.Columns.Remove("account_no");
+            dataGridViewSearchRecords1.Columns.Remove("cPassword");
+            dataGridViewSearchRecords1.Columns.Remove("password");
+            dataGridViewSearchRecords1.Columns.Remove("answer");
+            dataGridViewSearchRecords1.Columns.Remove("secret_Question");
+            dataGridViewSearchRecords1.Columns.Remove("IdSpecified");
+            dataGridViewSearchRecords1.Columns.Remove("Account");
+            dataGridViewSearchRecords1.Columns.Remove("Paid");
+            dataGridViewSearchRecords1.Columns.Remove("PaidSpecified");
+            dataGridViewSearchRecords1.Columns.Remove("receive");
+            dataGridViewSearchRecords1.Columns.Remove("receiveSpecified");
 
         }
 
@@ -163,6 +168,66 @@ namespace Ustaad_G
         private void txtIDno_Click(object sender, EventArgs e)
         {
             txtIDno.Clear();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmdReport_Click(object sender, EventArgs e)
+        {
+            bool isfound = false;
+            int i = 0;
+            MyServer.Service1 Server = new MyServer.Service1();
+            foreach (DataGridViewRow row in dataGridViewSearchRecords1.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[7].Value))
+                {
+                    Server.reportStudent(Slist.ElementAt(i));
+                    isfound = true;
+                }
+                i++;
+            }
+            if (isfound == true)
+            {
+                MessageBox.Show("This student is reported <.>_<.>");
+            }
+            else
+            {
+                MessageBox.Show("Please select the student first to report ~_~");
+            }
+
+        }
+
+        private void studentDetails_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void cmdshowstudent_Click(object sender, EventArgs e)
+        {
+            DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
+            c.ValueType = typeof(bool);
+            c.Name = "Chk";
+            c.HeaderText = "Select";
+
+            MyServer.Service1 Server = new MyServer.Service1();
+            Slist = Server.ShowAllStudents().ToList<MyServer.Student>();
+            BindingSource s = new BindingSource();
+            s.DataSource = Slist;
+            dataGridViewSearchRecords1.DataSource = s;
+            dataGridViewSearchRecords1.Columns.Add(c);
+
+
+            dataGridViewSearchRecords1.Columns.Remove("CPassword");
+            dataGridViewSearchRecords1.Columns.Remove("Password");
+            dataGridViewSearchRecords1.Columns.Remove("Answer");
+            dataGridViewSearchRecords1.Columns.Remove("Secret_Question");
+            dataGridViewSearchRecords1.Columns.Remove("Account");
+            dataGridViewSearchRecords1.Columns.Remove("Credit_card_no");
+            dataGridViewSearchRecords1.Columns.Remove("Report");
         }
     }
 }

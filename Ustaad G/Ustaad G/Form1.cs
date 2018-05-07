@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ustaad_G
-{
+{ 
     public partial class frmLogin : Form
     {
         public frmLogin()
@@ -194,28 +194,45 @@ namespace Ustaad_G
 
         private void cmdrating_Click(object sender, EventArgs e)
         {
+          
+            
+        }
+
+        private void txtIDno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdrating_Click_1(object sender, EventArgs e)
+        {
             MyServer.Service1 Server = new MyServer.Service1();
-            cmdrating.Text = Server.Calculate_rating();
-            if(cmdrating.Text == "1")
-            {
-                cmdrating.Text = "1 *";
-            }
-            else if (cmdrating.Text == "2")
-            {
-                cmdrating.Text = "2 **";
-            }
-            else if (cmdrating.Text == "3")
-            {
-                cmdrating.Text = "3 ***";
-            }
-            else if (cmdrating.Text == "4")
-            {
-                cmdrating.Text = "4 ****";
-            }
-            else if(cmdrating.Text == "5")
-            {
-                cmdrating.Text = "5 *****";
-            }
+                cmdrating.Text = Server.Calculate_rating();
+                if (cmdrating.Text == "1")
+                {
+                    cmdrating.Text = "1 *  :(";
+                }
+                else if (cmdrating.Text == "2")
+                {
+                    cmdrating.Text = "2 **  :|";
+                }
+                else if (cmdrating.Text == "3")
+                {
+                    cmdrating.Text = "3 ***  :)";
+                }
+                else if (cmdrating.Text == "4")
+                {
+                    cmdrating.Text = "4 ****  :D";
+                }
+                else if (cmdrating.Text == "5")
+                {
+                    cmdrating.Text = "5 *****  *_*";
+                }
+        
         }
     }
  }

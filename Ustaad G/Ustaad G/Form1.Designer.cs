@@ -393,14 +393,14 @@
             this.cmdrating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdrating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdrating.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdrating.Location = new System.Drawing.Point(209, 6);
+            this.cmdrating.Location = new System.Drawing.Point(192, 7);
             this.cmdrating.Margin = new System.Windows.Forms.Padding(0);
             this.cmdrating.Name = "cmdrating";
-            this.cmdrating.Size = new System.Drawing.Size(82, 35);
-            this.cmdrating.TabIndex = 21;
+            this.cmdrating.Size = new System.Drawing.Size(116, 33);
+            this.cmdrating.TabIndex = 20;
             this.cmdrating.Text = "Rating";
             this.cmdrating.UseVisualStyleBackColor = true;
-            this.cmdrating.Click += new System.EventHandler(this.cmdrating_Click);
+            this.cmdrating.Click += new System.EventHandler(this.cmdrating_Click_1);
             // 
             // frmLogin
             // 

@@ -30,12 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdRegister6 = new System.Windows.Forms.Button();
+            this.cmdAdmin6 = new System.Windows.Forms.Button();
             this.cmdHome6 = new System.Windows.Forms.Button();
             this.dataGridViewSearchRecords = new System.Windows.Forms.DataGridView();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.cmdSelect = new System.Windows.Forms.Button();
-            this.lnkLogin6 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout6 = new System.Windows.Forms.LinkLabel();
             this.lnkContactUs6 = new System.Windows.Forms.LinkLabel();
             this.lblPLP = new System.Windows.Forms.Label();
@@ -43,7 +42,7 @@
             this.comboBoxSelectArea = new System.Windows.Forms.ComboBox();
             this.Search = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmdAdmin6 = new System.Windows.Forms.Button();
+            this.cmdAccount = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -55,7 +54,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmdAdmin6);
-            this.panel1.Controls.Add(this.cmdRegister6);
+            this.panel1.Controls.Add(this.cmdAccount);
             this.panel1.Controls.Add(this.cmdHome6);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -64,24 +63,24 @@
             this.panel1.Size = new System.Drawing.Size(795, 54);
             this.panel1.TabIndex = 55;
             // 
-            // cmdRegister6
+            // cmdAdmin6
             // 
-            this.cmdRegister6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdRegister6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdRegister6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdRegister6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdRegister6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegister6.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdRegister6.Location = new System.Drawing.Point(570, 1);
-            this.cmdRegister6.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdRegister6.Name = "cmdRegister6";
-            this.cmdRegister6.Size = new System.Drawing.Size(128, 49);
-            this.cmdRegister6.TabIndex = 8;
-            this.cmdRegister6.Text = "Register";
-            this.cmdRegister6.UseVisualStyleBackColor = true;
-            this.cmdRegister6.Click += new System.EventHandler(this.cmdRegister6_Click);
+            this.cmdAdmin6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdAdmin6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAdmin6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdAdmin6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAdmin6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAdmin6.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdAdmin6.Location = new System.Drawing.Point(5, -1);
+            this.cmdAdmin6.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdAdmin6.Name = "cmdAdmin6";
+            this.cmdAdmin6.Size = new System.Drawing.Size(109, 49);
+            this.cmdAdmin6.TabIndex = 11;
+            this.cmdAdmin6.Text = "Admin";
+            this.cmdAdmin6.UseVisualStyleBackColor = true;
+            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
             // 
             // cmdHome6
             // 
@@ -143,23 +142,6 @@
             this.cmdSelect.UseVisualStyleBackColor = true;
             this.cmdSelect.Click += new System.EventHandler(this.cmdSelect_Click);
             // 
-            // lnkLogin6
-            // 
-            this.lnkLogin6.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkLogin6.AutoSize = true;
-            this.lnkLogin6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkLogin6.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkLogin6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkLogin6.ForeColor = System.Drawing.Color.White;
-            this.lnkLogin6.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkLogin6.Location = new System.Drawing.Point(684, 48);
-            this.lnkLogin6.Name = "lnkLogin6";
-            this.lnkLogin6.Size = new System.Drawing.Size(63, 23);
-            this.lnkLogin6.TabIndex = 59;
-            this.lnkLogin6.TabStop = true;
-            this.lnkLogin6.Text = "Login";
-            this.lnkLogin6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin6_LinkClicked);
-            // 
             // lnkAbout6
             // 
             this.lnkAbout6.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
@@ -169,7 +151,7 @@
             this.lnkAbout6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkAbout6.ForeColor = System.Drawing.Color.White;
             this.lnkAbout6.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkAbout6.Location = new System.Drawing.Point(610, 48);
+            this.lnkAbout6.Location = new System.Drawing.Point(673, 48);
             this.lnkAbout6.Name = "lnkAbout6";
             this.lnkAbout6.Size = new System.Drawing.Size(66, 23);
             this.lnkAbout6.TabIndex = 58;
@@ -185,7 +167,7 @@
             this.lnkContactUs6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkContactUs6.ForeColor = System.Drawing.Color.White;
             this.lnkContactUs6.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs6.Location = new System.Drawing.Point(494, 48);
+            this.lnkContactUs6.Location = new System.Drawing.Point(555, 48);
             this.lnkContactUs6.Name = "lnkContactUs6";
             this.lnkContactUs6.Size = new System.Drawing.Size(106, 23);
             this.lnkContactUs6.TabIndex = 57;
@@ -257,24 +239,25 @@
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // cmdAdmin6
+            // cmdAccount
             // 
-            this.cmdAdmin6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdAdmin6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdAdmin6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdAdmin6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAdmin6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAdmin6.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdAdmin6.Location = new System.Drawing.Point(5, -1);
-            this.cmdAdmin6.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdAdmin6.Name = "cmdAdmin6";
-            this.cmdAdmin6.Size = new System.Drawing.Size(109, 49);
-            this.cmdAdmin6.TabIndex = 11;
-            this.cmdAdmin6.Text = "Admin";
-            this.cmdAdmin6.UseVisualStyleBackColor = true;
-            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
+            this.cmdAccount.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdAccount.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAccount.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAccount.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdAccount.Location = new System.Drawing.Point(570, 1);
+            this.cmdAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdAccount.Name = "cmdAccount";
+            this.cmdAccount.Size = new System.Drawing.Size(128, 49);
+            this.cmdAccount.TabIndex = 8;
+            this.cmdAccount.Text = " Account";
+            this.cmdAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdAccount.UseVisualStyleBackColor = true;
+            this.cmdAccount.Click += new System.EventHandler(this.cmdRegister6_Click);
             // 
             // frmfiltered_teacher
             // 
@@ -287,7 +270,6 @@
             this.Controls.Add(this.dataGridViewSearchRecords);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.cmdSelect);
-            this.Controls.Add(this.lnkLogin6);
             this.Controls.Add(this.lnkAbout6);
             this.Controls.Add(this.lnkContactUs6);
             this.Controls.Add(this.lblPLP);
@@ -308,12 +290,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button cmdRegister6;
         private System.Windows.Forms.Button cmdHome6;
         private System.Windows.Forms.DataGridView dataGridViewSearchRecords;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.Button cmdSelect;
-        private System.Windows.Forms.LinkLabel lnkLogin6;
         private System.Windows.Forms.LinkLabel lnkAbout6;
         private System.Windows.Forms.LinkLabel lnkContactUs6;
         private System.Windows.Forms.Label lblPLP;
@@ -322,5 +302,6 @@
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button cmdAdmin6;
+        private System.Windows.Forms.Button cmdAccount;
     }
 }

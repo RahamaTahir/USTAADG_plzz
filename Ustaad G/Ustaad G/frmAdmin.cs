@@ -37,10 +37,10 @@ namespace Ustaad_G
         private void label3_Click(object sender, EventArgs e)
         {
             MyServer.Service1 Server = new MyServer.Service1();
-            List<MyServer.Student> list = Server.ShowAllStudents().ToList<MyServer.Student>();
+            List<MyServer.Student> Slist = Server.ShowAllStudents().ToList<MyServer.Student>();
 
             BindingSource S = new BindingSource();
-            S.DataSource = list;
+            S.DataSource = Slist;
             dataGridViewShowAllStudents.DataSource = S;
         }
 
@@ -64,6 +64,11 @@ namespace Ustaad_G
         }
 
         private void picHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdVerify_Click(object sender, EventArgs e)
         {
 
         }

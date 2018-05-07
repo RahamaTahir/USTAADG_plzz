@@ -46,13 +46,13 @@ namespace Ustaad_G_Service1
         public void AddStudent(string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string gender, string range, string area, string timing)
         {
             StudentDL st = new StudentDL();
-            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword,  gender,  range,  area,  timing);
+            st.AddStudent(username, age, secret_Question, answer, contact_no, password, cPassword, gender, range, area, timing);
         }
 
-        public void AddTeacher(string gender ,string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
+        public void AddTeacher(string gender, string username, string age, string secret_Question, string answer, string contact_no, string password, string cPassword, string subject, string level, string timing, string area, string range)
         {
             TeacherDL tc = new TeacherDL();
-            tc.AddTeacher( gender, username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
+            tc.AddTeacher(gender, username, age, secret_Question, answer, contact_no, password, cPassword, subject, level, timing, area, range);
         }
 
 
@@ -67,7 +67,7 @@ namespace Ustaad_G_Service1
         }
         public Teacher verifyteacher(string username, string password)
         {
-           
+
             return TeacherDL.verify(username, password);
         }
 
@@ -83,19 +83,19 @@ namespace Ustaad_G_Service1
             return st.isfoundS(username);
         }
 
-        public bool ResetPasswordS(string username,string secret_Question, string secret_answer)
+        public bool ResetPasswordS(string username, string secret_Question, string secret_answer)
         {
             StudentDL st = new StudentDL();
-            return st.ResetPasswordS(username,secret_Question, secret_answer);
+            return st.ResetPasswordS(username, secret_Question, secret_answer);
         }
 
-        public bool ResetPasswordT(string username,string secret_Question, string secret_answer)
+        public bool ResetPasswordT(string username, string secret_Question, string secret_answer)
         {
             TeacherDL tc = new TeacherDL();
-            return tc.ResetPasswordT(username,secret_Question, secret_answer);
+            return tc.ResetPasswordT(username, secret_Question, secret_answer);
         }
 
-        public bool VerifyByAdmin(string username,string password)
+        public bool VerifyByAdmin(string username, string password)
         {
             StudentDL st = new StudentDL();
             return st.VerifyByAdmin(username, password);
@@ -178,5 +178,12 @@ namespace Ustaad_G_Service1
             TeacherDL t = new TeacherDL();
             return t.receive(username, account);
         }
+
+        public void reportStudent(Student s)
+        {
+            StudentDL f = new StudentDL();
+            f.reportStudent(s);
+        }
+
     }
 }
