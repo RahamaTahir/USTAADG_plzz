@@ -22,7 +22,7 @@ namespace Ustaad_G
             name.Text = myUtil.std_loggedin.Username;
             number.Text = myUtil.std_loggedin.Contact_no;
             age.Text = myUtil.std_loggedin.Age;
-            gender.Text = myUtil.std_loggedin.Report;
+            gender.Text = myUtil.std_loggedin.Gender;
             Account.Text = myUtil.std_loggedin.Account;
             accountS = myUtil.std_loggedin.Account;
         
@@ -62,7 +62,7 @@ namespace Ustaad_G
         private void button6_Click(object sender, EventArgs e)
         {
             BindingSource s = new BindingSource();
-            s.DataSource = frmfiltered_teacher.Steachers;
+            s.DataSource = myUtil.std_loggedin.Teachers_select;
             dataGridViewSearchRecords1.DataSource = s;
 
             dataGridViewSearchRecords1.Columns.Remove("account_no");
@@ -208,6 +208,7 @@ namespace Ustaad_G
 
         private void cmdshowstudent_Click(object sender, EventArgs e)
         {
+           
             DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
             c.ValueType = typeof(bool);
             c.Name = "Chk";

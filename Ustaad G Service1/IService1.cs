@@ -92,6 +92,12 @@ namespace Ustaad_G_Service1
         [OperationContract]
         void reportStudent(Student s);
 
+        [OperationContract]
+        List<Teacher> get_TL(Student s);
+
+        [OperationContract]
+        Student selected_teachers_st(int id, Student s);
+
         // TODO: Add your service operations here
     }
 

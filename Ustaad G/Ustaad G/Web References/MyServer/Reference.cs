@@ -85,6 +85,10 @@ namespace Ustaad_G.MyServer {
         
         private System.Threading.SendOrPostCallback reportStudentOperationCompleted;
         
+        private System.Threading.SendOrPostCallback get_TLOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback selected_teachers_stOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -206,6 +210,12 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event reportStudentCompletedEventHandler reportStudentCompleted;
+        
+        /// <remarks/>
+        public event get_TLCompletedEventHandler get_TLCompleted;
+        
+        /// <remarks/>
+        public event selected_teachers_stCompletedEventHandler selected_teachers_stCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1110,6 +1120,71 @@ namespace Ustaad_G.MyServer {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/get_TL", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1")]
+        public Teacher[] get_TL([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] Student s) {
+            object[] results = this.Invoke("get_TL", new object[] {
+                        s});
+            return ((Teacher[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_TLAsync(Student s) {
+            this.get_TLAsync(s, null);
+        }
+        
+        /// <remarks/>
+        public void get_TLAsync(Student s, object userState) {
+            if ((this.get_TLOperationCompleted == null)) {
+                this.get_TLOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_TLOperationCompleted);
+            }
+            this.InvokeAsync("get_TL", new object[] {
+                        s}, this.get_TLOperationCompleted, userState);
+        }
+        
+        private void Onget_TLOperationCompleted(object arg) {
+            if ((this.get_TLCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_TLCompleted(this, new get_TLCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/selected_teachers_st", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Student selected_teachers_st(int id, [System.Xml.Serialization.XmlIgnoreAttribute()] bool idSpecified, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] Student s) {
+            object[] results = this.Invoke("selected_teachers_st", new object[] {
+                        id,
+                        idSpecified,
+                        s});
+            return ((Student)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void selected_teachers_stAsync(int id, bool idSpecified, Student s) {
+            this.selected_teachers_stAsync(id, idSpecified, s, null);
+        }
+        
+        /// <remarks/>
+        public void selected_teachers_stAsync(int id, bool idSpecified, Student s, object userState) {
+            if ((this.selected_teachers_stOperationCompleted == null)) {
+                this.selected_teachers_stOperationCompleted = new System.Threading.SendOrPostCallback(this.Onselected_teachers_stOperationCompleted);
+            }
+            this.InvokeAsync("selected_teachers_st", new object[] {
+                        id,
+                        idSpecified,
+                        s}, this.selected_teachers_stOperationCompleted, userState);
+        }
+        
+        private void Onselected_teachers_stOperationCompleted(object arg) {
+            if ((this.selected_teachers_stCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.selected_teachers_stCompleted(this, new selected_teachers_stCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1129,7 +1204,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1176,7 +1251,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1455,7 +1530,7 @@ namespace Ustaad_G.MyServer {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1485,6 +1560,8 @@ namespace Ustaad_G.MyServer {
         private string reportField;
         
         private string secret_QuestionField;
+        
+        private Teacher[] teachers_selectField;
         
         private string timingField;
         
@@ -1619,6 +1696,17 @@ namespace Ustaad_G.MyServer {
             }
             set {
                 this.secret_QuestionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public Teacher[] Teachers_select {
+            get {
+                return this.teachers_selectField;
+            }
+            set {
+                this.teachers_selectField = value;
             }
         }
         
@@ -2268,6 +2356,58 @@ namespace Ustaad_G.MyServer {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void reportStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void get_TLCompletedEventHandler(object sender, get_TLCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_TLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_TLCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Teacher[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Teacher[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void selected_teachers_stCompletedEventHandler(object sender, selected_teachers_stCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class selected_teachers_stCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal selected_teachers_stCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Student Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Student)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

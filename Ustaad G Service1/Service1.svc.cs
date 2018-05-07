@@ -185,5 +185,15 @@ namespace Ustaad_G_Service1
             f.reportStudent(s);
         }
 
+        public List<Teacher> get_TL(Student s)
+        {
+            return s.Teachers_select;
+        }
+
+        public Student selected_teachers_st(int id, Student student)
+        {
+            return TeacherDL.kuch_Bhi(id, student);
+        }
+
     }
 }

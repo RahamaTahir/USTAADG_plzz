@@ -410,4 +410,33 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="get_TL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="s" nillable="true" type="q11:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_TLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="get_TLResult" nillable="true" type="q12:ArrayOfTeacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="selected_teachers_st">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="s" nillable="true" type="q13:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="selected_teachers_stResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Ustaad_G_Service1" minOccurs="0" name="selected_teachers_stResult" nillable="true" type="q14:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

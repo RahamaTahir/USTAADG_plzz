@@ -21,11 +21,18 @@
       <xs:element minOccurs="0" name="Range" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Report" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Teachers_select" nillable="true" type="tns:ArrayOfTeacher" />
       <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Student" nillable="true" type="tns:Student" />
+  <xs:complexType name="ArrayOfTeacher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teacher" nillable="true" type="tns:Teacher" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
   <xs:complexType name="Teacher">
     <xs:sequence>
       <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
@@ -49,12 +56,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Teacher" nillable="true" type="tns:Teacher" />
-  <xs:complexType name="ArrayOfTeacher">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teacher" nillable="true" type="tns:Teacher" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
   <xs:complexType name="ArrayOfStudent">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Student" nillable="true" type="tns:Student" />

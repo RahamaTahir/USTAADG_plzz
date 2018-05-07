@@ -411,10 +411,10 @@
             this.cmdReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdReport.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdReport.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdReport.Location = new System.Drawing.Point(443, 467);
+            this.cmdReport.Location = new System.Drawing.Point(482, 467);
             this.cmdReport.Margin = new System.Windows.Forms.Padding(0);
             this.cmdReport.Name = "cmdReport";
-            this.cmdReport.Size = new System.Drawing.Size(178, 36);
+            this.cmdReport.Size = new System.Drawing.Size(139, 36);
             this.cmdReport.TabIndex = 87;
             this.cmdReport.Text = "Report";
             this.cmdReport.UseVisualStyleBackColor = true;

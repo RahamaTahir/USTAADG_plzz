@@ -175,6 +175,18 @@
   <wsdl:message name="IService1_reportStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:reportStudentResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_get_TL_InputMessage">
+    <wsdl:part name="parameters" element="tns:get_TL" />
+  </wsdl:message>
+  <wsdl:message name="IService1_get_TL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:get_TLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selected_teachers_st_InputMessage">
+    <wsdl:part name="parameters" element="tns:selected_teachers_st" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selected_teachers_st_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selected_teachers_stResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -287,6 +299,14 @@
     <wsdl:operation name="reportStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/reportStudent" message="tns:IService1_reportStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/reportStudentResponse" message="tns:IService1_reportStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="get_TL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/get_TL" message="tns:IService1_get_TL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/get_TLResponse" message="tns:IService1_get_TL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selected_teachers_st">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selected_teachers_st" message="tns:IService1_selected_teachers_st_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selected_teachers_stResponse" message="tns:IService1_selected_teachers_st_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -536,6 +556,24 @@
     </wsdl:operation>
     <wsdl:operation name="reportStudent">
       <soap:operation soapAction="http://tempuri.org/IService1/reportStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TL">
+      <soap:operation soapAction="http://tempuri.org/IService1/get_TL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selected_teachers_st">
+      <soap:operation soapAction="http://tempuri.org/IService1/selected_teachers_st" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

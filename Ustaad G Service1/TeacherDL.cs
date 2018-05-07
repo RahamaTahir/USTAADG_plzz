@@ -166,5 +166,17 @@ namespace Ustaad_G_Service1
             return account;
         }
 
+        public static Student kuch_Bhi(int id, Student s)
+        {
+            foreach (Teacher t in TeacherDL.Teachers)
+            {
+                if (t.Id == id)
+                {
+                    s.Teachers_select.Add(t);
+                }
+            }
+            return s;
+        }
+
     }
 }

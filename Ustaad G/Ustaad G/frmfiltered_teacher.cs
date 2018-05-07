@@ -117,12 +117,15 @@ namespace Ustaad_G
         private void cmdSelect_Click(object sender, EventArgs e)
         {
             bool isfound = false;
+            bool x = true;
             int i = 0;
             MyServer.Service1 Server = new MyServer.Service1();
             foreach (DataGridViewRow row in dataGridViewSearchRecords.Rows)
             {
                 if (Convert.ToBoolean(row.Cells[9].Value))
                 {
+                    MyServer.Student std = Server.selected_teachers_st(list.ElementAt(i).Id, x, myUtil.std_loggedin);
+                    myUtil.std_loggedin = std;
                     Steachers = Server.selected_teachers(list.ElementAt(i)).ToList<MyServer.Teacher>();
                     MessageBox.Show("Teacher Selected");
                     isfound = true;
