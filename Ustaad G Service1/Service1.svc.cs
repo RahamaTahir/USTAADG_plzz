@@ -195,5 +195,9 @@ namespace Ustaad_G_Service1
             return TeacherDL.kuch_Bhi(id, student);
         }
 
+        public void deleteStudent(string index)
+        {
+            StudentDL.delete(Int32.Parse(index));
+        }
     }
 }

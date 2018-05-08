@@ -97,6 +97,8 @@ namespace Ustaad_G_Service1
 
         [OperationContract]
         Student selected_teachers_st(int id, Student s);
+        [OperationContract]
+        void deleteStudent(string index);
 
         // TODO: Add your service operations here
     }

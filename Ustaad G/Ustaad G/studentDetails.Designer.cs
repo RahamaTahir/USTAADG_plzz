@@ -92,6 +92,7 @@
             this.cmdAdmin6.TabIndex = 11;
             this.cmdAdmin6.Text = "Admin";
             this.cmdAdmin6.UseVisualStyleBackColor = true;
+            this.cmdAdmin6.Click += new System.EventHandler(this.cmdAdmin6_Click);
             // 
             // cmdHome6
             // 
@@ -470,6 +471,7 @@
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "studentDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "studentDetails";
             this.Load += new System.EventHandler(this.studentDetails_Load);
             this.panel1.ResumeLayout(false);

@@ -175,11 +175,18 @@ namespace Ustaad_G_Service1
                     R++;
                     x.Report = R.ToString();
                 }
-            }
-            
+            }          
         }
-
-
-
+        
+        public static void delete(int index)
+        {
+         
+            Student s = Students[index];
+            int n = Int32.Parse(s.Report);
+            if(n!= 0)
+            {
+                Students.RemoveAt(index);
+            }
+        }
     }
 }

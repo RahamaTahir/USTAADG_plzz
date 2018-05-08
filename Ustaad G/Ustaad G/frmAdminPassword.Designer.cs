@@ -318,6 +318,7 @@
             this.Controls.Add(this.lblUstaadG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdminPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminPassword";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

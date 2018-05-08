@@ -46,7 +46,13 @@ namespace Ustaad_G
 
         private void dataGridViewST_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            MyServer.Service1 Server = new MyServer.Service1();
+            Server.deleteStudent(e.RowIndex.ToString());
+            List<MyServer.Student> Slist = Server.ShowAllStudents().ToList<MyServer.Student>();
 
+            BindingSource S = new BindingSource();
+            S.DataSource = Slist;
+            dataGridViewShowAllStudents.DataSource = S;
         }
 
         private void cmdHome4_Click_1(object sender, EventArgs e)

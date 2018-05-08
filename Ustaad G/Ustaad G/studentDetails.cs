@@ -230,5 +230,12 @@ namespace Ustaad_G
             dataGridViewSearchRecords1.Columns.Remove("Credit_card_no");
             dataGridViewSearchRecords1.Columns.Remove("Report");
         }
+
+        private void cmdAdmin6_Click(object sender, EventArgs e)
+        {
+            frmAdminPassword f = new frmAdminPassword();
+            f.Show();
+            this.Hide();
+        }
     }
 }

@@ -175,7 +175,7 @@
             this.chkT.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkT.Location = new System.Drawing.Point(426, 209);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(142, 29);
+            this.chkT.Size = new System.Drawing.Size(140, 29);
             this.chkT.TabIndex = 79;
             this.chkT.Text = "Is Teacher";
             this.chkT.UseVisualStyleBackColor = false;
@@ -346,6 +346,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditDetals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditDetals";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -42,5 +42,10 @@ namespace Ustaad_G
             MessageBox.Show("Thank you for your response. It would be helpful for us :D");
             this.Hide();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -89,6 +89,8 @@ namespace Ustaad_G.MyServer {
         
         private System.Threading.SendOrPostCallback selected_teachers_stOperationCompleted;
         
+        private System.Threading.SendOrPostCallback deleteStudentOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -216,6 +218,9 @@ namespace Ustaad_G.MyServer {
         
         /// <remarks/>
         public event selected_teachers_stCompletedEventHandler selected_teachers_stCompleted;
+        
+        /// <remarks/>
+        public event deleteStudentCompletedEventHandler deleteStudentCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1181,6 +1186,34 @@ namespace Ustaad_G.MyServer {
             if ((this.selected_teachers_stCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.selected_teachers_stCompleted(this, new selected_teachers_stCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/deleteStudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string index) {
+            this.Invoke("deleteStudent", new object[] {
+                        index});
+        }
+        
+        /// <remarks/>
+        public void deleteStudentAsync(string index) {
+            this.deleteStudentAsync(index, null);
+        }
+        
+        /// <remarks/>
+        public void deleteStudentAsync(string index, object userState) {
+            if ((this.deleteStudentOperationCompleted == null)) {
+                this.deleteStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteStudentOperationCompleted);
+            }
+            this.InvokeAsync("deleteStudent", new object[] {
+                        index}, this.deleteStudentOperationCompleted, userState);
+        }
+        
+        private void OndeleteStudentOperationCompleted(object arg) {
+            if ((this.deleteStudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteStudentCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2408,6 +2441,10 @@ namespace Ustaad_G.MyServer {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void deleteStudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591
