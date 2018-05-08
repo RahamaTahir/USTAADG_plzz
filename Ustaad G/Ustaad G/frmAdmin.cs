@@ -78,5 +78,11 @@ namespace Ustaad_G
         {
 
         }
+
+        private void lnkAbout4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
+        }
     }
 }

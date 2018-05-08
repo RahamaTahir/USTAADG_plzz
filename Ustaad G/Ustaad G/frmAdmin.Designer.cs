@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.dataGridViewShowAllStudents = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.lnkAbout4 = new System.Windows.Forms.LinkLabel();
-            this.lnkContactUs4 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,7 +41,6 @@
             this.dataGridViewAllTeachersRecord = new System.Windows.Forms.DataGridView();
             this.lblTeachers = new System.Windows.Forms.Label();
             this.lblStudents = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowAllStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,6 +77,14 @@
             this.dataGridViewShowAllStudents.TabIndex = 40;
             this.dataGridViewShowAllStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewST_CellContentClick);
             // 
+            // Column1
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "Delete";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,22 +112,7 @@
             this.lnkAbout4.TabIndex = 38;
             this.lnkAbout4.TabStop = true;
             this.lnkAbout4.Text = "About";
-            // 
-            // lnkContactUs4
-            // 
-            this.lnkContactUs4.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs4.AutoSize = true;
-            this.lnkContactUs4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs4.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs4.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs4.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs4.Location = new System.Drawing.Point(494, 48);
-            this.lnkContactUs4.Name = "lnkContactUs4";
-            this.lnkContactUs4.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs4.TabIndex = 37;
-            this.lnkContactUs4.TabStop = true;
-            this.lnkContactUs4.Text = "ContactUs";
+            this.lnkAbout4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout4_LinkClicked);
             // 
             // lblUstaadG
             // 
@@ -213,14 +205,6 @@
             this.lblStudents.Text = "Students";
             this.lblStudents.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Column1
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = "Delete";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +218,6 @@
             this.Controls.Add(this.dataGridViewShowAllStudents);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lnkAbout4);
-            this.Controls.Add(this.lnkContactUs4);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,7 +238,6 @@
         private System.Windows.Forms.DataGridView dataGridViewShowAllStudents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lnkAbout4;
-        private System.Windows.Forms.LinkLabel lnkContactUs4;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel panel1;

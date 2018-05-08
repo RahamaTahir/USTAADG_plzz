@@ -145,5 +145,11 @@ namespace Ustaad_G
             }
 
         }
+
+        private void lnkAbout6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
+        }
     }
 }

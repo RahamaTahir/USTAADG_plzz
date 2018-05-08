@@ -237,5 +237,11 @@ namespace Ustaad_G
             f.Show();
             this.Hide();
         }
+
+        private void lnkAbout6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
+        }
     }
 }

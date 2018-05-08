@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin5 = new System.Windows.Forms.Button();
             this.cmdRegister5 = new System.Windows.Forms.Button();
-            this.lnkContactUs5 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout5 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.txtLoginForm = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdrating = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -53,7 +53,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.picHome = new System.Windows.Forms.PictureBox();
-            this.cmdrating = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,7 +72,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmdAdmin5);
             this.panel1.Controls.Add(this.cmdRegister5);
-            this.panel1.Controls.Add(this.lnkContactUs5);
             this.panel1.Controls.Add(this.lnkAbout5);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -120,22 +118,6 @@
             this.cmdRegister5.UseVisualStyleBackColor = true;
             this.cmdRegister5.Click += new System.EventHandler(this.cmdRegister5_Click);
             // 
-            // lnkContactUs5
-            // 
-            this.lnkContactUs5.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.AutoSize = true;
-            this.lnkContactUs5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs5.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs5.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Location = new System.Drawing.Point(410, 13);
-            this.lnkContactUs5.Name = "lnkContactUs5";
-            this.lnkContactUs5.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs5.TabIndex = 19;
-            this.lnkContactUs5.TabStop = true;
-            this.lnkContactUs5.Text = "ContactUs";
-            // 
             // lnkAbout5
             // 
             this.lnkAbout5.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
@@ -151,6 +133,7 @@
             this.lnkAbout5.TabIndex = 18;
             this.lnkAbout5.TabStop = true;
             this.lnkAbout5.Text = "About";
+            this.lnkAbout5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout5_LinkClicked);
             // 
             // lblUstaadG
             // 
@@ -183,7 +166,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(43, 165);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 20);
+            this.checkBox1.Size = new System.Drawing.Size(98, 20);
             this.checkBox1.TabIndex = 25;
             this.checkBox1.Text = "Is Teacher";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -198,6 +181,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(761, 45);
             this.panel2.TabIndex = 26;
+            // 
+            // cmdrating
+            // 
+            this.cmdrating.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdrating.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdrating.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdrating.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.cmdrating.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.cmdrating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdrating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdrating.ForeColor = System.Drawing.Color.Transparent;
+            this.cmdrating.Location = new System.Drawing.Point(192, 7);
+            this.cmdrating.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdrating.Name = "cmdrating";
+            this.cmdrating.Size = new System.Drawing.Size(116, 33);
+            this.cmdrating.TabIndex = 20;
+            this.cmdrating.Text = "Rating";
+            this.cmdrating.UseVisualStyleBackColor = true;
+            this.cmdrating.Click += new System.EventHandler(this.cmdrating_Click_1);
             // 
             // pictureBox2
             // 
@@ -383,25 +385,6 @@
             this.picHome.TabIndex = 15;
             this.picHome.TabStop = false;
             // 
-            // cmdrating
-            // 
-            this.cmdrating.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdrating.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdrating.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdrating.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdrating.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdrating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdrating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdrating.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdrating.Location = new System.Drawing.Point(192, 7);
-            this.cmdrating.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdrating.Name = "cmdrating";
-            this.cmdrating.Size = new System.Drawing.Size(116, 33);
-            this.cmdrating.TabIndex = 20;
-            this.cmdrating.Text = "Rating";
-            this.cmdrating.UseVisualStyleBackColor = true;
-            this.cmdrating.Click += new System.EventHandler(this.cmdrating_Click_1);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,7 +428,6 @@
         private System.Windows.Forms.Button cmdAdmin5;
         private System.Windows.Forms.Button cmdRegister5;
         private System.Windows.Forms.Label lblUstaadG;
-        private System.Windows.Forms.LinkLabel lnkContactUs5;
         private System.Windows.Forms.LinkLabel lnkAbout5;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.TextBox txtLoginForm;

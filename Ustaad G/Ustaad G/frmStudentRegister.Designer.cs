@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblUstaadG = new System.Windows.Forms.Label();
-            this.lnkContactUs8 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout8 = new System.Windows.Forms.LinkLabel();
             this.lnkLogin8 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,23 +68,6 @@
             this.lblUstaadG.Size = new System.Drawing.Size(256, 55);
             this.lblUstaadG.TabIndex = 10;
             this.lblUstaadG.Text = "Ustaad G";
-            // 
-            // lnkContactUs8
-            // 
-            this.lnkContactUs8.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs8.AutoSize = true;
-            this.lnkContactUs8.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs8.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs8.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs8.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs8.Location = new System.Drawing.Point(494, 48);
-            this.lnkContactUs8.Name = "lnkContactUs8";
-            this.lnkContactUs8.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs8.TabIndex = 13;
-            this.lnkContactUs8.TabStop = true;
-            this.lnkContactUs8.Text = "ContactUs";
-            this.lnkContactUs8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkContactUs8_LinkClicked);
             // 
             // lnkAbout8
             // 
@@ -337,10 +319,11 @@
             this.lnklblSTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblSTerms.Location = new System.Drawing.Point(386, 552);
             this.lnklblSTerms.Name = "lnklblSTerms";
-            this.lnklblSTerms.Size = new System.Drawing.Size(240, 25);
+            this.lnklblSTerms.Size = new System.Drawing.Size(242, 25);
             this.lnklblSTerms.TabIndex = 35;
             this.lnklblSTerms.TabStop = true;
             this.lnklblSTerms.Text = "Terms and Conditions";
+            this.lnklblSTerms.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblSTerms_LinkClicked);
             // 
             // cmdSRegister
             // 
@@ -501,7 +484,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lnkLogin8);
             this.Controls.Add(this.lnkAbout8);
-            this.Controls.Add(this.lnkContactUs8);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -519,7 +501,6 @@
 
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Label lblUstaadG;
-        private System.Windows.Forms.LinkLabel lnkContactUs8;
         private System.Windows.Forms.LinkLabel lnkAbout8;
         private System.Windows.Forms.LinkLabel lnkLogin8;
         private System.Windows.Forms.Panel panel1;

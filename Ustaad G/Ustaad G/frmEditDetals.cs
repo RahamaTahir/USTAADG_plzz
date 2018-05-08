@@ -24,26 +24,53 @@ namespace Ustaad_G
 
         private void cmdEdit_Click(object sender, EventArgs e)
         {
-            if (txtEName.Text == "" || txtEAge.Text == "" || txtECntctNo.Text == "")
+            if (txtEName.Text == "" || txtEAge.Text == "" || txtECntctNo.Text == "" || txtPwd.Text == "")
             {
                 MessageBox.Show("Please enter the reqiured information");
             }
             else
             {
+                bool isFound;
+                bool isFoundPass;
                 MyServer.Service1 Server = new MyServer.Service1();
                 if (chkT.Checked)
                 {
-                    Server.EditTeacherDetails(txtPwd.Text, txtEName.Text, txtEAge.Text, txtECntctNo.Text);
+                    Server.isUniqueT(txtEName.Text, out isFound, out isFoundPass);
+                    if (isFound == true)
+                    {
+                        Server.EditTeacherDetails(txtPwd.Text, txtEName.Text, txtEAge.Text, txtECntctNo.Text);
+                        MessageBox.Show("Your Details are edited");
+                        frmLogin L = new frmLogin();
+                        this.Hide();
+                        L.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("This userename already exist");
+                    }
                 }
                 else
                 {
-                    Server.EditStudentDetails(txtPwd.Text, txtEName.Text, txtEAge.Text, txtECntctNo.Text);
+                    Server.isUniqueS(txtEName.Text, out isFound, out isFoundPass);
+                    if (isFound == true)
+                    {
+                        Server.EditStudentDetails(txtPwd.Text, txtEName.Text, txtEAge.Text, txtECntctNo.Text);
+                        MessageBox.Show("Your Details are edited");
+                        frmLogin L = new frmLogin();
+                        this.Hide();
+                        L.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("This userename already exist");
+                    }
                 }
-                MessageBox.Show("Your Details are edited");
-                frmLogin L = new frmLogin();
-                this.Hide();
-                L.Show();
+                    
             }
+                
+               
+                
+            
         }
 
         private void cmdAsk_Click(object sender, EventArgs e)
@@ -120,7 +147,8 @@ namespace Ustaad_G
 
         private void lnkAbout9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmAbout R = new frmAbout();
+            R.Show();
         }
 
         private void lnkContactUs9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

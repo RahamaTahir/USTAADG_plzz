@@ -33,7 +33,6 @@
             this.cmdHome5 = new System.Windows.Forms.Button();
             this.lnkLogin5 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout5 = new System.Windows.Forms.LinkLabel();
-            this.lnkContactUs5 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.lblPLP = new System.Windows.Forms.Label();
             this.cmdTutor = new System.Windows.Forms.Button();
@@ -128,23 +127,6 @@
             this.lnkAbout5.Text = "About";
             this.lnkAbout5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout1_LinkClicked);
             // 
-            // lnkContactUs5
-            // 
-            this.lnkContactUs5.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.AutoSize = true;
-            this.lnkContactUs5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs5.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs5.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Location = new System.Drawing.Point(494, 48);
-            this.lnkContactUs5.Name = "lnkContactUs5";
-            this.lnkContactUs5.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs5.TabIndex = 7;
-            this.lnkContactUs5.TabStop = true;
-            this.lnkContactUs5.Text = "ContactUs";
-            this.lnkContactUs5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkContactUs5_LinkClicked);
-            // 
             // lblUstaadG
             // 
             this.lblUstaadG.AutoSize = true;
@@ -229,7 +211,6 @@
             this.Controls.Add(this.cmdTutor);
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.lblUstaadG);
-            this.Controls.Add(this.lnkContactUs5);
             this.Controls.Add(this.lnkAbout5);
             this.Controls.Add(this.lnkLogin5);
             this.Controls.Add(this.panel1);
@@ -252,7 +233,6 @@
         private System.Windows.Forms.Button cmdHome5;
         private System.Windows.Forms.LinkLabel lnkLogin5;
         private System.Windows.Forms.LinkLabel lnkAbout5;
-        private System.Windows.Forms.LinkLabel lnkContactUs5;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.Button cmdTutor;

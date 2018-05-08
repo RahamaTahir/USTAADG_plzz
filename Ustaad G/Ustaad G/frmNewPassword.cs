@@ -30,7 +30,6 @@ namespace Ustaad_G
         private Button cmdAdmin5;
         private Button cmdRegister5;
         private Button cmdHome5;
-        private LinkLabel lnkContactUs5;
         private LinkLabel lnkLogin5;
         private LinkLabel lnkAbout5;
         private Panel panel1;
@@ -159,6 +158,12 @@ namespace Ustaad_G
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lnkAbout5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
         }
     }
 }

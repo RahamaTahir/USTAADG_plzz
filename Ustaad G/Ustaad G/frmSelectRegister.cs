@@ -28,6 +28,8 @@ namespace Ustaad_G
 
         private void lnkAbout1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmAbout R = new frmAbout();
+            R.Show();
             //this.Hide();
             //frmAboutUs About = new frmAboutUs();
             //About.Show();

@@ -151,5 +151,11 @@ namespace Ustaad_G
         {
             txtAnswerReset.Clear();
         }
+
+        private void lnkAbout9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
+        }
     }
 }

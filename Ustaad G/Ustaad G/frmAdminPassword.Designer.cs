@@ -33,7 +33,6 @@
             this.lblPLP = new System.Windows.Forms.Label();
             this.lnkAbout10 = new System.Windows.Forms.LinkLabel();
             this.lnkLogin10 = new System.Windows.Forms.LinkLabel();
-            this.lnkContact10 = new System.Windows.Forms.LinkLabel();
             this.cmdRegister10 = new System.Windows.Forms.Button();
             this.cmdHome10 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -110,6 +109,7 @@
             this.lnkAbout10.TabIndex = 64;
             this.lnkAbout10.TabStop = true;
             this.lnkAbout10.Text = "About";
+            this.lnkAbout10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout10_LinkClicked);
             // 
             // lnkLogin10
             // 
@@ -127,22 +127,6 @@
             this.lnkLogin10.TabStop = true;
             this.lnkLogin10.Text = "Login";
             this.lnkLogin10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin10_LinkClicked);
-            // 
-            // lnkContact10
-            // 
-            this.lnkContact10.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContact10.AutoSize = true;
-            this.lnkContact10.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContact10.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContact10.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContact10.ForeColor = System.Drawing.Color.White;
-            this.lnkContact10.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContact10.Location = new System.Drawing.Point(494, 48);
-            this.lnkContact10.Name = "lnkContact10";
-            this.lnkContact10.Size = new System.Drawing.Size(106, 23);
-            this.lnkContact10.TabIndex = 62;
-            this.lnkContact10.TabStop = true;
-            this.lnkContact10.Text = "ContactUs";
             // 
             // cmdRegister10
             // 
@@ -312,7 +296,6 @@
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.lnkAbout10);
             this.Controls.Add(this.lnkLogin10);
-            this.Controls.Add(this.lnkContact10);
             this.Controls.Add(this.picHome);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblUstaadG);
@@ -335,7 +318,6 @@
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.LinkLabel lnkAbout10;
         private System.Windows.Forms.LinkLabel lnkLogin10;
-        private System.Windows.Forms.LinkLabel lnkContact10;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Button cmdRegister10;
         private System.Windows.Forms.Button cmdHome10;

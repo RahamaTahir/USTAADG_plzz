@@ -52,6 +52,8 @@ namespace Ustaad_G
 
         private void lnkAbout2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmAbout R = new frmAbout();
+            R.Show();
             ///this.Hide();
             //frmAboutUs About = new frmAboutUs();
             //About.Show();
@@ -97,6 +99,9 @@ namespace Ustaad_G
                     {
                         Server.AddTeacher( combogenderT.Text  , txtTName.Text, txtTage.Text, comboBoxSecretQs.Text, txtSecretAnswer.Text, txtTNo.Text, txtTpassword.Text, txtTCPassword.Text, txtTSubject.Text, comboBoxTLevel.Text, txtTiming.Text, comboBoxSelectArea.Text, txtRange.Text);
                         MessageBox.Show("You have been registered");
+                        frmLogin L = new frmLogin();
+                        this.Hide();
+                        L.Show();
                         //frmLogin f = new frmLogin();
                         //f.Show();
                         //this.Hide();
@@ -203,6 +208,12 @@ namespace Ustaad_G
         private void comboBoxSecretQs_Click(object sender, EventArgs e)
         {
             comboBoxSecretQs.ResetText();
+        }
+
+        private void lnklblTerms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmTermsAndConditions L = new frmTermsAndConditions();
+            L.Show();
         }
     }
 }

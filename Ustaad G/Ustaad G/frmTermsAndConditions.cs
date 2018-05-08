@@ -10,37 +10,11 @@ using System.Windows.Forms;
 
 namespace Ustaad_G
 {
-    public partial class frmAdminPassword : Form
+    public partial class frmTermsAndConditions : Form
     {
-        public frmAdminPassword()
+        public frmTermsAndConditions()
         {
             InitializeComponent();
-        }
-
-        private void picHome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmdAdminPassword_Click(object sender, EventArgs e)
-        {
-            if (txtAminPassword.Text == "")
-            {
-                MessageBox.Show("Please enter password");
-            }
-            else
-            {
-                if (txtAminPassword.Text == "khadija")
-                {
-                    frmAdmin L = new frmAdmin();
-                    this.Hide();
-                    L.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect Password!");
-                }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,15 +38,16 @@ namespace Ustaad_G
             R.Show();
         }
 
-        private void txtAminPassword_Click(object sender, EventArgs e)
-        {
-            txtAminPassword.Clear();
-        }
-
         private void lnkAbout10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmAbout R = new frmAbout();
+            this.Hide();
             R.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

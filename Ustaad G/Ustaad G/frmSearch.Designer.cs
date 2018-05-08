@@ -39,7 +39,6 @@
             this.cmdAdmin3 = new System.Windows.Forms.Button();
             this.cmdHome3 = new System.Windows.Forms.Button();
             this.lnkAbout3 = new System.Windows.Forms.LinkLabel();
-            this.lnkContactUs3 = new System.Windows.Forms.LinkLabel();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -231,22 +230,7 @@
             this.lnkAbout3.TabIndex = 33;
             this.lnkAbout3.TabStop = true;
             this.lnkAbout3.Text = "About";
-            // 
-            // lnkContactUs3
-            // 
-            this.lnkContactUs3.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs3.AutoSize = true;
-            this.lnkContactUs3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs3.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs3.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs3.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs3.Location = new System.Drawing.Point(565, 48);
-            this.lnkContactUs3.Name = "lnkContactUs3";
-            this.lnkContactUs3.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs3.TabIndex = 32;
-            this.lnkContactUs3.TabStop = true;
-            this.lnkContactUs3.Text = "ContactUs";
+            this.lnkAbout3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout3_LinkClicked);
             // 
             // lblUstaadG
             // 
@@ -305,7 +289,6 @@
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lnkAbout3);
-            this.Controls.Add(this.lnkContactUs3);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -332,7 +315,6 @@
         private System.Windows.Forms.Button cmdAdmin3;
         private System.Windows.Forms.Button cmdHome3;
         private System.Windows.Forms.LinkLabel lnkAbout3;
-        private System.Windows.Forms.LinkLabel lnkContactUs3;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.LinkLabel linkLabel1;

@@ -46,7 +46,6 @@
             this.cmdAdmin5 = new System.Windows.Forms.Button();
             this.cmdRegister5 = new System.Windows.Forms.Button();
             this.cmdHome5 = new System.Windows.Forms.Button();
-            this.lnkContactUs5 = new System.Windows.Forms.LinkLabel();
             this.lnkLogin5 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout5 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -286,22 +285,6 @@
             this.cmdHome5.UseVisualStyleBackColor = true;
             this.cmdHome5.Click += new System.EventHandler(this.cmdHome5_Click);
             // 
-            // lnkContactUs5
-            // 
-            this.lnkContactUs5.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.AutoSize = true;
-            this.lnkContactUs5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs5.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs5.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs5.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs5.Location = new System.Drawing.Point(294, 13);
-            this.lnkContactUs5.Name = "lnkContactUs5";
-            this.lnkContactUs5.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs5.TabIndex = 19;
-            this.lnkContactUs5.TabStop = true;
-            this.lnkContactUs5.Text = "ContactUs";
-            // 
             // lnkLogin5
             // 
             this.lnkLogin5.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
@@ -334,6 +317,7 @@
             this.lnkAbout5.TabIndex = 18;
             this.lnkAbout5.TabStop = true;
             this.lnkAbout5.Text = "About";
+            this.lnkAbout5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout5_LinkClicked);
             // 
             // panel1
             // 
@@ -342,7 +326,6 @@
             this.panel1.Controls.Add(this.cmdAdmin5);
             this.panel1.Controls.Add(this.cmdRegister5);
             this.panel1.Controls.Add(this.cmdHome5);
-            this.panel1.Controls.Add(this.lnkContactUs5);
             this.panel1.Controls.Add(this.lnkLogin5);
             this.panel1.Controls.Add(this.lnkAbout5);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

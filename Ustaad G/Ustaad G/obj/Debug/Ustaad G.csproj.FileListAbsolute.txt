@@ -231,3 +231,5 @@ C:\Users\Hmna76\Desktop\sunday\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad G
 C:\Users\Hmna76\Desktop\sunday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe.config
 C:\Users\Hmna76\Desktop\sunday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.exe
 C:\Users\Hmna76\Desktop\sunday\USTAADG_plzz\Ustaad G\Ustaad G\bin\Debug\Ustaad G.pdb
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmAbout.resources
+C:\Users\Hmna76\Desktop\USTAADG_plzz\Ustaad G\Ustaad G\obj\Debug\Ustaad_G.frmTermsAndConditions.resources

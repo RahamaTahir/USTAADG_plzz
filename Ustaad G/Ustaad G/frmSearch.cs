@@ -130,5 +130,11 @@ namespace Ustaad_G
         {
             comboBoxLevel.ResetText();
         }
+
+        private void lnkAbout3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout R = new frmAbout();
+            R.Show();
+        }
     }
 }

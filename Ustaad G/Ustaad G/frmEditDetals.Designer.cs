@@ -41,7 +41,6 @@
             this.txtEName = new System.Windows.Forms.TextBox();
             this.lblUstaadG = new System.Windows.Forms.Label();
             this.lnkAbout9 = new System.Windows.Forms.LinkLabel();
-            this.lnkContactUs9 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -175,7 +174,7 @@
             this.chkT.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkT.Location = new System.Drawing.Point(426, 209);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(140, 29);
+            this.chkT.Size = new System.Drawing.Size(142, 29);
             this.chkT.TabIndex = 79;
             this.chkT.Text = "Is Teacher";
             this.chkT.UseVisualStyleBackColor = false;
@@ -265,23 +264,6 @@
             this.lnkAbout9.Text = "About";
             this.lnkAbout9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout9_LinkClicked);
             // 
-            // lnkContactUs9
-            // 
-            this.lnkContactUs9.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs9.AutoSize = true;
-            this.lnkContactUs9.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs9.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs9.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs9.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs9.Location = new System.Drawing.Point(486, 24);
-            this.lnkContactUs9.Name = "lnkContactUs9";
-            this.lnkContactUs9.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs9.TabIndex = 71;
-            this.lnkContactUs9.TabStop = true;
-            this.lnkContactUs9.Text = "ContactUs";
-            this.lnkContactUs9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkContactUs9_LinkClicked);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -341,7 +323,6 @@
             this.Controls.Add(this.txtEName);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.lnkAbout9);
-            this.Controls.Add(this.lnkContactUs9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -370,7 +351,6 @@
         private System.Windows.Forms.TextBox txtEName;
         private System.Windows.Forms.Label lblUstaadG;
         private System.Windows.Forms.LinkLabel lnkAbout9;
-        private System.Windows.Forms.LinkLabel lnkContactUs9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;

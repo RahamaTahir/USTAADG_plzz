@@ -48,6 +48,8 @@ namespace Ustaad_G
 
         private void lnkAbout8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmAbout R = new frmAbout();
+            R.Show();
             //this.Hide();
             //frmAboutUs About = new frmAboutUs();
             //About.Show();
@@ -94,6 +96,9 @@ namespace Ustaad_G
                     {
                         Server.AddStudent( txtSName.Text, txtSage.Text, comboBoxSSecretQs.Text, txtSSecretAnswer.Text, txtSNo.Text, txtSpassword.Text, txtSCPassword.Text , comboGender.Text , txtRange.Text , comboBoxSelectArea.Text, txttiming.Text);
                         MessageBox.Show("You have been registered");
+                        frmLogin L = new frmLogin();
+                        this.Hide();
+                        L.Show();
                         //frmLogin L = new frmLogin();
                         //this.Hide();
                         //L.Show();
@@ -189,6 +194,12 @@ namespace Ustaad_G
         private void picHome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lnklblSTerms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmTermsAndConditions L = new frmTermsAndConditions();
+            L.Show();
         }
     }
 }

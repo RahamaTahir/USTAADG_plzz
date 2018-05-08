@@ -32,7 +32,6 @@
             this.lblPLP = new System.Windows.Forms.Label();
             this.lnkLogin9 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout9 = new System.Windows.Forms.LinkLabel();
-            this.lnkContactUs9 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin9 = new System.Windows.Forms.Button();
             this.cmdRegister9 = new System.Windows.Forms.Button();
@@ -104,22 +103,7 @@
             this.lnkAbout9.TabIndex = 29;
             this.lnkAbout9.TabStop = true;
             this.lnkAbout9.Text = "About";
-            // 
-            // lnkContactUs9
-            // 
-            this.lnkContactUs9.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs9.AutoSize = true;
-            this.lnkContactUs9.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs9.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs9.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs9.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs9.Location = new System.Drawing.Point(494, 42);
-            this.lnkContactUs9.Name = "lnkContactUs9";
-            this.lnkContactUs9.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs9.TabIndex = 28;
-            this.lnkContactUs9.TabStop = true;
-            this.lnkContactUs9.Text = "ContactUs";
+            this.lnkAbout9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAbout9_LinkClicked);
             // 
             // panel1
             // 
@@ -275,7 +259,7 @@
             this.chkT.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.chkT.Location = new System.Drawing.Point(363, 247);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(140, 29);
+            this.chkT.Size = new System.Drawing.Size(142, 29);
             this.chkT.TabIndex = 49;
             this.chkT.Text = "Is Teacher";
             this.chkT.UseVisualStyleBackColor = false;
@@ -329,7 +313,6 @@
             this.Controls.Add(this.lblPLP);
             this.Controls.Add(this.lnkLogin9);
             this.Controls.Add(this.lnkAbout9);
-            this.Controls.Add(this.lnkContactUs9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.picHome);
@@ -352,7 +335,6 @@
         private System.Windows.Forms.Label lblPLP;
         private System.Windows.Forms.LinkLabel lnkLogin9;
         private System.Windows.Forms.LinkLabel lnkAbout9;
-        private System.Windows.Forms.LinkLabel lnkContactUs9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdAdmin9;
         private System.Windows.Forms.Button cmdRegister9;

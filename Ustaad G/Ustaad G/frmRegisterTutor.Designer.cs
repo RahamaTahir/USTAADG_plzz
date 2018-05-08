@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblUstaadG = new System.Windows.Forms.Label();
-            this.lnkContactUs2 = new System.Windows.Forms.LinkLabel();
             this.lnkAbout2 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdAdmin2 = new System.Windows.Forms.Button();
@@ -70,23 +69,6 @@
             this.lblUstaadG.Size = new System.Drawing.Size(256, 55);
             this.lblUstaadG.TabIndex = 9;
             this.lblUstaadG.Text = "Ustaad G";
-            // 
-            // lnkContactUs2
-            // 
-            this.lnkContactUs2.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs2.AutoSize = true;
-            this.lnkContactUs2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lnkContactUs2.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkContactUs2.ForeColor = System.Drawing.Color.White;
-            this.lnkContactUs2.LinkColor = System.Drawing.Color.Transparent;
-            this.lnkContactUs2.Location = new System.Drawing.Point(494, 48);
-            this.lnkContactUs2.Name = "lnkContactUs2";
-            this.lnkContactUs2.Size = new System.Drawing.Size(106, 23);
-            this.lnkContactUs2.TabIndex = 10;
-            this.lnkContactUs2.TabStop = true;
-            this.lnkContactUs2.Text = "ContactUs";
-            this.lnkContactUs2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkContactUs2_LinkClicked);
             // 
             // lnkAbout2
             // 
@@ -428,10 +410,11 @@
             this.lnklblTerms.LinkColor = System.Drawing.Color.DarkSlateGray;
             this.lnklblTerms.Location = new System.Drawing.Point(379, 565);
             this.lnklblTerms.Name = "lnklblTerms";
-            this.lnklblTerms.Size = new System.Drawing.Size(240, 25);
+            this.lnklblTerms.Size = new System.Drawing.Size(242, 25);
             this.lnklblTerms.TabIndex = 33;
             this.lnklblTerms.TabStop = true;
             this.lnklblTerms.Text = "Terms and Conditions";
+            this.lnklblTerms.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblTerms_LinkClicked);
             // 
             // picHome
             // 
@@ -527,7 +510,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lnkLogin2);
             this.Controls.Add(this.lnkAbout2);
-            this.Controls.Add(this.lnkContactUs2);
             this.Controls.Add(this.lblUstaadG);
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -543,7 +525,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblUstaadG;
-        private System.Windows.Forms.LinkLabel lnkContactUs2;
         private System.Windows.Forms.LinkLabel lnkAbout2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdRegister2;

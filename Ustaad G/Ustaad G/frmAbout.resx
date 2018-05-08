@@ -117,7 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Welcome to UstaadG! Our objective is to offer you the most 
+comprehensive listing of tutors, teachers and educational services.
+#Finding a Tutor
+To find a tutor, we recommend you click the SEARCH icon after login 
+and enter your selection criteria.
+#When does a child need a tutor?
+There are many different reasons why children receive tutoring. 
+Thousands of children having difficulty with a subject in school are 
+currently being tutored. The following are among the reasons:
+-&gt;Many students didn't master basic skills which need to be re-taught
+    to them.
+-&gt;Some have a learning disability which poses challenges to the 
+    mastery of information and slows down progress in school.
+-&gt;Others have weak organisational skills, which results in difficulty 
+    keeping on schedule with studying and completing assignments.
+-&gt;Some students have medical, social, emotional, behavioral, and/or 
+    family problems.
+-&gt;Many students need help in maths, english and science.
+-&gt;Advanced students like to accelerate their learning and seek a tutor
+    to challenge their thinking.
+#Feedback
+UstaadG strives to provide the teaching community with a high quality
+service and advice on tutoring matters. To assist us in evaluating and 
+improving our service, we invite you to send us your feedback by way 
+of comments and suggestions.
+Be sure to check back with us on a regular basis.</value>
+  </data>
 </root>

@@ -117,7 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Please read and agree to the following Terms and Conditions before using 
+the information and services available on UstaadG.
+#Condition of Use:
+In using the Tutor Finder website, you agree not to do any of the following:
+-&gt;submit any false or misleading information;
+-&gt;use this website in a way that may harass, annoy or disrupt any third
+    person, including a third person who may receive messages as a result 
+    of your use of this website; submit any threatening, defamatory, 
+    obscene, abusive or indecent material;
+-&gt;use any of the content on Tutor Finder for commercial purposes or gain 
+    or to establish or operate your own product or offering;
+-&gt;contact tutors or students who advertise on this website for the purpose 
+    of re-advertising their services on a competing website;
+-&gt;data mine, scrape or conduct automated searches on this website or any 
+    information contained on it;
+-&gt;interfere with, or attempt to interfere with, the proper working of this 
+    website, (including, for example, by making excessive traffic demands on 
+    this website);
+-&gt;submit any material of any kind which contains a virus or other harmful 
+    component;
+-&gt;attempt to gain unauthorised access to any part of this website;
+
+UstaadG reserves the right to cooperate fully with any law enforcement 
+authority in any jurisdiction in respect of any lawful direction or request to 
+disclose the identity or other information in respect of anyone posting any 
+materials which breach any applicable or relevant law.</value>
+  </data>
 </root>

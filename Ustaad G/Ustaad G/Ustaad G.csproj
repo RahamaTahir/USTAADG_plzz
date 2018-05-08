@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="frmStudentRegister.Designer.cs">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTermsAndConditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTermsAndConditions.Designer.cs">
+      <DependentUpon>frmTermsAndConditions.cs</DependentUpon>
+    </Compile>
     <Compile Include="myUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudentRegister.resx">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTermsAndConditions.resx">
+      <DependentUpon>frmTermsAndConditions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
