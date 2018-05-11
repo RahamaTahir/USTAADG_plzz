@@ -73,6 +73,7 @@ namespace Ustaad_G
                         dataGridViewSearchRecords.Columns.Remove("PaidSpecified");
                         dataGridViewSearchRecords.Columns.Remove("receive");
                         dataGridViewSearchRecords.Columns.Remove("receiveSpecified");
+                        
                     }
                 }
             }

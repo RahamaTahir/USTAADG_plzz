@@ -54,6 +54,7 @@
             this.txtIDno = new System.Windows.Forms.TextBox();
             this.cmdReport = new System.Windows.Forms.Button();
             this.cmdshowstudent = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchRecords1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cmdAdmin6);
             this.panel1.Controls.Add(this.cmdHome6);
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,6 +426,25 @@
             this.cmdshowstudent.UseVisualStyleBackColor = true;
             this.cmdshowstudent.Click += new System.EventHandler(this.cmdshowstudent_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(423, 3);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 49);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Search Teacher";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // studentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,5 +515,6 @@
         private System.Windows.Forms.TextBox txtIDno;
         private System.Windows.Forms.Button cmdReport;
         private System.Windows.Forms.Button cmdshowstudent;
+        private System.Windows.Forms.Button button1;
     }
 }

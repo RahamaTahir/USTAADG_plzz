@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdViewDetails = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdSearch = new System.Windows.Forms.Button();
             this.comboBoxLevel = new System.Windows.Forms.ComboBox();
@@ -46,32 +45,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmdViewDetails
-            // 
-            this.cmdViewDetails.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdViewDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdViewDetails.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdViewDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdViewDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdViewDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdViewDetails.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdViewDetails.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdViewDetails.Location = new System.Drawing.Point(272, 389);
-            this.cmdViewDetails.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdViewDetails.Name = "cmdViewDetails";
-            this.cmdViewDetails.Size = new System.Drawing.Size(204, 33);
-            this.cmdViewDetails.TabIndex = 43;
-            this.cmdViewDetails.Text = "View Details";
-            this.cmdViewDetails.UseVisualStyleBackColor = true;
-            this.cmdViewDetails.Click += new System.EventHandler(this.cmdViewDetails_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Font = new System.Drawing.Font("Broadway", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(217, 334);
+            this.label1.Location = new System.Drawing.Point(217, 350);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 40);
             this.label1.TabIndex = 42;
@@ -280,7 +260,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 454);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.cmdViewDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdSearch);
             this.Controls.Add(this.comboBoxLevel);
@@ -303,8 +282,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cmdViewDetails;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmdSearch;
         private System.Windows.Forms.ComboBox comboBoxLevel;

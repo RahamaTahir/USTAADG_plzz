@@ -45,6 +45,7 @@ namespace Ustaad_G
             UserT = myUtil.teacher_loggedIn.Username;
             accountT = myUtil.teacher_loggedIn.Account;
             txtIDno.Hide();
+            button1.Hide();
 
                     }
 
@@ -242,6 +243,13 @@ namespace Ustaad_G
         {
             frmAbout R = new frmAbout();
             R.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmSearch L = new frmSearch();
+            this.Hide();
+            L.Show();
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.cmdDelete = new System.Windows.Forms.Button();
             this.dataGridViewShowAllStudents = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,24 +45,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllTeachersRecord)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmdDelete
-            // 
-            this.cmdDelete.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdDelete.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.cmdDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.cmdDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.cmdDelete.Location = new System.Drawing.Point(585, 631);
-            this.cmdDelete.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdDelete.Name = "cmdDelete";
-            this.cmdDelete.Size = new System.Drawing.Size(151, 33);
-            this.cmdDelete.TabIndex = 42;
-            this.cmdDelete.Text = "Delete";
-            this.cmdDelete.UseVisualStyleBackColor = true;
             // 
             // dataGridViewShowAllStudents
             // 
@@ -214,7 +195,6 @@
             this.Controls.Add(this.lblTeachers);
             this.Controls.Add(this.dataGridViewAllTeachersRecord);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.dataGridViewShowAllStudents);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lnkAbout4);
@@ -234,7 +214,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button cmdDelete;
         private System.Windows.Forms.DataGridView dataGridViewShowAllStudents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lnkAbout4;
